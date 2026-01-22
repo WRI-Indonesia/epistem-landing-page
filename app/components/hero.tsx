@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 
 export const Hero = () => {
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-center">
+    <main className="flex lg:min-h-screen w-full flex-col items-center justify-center">
       <div
-        className="h-screen w-full flex flex-col items-center justify-center px-4"
+        className="lg:h-screen w-full flex flex-col items-center justify-center px-4 max-lg:pt-32"
         style={{
           background: "linear-gradient(180deg, #FFE9F1 0%, #FFF 100%)",
         }}

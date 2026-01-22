@@ -22,7 +22,7 @@ export const NavBar = () => {
     // <AnimatePresence>
     <div
       className={cn(
-        "fixed top-3 px-3 w-full block max-w-360 left-1/2 -translate-x-1/2 z-50",
+        "fixed top-3 px-8 w-full block max-w-360 left-1/2 -translate-x-1/2 z-50",
         // "fixed top-3 px-3 w-full hidden lg:block max-w-360 left-1/2 -translate-x-1/2 z-50",
         {},
       )}
@@ -67,7 +67,7 @@ export const NavBar = () => {
               }}
             >
               <div className="flex flex-row items-center gap-x-2">
-                <Image
+                {/* <Image
                   src="/images/epistem-logo.webp"
                   alt="epistem logo"
                   width={270}
@@ -76,7 +76,14 @@ export const NavBar = () => {
                 />
                 <p className="text-black font-inter text-sm lg:text-2xl font-bold">
                   Epistem
-                </p>
+                </p> */}
+                <Image
+                  src="/images/epistem-logos.webp"
+                  alt="epistem logo"
+                  width={500}
+                  height={216}
+                  className="h-9 lg:h-16 w-auto pt-1.25 pr-1.25"
+                />
               </div>
 
               <div className="flex flex-row items-center space-x-1.5">

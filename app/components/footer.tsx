@@ -45,21 +45,23 @@ export const Footer = () => {
                 />
               </div>
               <div className="space-y-5">
-                <p className="text-xs lg:text-2xl">Diprakarsai oleh:</p>
+                <p className="text-xs lg:text-sm font-inter font-regular text-black">
+                  Initiated by:
+                </p>
                 <div className="flex flex-row gap-x-5 lg:gap-x-15">
                   <Image
                     src="/images/iiasa-logo.webp"
                     alt="iiasa logo"
                     width={201}
                     height={282}
-                    className="w-9 lg:w-17"
+                    className="w-7 lg:w-17"
                   />
                   <Image
                     src="/images/cifor-logo.webp"
                     alt="cifor logo"
                     width={678}
                     height={285}
-                    className="w-30 lg:w-56"
+                    className="w-24 lg:w-56"
                   />
                 </div>
 

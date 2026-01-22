@@ -82,7 +82,7 @@ export const ContactUs = () => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="w-full relative py-6 lg:py-10">
+      <div className="w-full relative max-lg:pt-0 py-6 lg:py-10">
         <motion.p
           ref={titleComp}
           initial={{ y: "100%", opacity: 0 }}
@@ -115,16 +115,16 @@ export const ContactUs = () => {
                   >
                     <FieldLabel htmlFor="name">
                       <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                        Full Name
+                        First Name
                       </p>
                     </FieldLabel>
                     <Input
                       {...field}
                       aria-invalid={fieldState.invalid}
-                      className="bg-white text-sm lg:text-lg"
+                      className="bg-white text-sm lg:text-[15px]"
                       id="name"
                       autoComplete="off"
-                      placeholder="Enter your full name"
+                      placeholder="Your First Name"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -149,10 +149,10 @@ export const ContactUs = () => {
                     <Input
                       {...field}
                       aria-invalid={fieldState.invalid}
-                      className="bg-white text-sm lg:text-lg"
+                      className="bg-white text-sm lg:text-[15px]"
                       id="email"
                       autoComplete="off"
-                      placeholder="Enter your email address"
+                      placeholder="Email"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -177,11 +177,11 @@ export const ContactUs = () => {
                     <Input
                       {...field}
                       aria-invalid={fieldState.invalid}
-                      className="bg-white text-sm lg:text-lg"
+                      className="bg-white text-sm lg:text-[15px]"
                       id="phone_number"
                       autoComplete="off"
                       type="tel"
-                      placeholder="Enter your phone number"
+                      placeholder="+000"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -206,10 +206,10 @@ export const ContactUs = () => {
                     <Input
                       {...field}
                       aria-invalid={fieldState.invalid}
-                      className="bg-white text-sm lg:text-lg"
+                      className="bg-white text-sm lg:text-[15px]"
                       id="company_name"
                       autoComplete="off"
-                      placeholder="Enter your full name"
+                      placeholder="Company Name"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -235,10 +235,10 @@ export const ContactUs = () => {
                       <Input
                         {...field}
                         aria-invalid={fieldState.invalid}
-                        className="bg-white text-sm lg:text-lg"
+                        className="bg-white text-sm lg:text-[15px]"
                         id="company_name"
                         autoComplete="off"
-                        placeholder="Enter your full name"
+                        placeholder="Company Name"
                       />
                       {fieldState.invalid && (
                         <FieldError errors={[fieldState.error]} />
@@ -249,8 +249,10 @@ export const ContactUs = () => {
                 <p className="font-inter text-sm font-medium text-text-icons-base-second">
                   Your request will be sent securely and remain private.
                 </p>
-                <Button variant={"primary"}>
-                  <p className="">Submit</p>
+                <Button variant={"primary"} className="h-auto py-3 px-5 w-fit">
+                  <p className="font-aptos text-xs lg:text-[15px] font-semibold lg:font-bold text-text-icons-on-color">
+                    Send your message
+                  </p>
                 </Button>
               </div>
               <Controller
@@ -271,10 +273,10 @@ export const ContactUs = () => {
                     <Textarea
                       {...field}
                       aria-invalid={fieldState.invalid}
-                      className="bg-white h-full text-sm lg:text-lg"
+                      className="bg-white h-full text-sm lg:text-[15px]"
                       id="message-contac"
                       autoComplete="off"
-                      placeholder="Enter your message"
+                      placeholder="Message"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -286,8 +288,10 @@ export const ContactUs = () => {
                 <p className="font-inter text-sm font-medium text-text-icons-base-second">
                   Your request will be sent securely and remain private.
                 </p>
-                <Button variant={"primary"}>
-                  <p className="">Submit</p>
+                <Button variant={"primary"} className="h-auto py-3 px-5">
+                  <p className="font-aptos text-xs lg:text-lg font-semibold lg:font-bold text-text-icons-on-color">
+                    Send your message
+                  </p>
                 </Button>
               </div>
             </FieldSet>

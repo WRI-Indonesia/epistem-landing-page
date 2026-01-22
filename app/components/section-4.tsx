@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export const Section4 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export const Section4 = () => {
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
       <div className="w-full relative">
-        <div className="grid grid-cols-4 grid-rows-1 md:grid-rows-1 md:grid-cols-12 py-8 md:py-20 gap-y-4 gap-x-4 h-fit relative">
+        <div className="grid grid-cols-4 grid-rows-1 md:grid-rows-1 md:grid-cols-12 py-8 md:py-20 gap-y-9 gap-x-9 h-fit relative">
           <motion.div
             ref={imageComp}
             initial={{ x: "0%", opacity: 0 }}
@@ -100,13 +101,38 @@ export const Section4 = () => {
                 <div className="space-y-2 md:space-y-8 font-pjs text-[11px] md:text-2xl font-medium text-text-icons-base-main">
                   <div className="">
                     <p className="text-primary-pink">The Team</p>
-                    <p className="">
+                    <div className="">
                       Epistem is initiated by a consortium led by the
-                      International Institute for Applied Systems Analysis
-                      (IIASA), in partnership with The Center for International
-                      Forestry Research and World Agroforestry (CIFOR-ICRAF) and
-                      World Resources Institute Indonesia (WRI Indonesia).
-                    </p>
+                      International Institute for Applied Systems Analysis (
+                      <Link
+                        href="http://iiasa.ac.at"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary-pink underline underline-offset-2"
+                      >
+                        IIASA
+                      </Link>
+                      ), in partnership with The Center for International
+                      Forestry Research and World Agroforestry (
+                      <Link
+                        href="http://cifor-icraf.org"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary-pink underline underline-offset-2"
+                      >
+                        CIFOR-ICRAF
+                      </Link>
+                      ) and World Resources Institute Indonesia (
+                      <Link
+                        href="http://wri-indonesia.org/en"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary-pink underline underline-offset-2"
+                      >
+                        WRI Indonesia
+                      </Link>
+                      ).
+                    </div>
                   </div>
 
                   <div className="">
@@ -195,7 +221,7 @@ export const Section4 = () => {
               opacity: imageMobileIsInView ? 1 : 0,
               transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
             }}
-            className="md:hidden col-span-4 relative z-11 h-fit"
+            className="hidden col-span-4 relative z-11 h-fit"
           >
             <div className={cn("rounded-2xl overflow-hidden")}>
               <Image

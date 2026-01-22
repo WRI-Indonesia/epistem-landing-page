@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
+import { is } from "zod/locales";
 
 const featureArray = [
   {
@@ -47,7 +48,7 @@ export const Section3 = () => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="grid grid-cols-4 w-full pt-12 pb-6">
+      <div className="grid grid-cols-12 w-full pt-12 pb-6 gap-y-3">
         <motion.div
           ref={titleComp}
           initial={{ y: "100%" }}
@@ -57,9 +58,9 @@ export const Section3 = () => {
               visualDuration: 2,
             },
           }}
-          className="col-span-2 flex flex-row items-center"
+          className="col-span-12 lg:col-span-5 flex flex-row items-center"
         >
-          <p className="font-pjs text-xl lg:text-6xl font-bold text-text-icons-base-main leading-normal">
+          <p className="font-pjs text-xl lg:text-6xl font-bold text-text-icons-base-main leading-normal text-center lg:text-left w-full">
             The Approach
           </p>
         </motion.div>
@@ -71,9 +72,9 @@ export const Section3 = () => {
               visualDuration: 2,
             },
           }}
-          className="col-start-3 lg:col-start-4 col-end-5 flex flex-row items-center justify-end"
+          className="max-lg:col-span-12 lg:col-start-9 lg:col-end-13 flex flex-row items-center justify-end"
         >
-          <p className="font-pjs text-xs lg:text-xl font-regular text-text-icons-base-main leading-normal text-right">
+          <p className="font-pjs text-xs lg:text-xl font-regular text-text-icons-base-main leading-normal text-center lg:text-justify w-full">
             Epistem integrates scientific rigor with real-world usability,
             making mapping and monitoring easier, smarter, and more inclusive.
           </p>
@@ -102,58 +103,69 @@ export const Section3 = () => {
                   },
                 }}
                 key={`approach-features-${index}`}
-                className={`col-span-4 pt-4 ${item.background} rounded-2xl h-fit`}
+                className={`col-span-4 ${item.background} rounded-2xl overflow-hidden h-fit`}
               >
-                <div className="flex flex-col items-center justify-start">
-                  <p className="px-6 font-pjs text-lg lg:text-3xl font-extrabold text-text-icons-on-color text-center min-h-10 lg:min-h-20">
-                    {item.title}
-                  </p>
-                  <div className="px-6 mt-8 lg:mt-15">
-                    <Image
-                      src={item.url}
-                      alt={item.title}
-                      width={220}
-                      height={220}
-                      className="h-24 lg:h-55 w-auto"
-                    />
+                {/* <div className="flex flex-col items-center justify-start pt-4"> */}
+                <div
+                  className={cn(
+                    "flex flex-col items-center justify-between pt-4 h-fit w-full",
+                    !isSelected && "aspect-square",
+                  )}
+                >
+                  <div className="flex flex-col items-center">
+                    <p className="px-6 font-pjs text-lg lg:text-[28px] font-extrabold text-text-icons-on-color text-center min-h-22">
+                      {item.title}
+                    </p>
+                    <div className="">
+                      {/* <div className="px-6 mt-8 lg:mt-8"> */}
+                    </div>
                   </div>
-                  <motion.p
-                    layout="size"
-                    className={cn(
-                      "px-6 font-pjs text-md lg:text-2xl font-medium text-text-icons-on-color mt-8 lg:mt-19 text-ellipsis",
-                      // index !== selected && "line-clamp-3",
-                    )}
-                    animate={{
-                      display: isSelected ? "" : "-webkit-box",
-                      webkitLineClamp: isSelected ? "unset" : 3,
-                      overflow: isSelected ? "" : "hidden",
-                      maxHeight: isSelected ? "400px" : "100px",
-                      transition: {
-                        bounce: 0,
-                      },
-                    }}
-                  >
-                    {item.description}
-                  </motion.p>
-                  <Button
-                    className={`text-gray-100 py-4 w-full mt-2 rounded-t-none rounded-b-2xl ${item.background} hover:${item.background} hover:brightness-110`}
-                    onClick={() => {
-                      if (isSelected) {
-                        setSelected(-1);
-                        return;
-                      }
-
-                      setSelected(index);
-                    }}
-                    // variant={"ghost"}
-                  >
-                    <motion.div
-                      animate={{ rotate: isSelected ? 180 : 0 }}
-                      className=""
+                  <Image
+                    src={item.url}
+                    alt={item.title}
+                    width={200}
+                    height={200}
+                    className="h-fit w-full max-w-40 md:max-w-80 lg:max-w-40 xl:max-w-50 aspect-square pt-5"
+                  />
+                  <div className={cn("pt-10", item.background)}>
+                    <motion.p
+                      layout="size"
+                      className={cn(
+                        "px-6 font-pjs text-md lg:text-2xl font-medium text-text-icons-on-color mt-0 lg:mt-0 text-ellipsis",
+                        // index !== selected && "line-clamp-3",
+                      )}
+                      animate={{
+                        display: isSelected ? "" : "-webkit-box",
+                        webkitLineClamp: isSelected ? "unset" : 3,
+                        overflow: isSelected ? "" : "hidden",
+                        maxHeight: isSelected ? "400px" : "70px",
+                        transition: {
+                          bounce: 0,
+                        },
+                      }}
                     >
-                      <ChevronDownIcon className="mx-auto size-6 " />
-                    </motion.div>
-                  </Button>
+                      {item.description}
+                    </motion.p>
+                    <Button
+                      className={`text-gray-100 py-4 w-full mt-2 rounded-t-none rounded-b-2xl ${item.background} hover:${item.background} hover:brightness-110`}
+                      onClick={() => {
+                        if (isSelected) {
+                          setSelected(-1);
+                          return;
+                        }
+
+                        setSelected(index);
+                      }}
+                      // variant={"ghost"}
+                    >
+                      <motion.div
+                        animate={{ rotate: isSelected ? 180 : 0 }}
+                        className=""
+                      >
+                        <ChevronDownIcon className="mx-auto size-6 " />
+                      </motion.div>
+                    </Button>
+                  </div>
                 </div>
               </motion.div>
             );

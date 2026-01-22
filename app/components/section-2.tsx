@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 const featureArray = [
   {
     component: (
-      <div className="h-full w-full lg:grid lg:grid-cols-12 lg:grid-rows-1 gap-x-10">
+      <div className="h-full w-full lg:grid lg:grid-cols-12 lg:grid-rows-1 gap-x-20">
         <motion.div
           initial={{
             opacity: 0,
@@ -34,7 +34,7 @@ const featureArray = [
             width={1616}
             height={1238}
             src="/images/luma-display.webp"
-            className="max-sm:max-w-50 max-md:max-w-80 max-lg:max-w-100 lg:w-full lg:ml-20 mx-auto max-lg:pl-10 relative lg:right-5"
+            className="max-sm:max-w-50 max-md:max-w-85 max-lg:max-w-105 lg:w-full lg:ml-20 mx-auto max-sm:pl-7 max-lg:pl-10 relative lg:right-5 max-sm:bottom-2 max-sm:-mb-7 lg:-bottom-5"
             alt="luma"
           />
         </motion.div>
@@ -68,7 +68,11 @@ const featureArray = [
             </p>
           </div>
           <div className="">
-            <Button variant={"primary"} size={"lg"} className="">
+            <Button
+              variant={"primary"}
+              size={"lg"}
+              className="h-auto py-1 lg:py-3 px-5"
+            >
               <p className="font-aptos text-xs lg:text-lg font-semibold lg:font-bold text-text-icons-on-color">
                 Try Luma Mockup
               </p>
@@ -143,7 +147,7 @@ const featureArray = [
       //     />
       //   </motion.div>
       // </div>
-      <div className="h-full w-full lg:grid lg:grid-cols-12 lg:grid-rows-1 gap-x-10 flex flex-col-reverse">
+      <div className="h-full w-full lg:grid lg:grid-cols-12 lg:grid-rows-1 gap-x-20 flex flex-col-reverse">
         <motion.div
           layout
           initial={{
@@ -174,7 +178,12 @@ const featureArray = [
             </p>
           </div>
           <div className="">
-            <Button variant={"primary"} size={"lg"} className="" disabled>
+            <Button
+              variant={"primary"}
+              size={"lg"}
+              className="h-auto py-1 lg:py-3 px-5"
+              disabled
+            >
               <p className="font-aptos text-xs lg:text-lg font-semibold lg:font-bold text-text-icons-on-color">
                 Rona Coming Soon
               </p>
@@ -194,14 +203,14 @@ const featureArray = [
             },
           }}
           // exit={{ opacity: 0 }}
-          className="pointer-events-none col-span-6 lg:col-span-5 max-lg:w-fit flex flex-col items-center max-lg:mx-auto"
+          className="pointer-events-none col-span-6 lg:col-span-5 max-lg:w-fit flex flex-col items-center lg:justify-center max-lg:mx-auto"
         >
           <Image
             width={1616}
             height={1238}
             src="/images/luma-display-left.webp"
             // mx-auto pl-10
-            className="max-sm:max-w-50 max-md:max-w-80 max-lg:max-w-100 lg:w-full lg:ml-20 relative right-5 lg:right-20"
+            className="max-sm:max-w-50 max-md:max-w-85 max-lg:max-w-105 lg:w-full lg:ml-20 relative right-5 lg:right-20 max-sm:bottom-2 max-sm:-mb-6 lg:-bottom-5"
             alt="luma"
           />
         </motion.div>
@@ -220,7 +229,7 @@ export const Section2 = () => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3 lg:py-20">
-      <div className="grid grid-cols-4 w-full pt-12 pb-6">
+      <div className="grid grid-cols-12 w-full pt-12 pb-6 sm:pb-12 gap-y-4">
         <motion.div
           ref={titleComp}
           initial={{ y: "100%" }}
@@ -230,9 +239,10 @@ export const Section2 = () => {
               visualDuration: 2,
             },
           }}
-          className="col-span-2 flex flex-row items-center"
+          // className="col-span-4 flex flex-row items-center"
+          className="col-span-12 lg:col-span-5 flex flex-row items-center"
         >
-          <p className="font-pjs text-xl lg:text-6xl font-bold text-text-icons-base-main leading-normal">
+          <p className="w-full font-pjs text-xl lg:text-6xl font-bold text-text-icons-base-main leading-normal text-center lg:text-left">
             Browse Application
           </p>
         </motion.div>
@@ -244,16 +254,17 @@ export const Section2 = () => {
               visualDuration: 2,
             },
           }}
-          className="col-start-3 lg:col-start-4 col-end-5 flex flex-row items-center justify-end"
+          // className="col-start-9 col-end-13 flex flex-row items-center justify-end"
+          className="max-lg:col-span-12 lg:col-start-9 lg:col-end-13 flex flex-row items-center justify-end"
         >
-          <p className="font-pjs text-xs lg:text-xl font-regular text-text-icons-base-main leading-normal text-right">
+          <p className="w-full font-pjs text-xs lg:text-xl font-regular text-text-icons-base-main leading-normal text-center lg:text-justify">
             Explore Epistem applications to create maps, track changes, access
             high-quality data, and collaborate with an open-source community.
           </p>
         </motion.div>
       </div>
       <div className="mt-2 md:mt-8 lg:mt-16  pt-2 md:pt-8 lg:pt-16 w-full relative">
-        <div className="w-full p-5 rounded-lg bg-text-icons-base-main h-fit lg:min-h-120 lg:h-120 flex flex-col gap-y-2 px-8 lg:px-15">
+        <div className="w-full p-5 rounded-lg bg-text-icons-base-main h-fit lg:min-h-125 lg:h-125 flex flex-col gap-y-2 px-8 lg:px-15">
           {featureArray.map((item, index) => {
             const isSelected = index === selected;
 
