@@ -209,7 +209,7 @@ export const Section1 = () => {
                 visualDuration: 2,
               },
             }}
-            className="max-lg:px-5.5"
+            className="lg:hidden max-lg:px-5.5"
           >
             <div>{selectedComp()}</div>
             {/* {demoArray.map((item, index) => {
