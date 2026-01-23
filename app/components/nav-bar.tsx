@@ -22,7 +22,7 @@ export const NavBar = () => {
     // <AnimatePresence>
     <div
       className={cn(
-        "fixed top-3 px-8 w-full block max-w-360 left-1/2 -translate-x-1/2 z-50",
+        "fixed top-3 px-3 lg:px-3 w-full block max-w-360 left-1/2 -translate-x-1/2 z-50",
         // "fixed top-3 px-3 w-full hidden lg:block max-w-360 left-1/2 -translate-x-1/2 z-50",
         {},
       )}
@@ -32,7 +32,7 @@ export const NavBar = () => {
         <motion.div
           layout
           className={cn(
-            "bg-white rounded-2xl shadow px-5 py-3 flex flex-row items-center gap-x-10",
+            "bg-white rounded-2xl shadow px-5 py-3 flex flex-row items-center gap-x-5 lg:gap-x-10",
             {
               "justify-end ml-auto w-fit py-5": !open,
             },

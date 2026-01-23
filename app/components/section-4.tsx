@@ -28,7 +28,7 @@ export const Section4 = () => {
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
       <div className="w-full relative">
-        <div className="grid grid-cols-4 grid-rows-1 md:grid-rows-1 md:grid-cols-12 py-8 md:py-20 gap-y-9 gap-x-9 h-fit relative">
+        <div className="grid grid-cols-4 grid-rows-1 lg:grid-rows-1 lg:grid-cols-12 py-8 lg:py-20 gap-y-9 gap-x-9 h-fit relative max-lg:pb-0">
           <motion.div
             ref={imageComp}
             initial={{ x: "0%", opacity: 0 }}
@@ -37,13 +37,13 @@ export const Section4 = () => {
               opacity: imageIsInView ? 1 : 0,
               transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
             }}
-            className="max-md:hidden col-span-4 relative z-11"
+            className="max-lg:hidden col-span-4 relative z-11"
           >
             <div
               className={cn(
                 // "max-h-160 rounded-2xl overflow-hidden",
                 // isOpen && "max-h-250",
-                'bg-[url("/images/collage.webp")] bg-cover bg-top bg-no-repeat rounded-2xl',
+                'bg-[url("/images/collage.webp")] bg-cover bg-top-left bg-no-repeat rounded-2xl',
                 "h-full",
               )}
             >
@@ -65,17 +65,17 @@ export const Section4 = () => {
               opacity: textIsInView ? 1 : 0,
               transition: { bounce: 0, visualDuration: 2, delay: 0.2 },
             }}
-            className="col-span-4 md:col-span-8 flex flex-col justify-between relative z-10"
+            className="col-span-4 lg:col-span-8 flex flex-col justify-between relative z-10 max-lg:space-y-2"
           >
-            <p className="font-pjs font-bold text-xl md:text-6xl text-text-icons-base-main">
+            <p className="font-pjs font-bold text-xl lg:text-6xl text-text-icons-base-main text-center lg:text-left">
               About Us
             </p>
-            <div className="space-y-2 md:space-y-12 mt-2 md:mt-44">
-              <p className="text-[13px] md:text-5xl font-pjs font-semibold text-text-icons-base-main">
+            <div className="space-y-2 lg:space-y-12 mt-0 lg:mt-45">
+              <p className="text-[13px] lg:text-5xl font-pjs font-bold lg:font-semibold text-text-icons-base-main text-center lg:text-left leading-normal">
                 Supporting change-makers with data-driven solutions built for
                 their sustainable restoration goals.
               </p>
-              <p className="font-pjs text-[11px] md:text-2xl font-regular text-text-icons-base-main">
+              <p className="font-pjs text-[11px] lg:text-2xl font-regular text-text-icons-base-main text-center lg:text-left">
                 Epistem is a consortium-led initiative combining global research
                 expertise with local knowledge to bridge the gap between
                 science, data, and implementation of nature-based solutions.
@@ -83,22 +83,27 @@ export const Section4 = () => {
                 Indonesia, Epistem delivers practical tools for real-world
                 impact.
               </p>
-              <Button
-                variant={"link"}
-                className="p-0"
-                onClick={() => {
-                  setIsOpen((val) => !val);
-                }}
-              >
-                <p className="font-pjs text-[10px] md:text-xl font-bold text-primary-pink">
-                  Read {isOpen ? "Less" : "More"}
-                </p>
-                <motion.div animate={{ rotate: isOpen ? 180 : 0 }} className="">
-                  <ChevronDownIcon className="text-primary-pink size-4 stroke-3" />
-                </motion.div>
-              </Button>
+              <div className="flex flex-row items-center max-lg:justify-center">
+                <Button
+                  variant={"link"}
+                  className="p-0"
+                  onClick={() => {
+                    setIsOpen((val) => !val);
+                  }}
+                >
+                  <p className="font-pjs text-[10px] lg:text-xl font-bold text-primary-pink ">
+                    Read {isOpen ? "Less" : "More"}
+                  </p>
+                  <motion.div
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    className=""
+                  >
+                    <ChevronDownIcon className="text-primary-pink size-4 stroke-3" />
+                  </motion.div>
+                </Button>
+              </div>
               {isOpen && (
-                <div className="space-y-2 md:space-y-8 font-pjs text-[11px] md:text-2xl font-medium text-text-icons-base-main">
+                <div className="space-y-2 lg:space-y-8 font-pjs text-[11px] lg:text-2xl font-medium text-text-icons-base-main">
                   <div className="">
                     <p className="text-primary-pink">The Team</p>
                     <div className="">

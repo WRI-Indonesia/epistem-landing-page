@@ -51,7 +51,7 @@ const featureArray = [
               visualDuration: 1,
             },
           }}
-          className="space-y-6 flex flex-col justify-end pb-10 col-span-6 lg:col-span-7 max-md:pt-10 max-lg:pt-20 lg:pl-20"
+          className="space-y-3 lg:space-y-6 flex flex-col justify-end pb-7.5 lg:pb-10 col-span-6 lg:col-span-7 max-md:pt-10 max-lg:pt-20 lg:pl-20 max-lg:pr-15"
         >
           <p className="font-pjs text-xs lg:text-2xl font-medium text-text-icons-on-color leading-normal">
             Luma
@@ -162,7 +162,7 @@ const featureArray = [
             },
           }}
           // exit={{ opacity: 0 }}
-          className="space-y-6 flex flex-col justify-end pb-10 col-span-6 lg:col-span-6 max-md:pt-10 max-lg:pt-20"
+          className="space-y-3 lg:space-y-6 flex flex-col justify-end pb-10 col-span-6 lg:col-span-6 max-md:pt-10 max-lg:pt-20"
           // className="space-y-6 flex flex-col justify-end pb-10 col-span-6 lg:col-span-7 max-lg:pt-20 lg:pl-20"
         >
           <p className="font-pjs text-xs lg:text-2xl font-medium text-text-icons-on-color leading-normal">
@@ -229,7 +229,7 @@ export const Section2 = () => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3 lg:py-20">
-      <div className="grid grid-cols-12 w-full pt-12 pb-6 sm:pb-12 gap-y-4">
+      <div className="grid grid-cols-12 w-full pt-8 lg:pt-12 pb-10 sm:pb-12 gap-y-4">
         <motion.div
           ref={titleComp}
           initial={{ y: "100%" }}
@@ -263,8 +263,8 @@ export const Section2 = () => {
           </p>
         </motion.div>
       </div>
-      <div className="mt-2 md:mt-8 lg:mt-16  pt-2 md:pt-8 lg:pt-16 w-full relative">
-        <div className="w-full p-5 rounded-lg bg-text-icons-base-main h-fit lg:min-h-125 lg:h-125 flex flex-col gap-y-2 px-8 lg:px-15">
+      <div className="mt-4 md:mt-8 lg:mt-16 pt-0 md:pt-8 lg:pt-16 w-full relative">
+        <div className="w-full max-lg:px-6 max-lg:pb-3.5 lg:p-5 rounded-lg bg-text-icons-base-main h-fit lg:min-h-125 lg:h-125 flex flex-col gap-y-2 px-8 lg:px-15">
           {featureArray.map((item, index) => {
             const isSelected = index === selected;
 
@@ -281,7 +281,7 @@ export const Section2 = () => {
                 <div
                   key={`feature-button-${index}`}
                   className={cn(
-                    "h-1 lg:h-2 w-28 rounded-full hover:cursor-pointer hover:brightness-90 transition-all duration-200",
+                    "h-1 lg:h-2 w-13.5 lg:w-28 rounded-full hover:cursor-pointer hover:brightness-90 transition-all duration-200",
                     isSelected
                       ? "bg-primary-red-pink-light-active"
                       : "bg-white",

@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <main className="flex lg:min-h-screen w-full flex-col items-center justify-center">
       <div
-        className="lg:h-screen w-full flex flex-col items-center justify-center px-4 max-lg:pt-32"
+        className="lg:h-screen w-full flex flex-col items-center justify-center px-4 max-lg:pt-45"
         style={{
           background: "linear-gradient(180deg, #FFE9F1 0%, #FFF 100%)",
         }}
@@ -62,7 +62,7 @@ export const Hero = () => {
               delay: 1,
             },
           }}
-          className="font-pjs text-sm lg:text-2xl font-semibold text-primary-pink mb-8 text-center leading-normal"
+          className="font-pjs text-sm lg:text-2xl font-semibold text-primary-pink mb-15 lg:mb-8 text-center leading-normal"
         >
           Scaling nature-based solutions with participatory
           <br />

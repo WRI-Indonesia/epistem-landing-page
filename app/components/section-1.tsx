@@ -66,7 +66,7 @@ export const Section1 = () => {
     const item = demoArray[selected];
     return (
       <AnimatePresence mode="wait">
-        <div className="w-full mb-8 rounded-3xl shadow-2xl">
+        <div className="w-full mb-9.5 rounded-3xl shadow-2xl">
           <motion.div
             className={cn(
               "relative rounded-3xl overflow-hidden border-10 border-black w-full col-span-11",
@@ -136,7 +136,7 @@ export const Section1 = () => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="grid grid-cols-12 w-full pt-12 pb-6 gap-y-4">
+      <div className="grid grid-cols-12 w-full pt-3 lg:pt-12 pb-3 lg:pb-6 gap-y-3">
         <motion.div
           ref={titleComp}
           initial={{ y: "100%" }}
@@ -170,7 +170,7 @@ export const Section1 = () => {
         </motion.div>
       </div>
       <div
-        className="rounded-md lg:rounded-2xl max-lg:pb-9 max-lg:px-11.5 lg:px-25 py-13 lg:py-16 space-y-5 lg:space-y-16 w-full"
+        className="rounded-md lg:rounded-2xl px-6 lg:px-25 py-9 lg:py-16 space-y-5 lg:space-y-16 max-lg:mb-2 w-full"
         style={{
           background: "linear-gradient(120deg, #CC4778 41.94%, #A62555 89.53%)",
         }}
@@ -209,7 +209,7 @@ export const Section1 = () => {
                 visualDuration: 2,
               },
             }}
-            className=""
+            className="max-lg:px-5.5"
           >
             <div>{selectedComp()}</div>
             {/* {demoArray.map((item, index) => {
@@ -372,7 +372,7 @@ export const Section1 = () => {
             </p>
           </div>
           <div className="block lg:hidden space-y-4">
-            <div className="flex flex-row justify-between items-center gap-x-2">
+            <div className="flex flex-row justify-between items-center gap-x-2 max-lg:px-5.5">
               <Button
                 disabled={selected === 0}
                 className="rounded-full p-2 aspect-square h-6"
