@@ -140,13 +140,13 @@ export const NavBar = () => {
               </div>
             </motion.div>
           )}
-          <Button
+          {/* <Button
             variant="ghost"
             size="icon-lg"
             className="p-6 rounded-full ml-auto bg-white"
           >
             <MenuIcon className="text-primary-pink size-9 lg:size-10" />
-          </Button>
+          </Button> */}
         </motion.div>
       </AnimatePresence>
     </div>
