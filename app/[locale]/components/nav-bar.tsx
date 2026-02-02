@@ -7,8 +7,14 @@ import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
 export const NavBar = () => {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [open, setOpen] = useState(true);
 
   const handleMouseOver = () => {
@@ -18,11 +24,16 @@ export const NavBar = () => {
     // setOpen(false);
   };
 
+  const handleChangeLocale = (newLocale: string) => {
+    router.push(pathname, { locale: newLocale });
+  };
+
   return (
     // <AnimatePresence>
     <div
       className={cn(
-        "fixed top-3 px-3 lg:px-3 w-full block max-w-360 left-1/2 -translate-x-1/2 z-50",
+        "fixed w-full block left-1/2 -translate-x-1/2 z-50",
+        // "fixed top-3 px-3 lg:px-3 w-full block max-w-360 left-1/2 -translate-x-1/2 z-50",
         // "fixed top-3 px-3 w-full hidden lg:block max-w-360 left-1/2 -translate-x-1/2 z-50",
         {},
       )}
@@ -32,7 +43,8 @@ export const NavBar = () => {
         <motion.div
           layout
           className={cn(
-            "bg-white rounded-2xl shadow px-5 py-3 flex flex-row items-center gap-x-5 lg:gap-x-10",
+            "bg-white shadow px-5 py-3 flex flex-row items-center gap-x-5 lg:gap-x-10",
+            // "bg-white rounded-2xl shadow px-5 py-3 flex flex-row items-center gap-x-5 lg:gap-x-10",
             {
               "justify-end ml-auto w-fit py-5": !open,
             },
@@ -87,8 +99,20 @@ export const NavBar = () => {
               </div>
 
               <div className="flex flex-row items-center space-x-1.5">
-                <Button variant={"ghost"} className="p-1">
-                  <p className="font-inter text-sm lg:text-2xl font-bold text-primary-pink">
+                <Button
+                  onClick={() => {
+                    handleChangeLocale("en");
+                  }}
+                  disabled={locale === "en"}
+                  variant={"ghost"}
+                  className="p-1 disabled:opacity-100"
+                >
+                  <p
+                    className={cn(
+                      "font-inter text-sm lg:text-2xl font-regular text-muted",
+                      locale === "en" && "font-bold text-primary-pink",
+                    )}
+                  >
                     EN
                   </p>
                 </Button>
@@ -96,8 +120,20 @@ export const NavBar = () => {
                   orientation="vertical"
                   className="data-[orientation=vertical]:min-h-6 bg-muted"
                 />
-                <Button variant={"ghost"} className="p-1">
-                  <p className="font-inter text-sm lg:text-2xl font-regular text-muted">
+                <Button
+                  onClick={() => {
+                    handleChangeLocale("id");
+                  }}
+                  disabled={locale === "id"}
+                  variant={"ghost"}
+                  className="p-1 disabled:opacity-100"
+                >
+                  <p
+                    className={cn(
+                      "font-inter text-sm lg:text-2xl font-regular text-muted",
+                      locale === "id" && "font-bold text-primary-pink",
+                    )}
+                  >
                     ID
                   </p>
                 </Button>

@@ -1,7 +1,10 @@
 "use client";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 export const Hero = () => {
+  const t = useTranslations("HomePage.Hero");
+
   return (
     <main className="flex lg:min-h-screen w-full flex-col items-center justify-center">
       <div
@@ -26,7 +29,7 @@ export const Hero = () => {
           }}
           className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal lg:leading-25"
         >
-          Together,{" "}
+          {t("title1")}{" "}
         </motion.p>
         <motion.p
           layout
@@ -45,7 +48,7 @@ export const Hero = () => {
           }}
           className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal mb-3"
         >
-          we map change
+          {t("title2")}
         </motion.p>
         <motion.p
           layout
@@ -63,10 +66,11 @@ export const Hero = () => {
             },
           }}
           className="font-pjs text-sm lg:text-2xl font-semibold text-primary-pink mb-15 lg:mb-8 text-center leading-normal"
+          dangerouslySetInnerHTML={{ __html: t("caption") }}
         >
-          Scaling nature-based solutions with participatory
+          {/* Scaling nature-based solutions with participatory
           <br />
-          land use and cover mapping platform
+          land use and cover mapping platform */}
         </motion.p>
         {/* <motion.div
           initial={{

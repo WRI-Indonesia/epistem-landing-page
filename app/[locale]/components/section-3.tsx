@@ -13,31 +13,31 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
 import { is } from "zod/locales";
+import { useTranslations } from "next-intl";
 
 const featureArray = [
   {
-    title: "Scientifically robust",
-    description:
-      "Focuses on technical solutions that are scientifically sound, provides reliable, high-resolution data and tools grounded in research and tailored for field implementation.",
+    titleKey: "item1Title",
+    descriptionKey: "item1Description",
     url: "/icons/approach-1.svg",
     background: "bg-primary-pink",
   },
   {
-    title: "Participatory and co-created",
-    description:
-      "Effective solutions emerge only when those implementing change help shape the tools that drive it. Developed collaboratively with local actors and stakeholders, the system is transparent, open-source, and accessible, fostering usability and long-term ownership.",
+    titleKey: "item2Title",
+    descriptionKey: "item2Description",
     url: "/icons/approach-2.svg",
     background: "bg-primary-pink-active",
   },
   {
-    title: "Accessible high technology ",
-    description:
-      "Epistem handles complex coding and data processing behind the scenes, allowing users to generate maps and insights with ease, turning advanced science into actionable solutions.",
+    titleKey: "item3Title",
+    descriptionKey: "item3Description",
     url: "/icons/approach-3.svg",
     background: "bg-primary-pink-dark-hover",
   },
 ];
 export const Section3 = () => {
+  const t = useTranslations("HomePage.Section3");
+
   const [selected, setSelected] = useState(-1);
 
   const titleComp = useRef(null);
@@ -50,7 +50,7 @@ export const Section3 = () => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="grid grid-cols-12 w-full pt-8 lg:pt-12 pb-10 lg:pb-6 gap-y-3">
+      <div className="grid grid-cols-12 w-full pt-15 lg:pt-12 pb-10 lg:pb-0 gap-y-3">
         <motion.div
           ref={titleComp}
           initial={{ y: "100%" }}
@@ -63,7 +63,7 @@ export const Section3 = () => {
           className="col-span-12 lg:col-span-5 flex flex-row items-center"
         >
           <p className="font-pjs text-xl lg:text-6xl font-bold text-text-icons-base-main leading-normal text-center lg:text-left w-full">
-            The Approach
+            {t("title")}
           </p>
         </motion.div>
         <motion.div
@@ -77,8 +77,7 @@ export const Section3 = () => {
           className="max-lg:col-span-12 lg:col-start-9 lg:col-end-13 flex flex-row items-center justify-end"
         >
           <p className="font-pjs text-xs lg:text-xl font-regular text-text-icons-base-main leading-normal text-center lg:text-justify w-full">
-            Epistem integrates scientific rigor with real-world usability,
-            making mapping and monitoring easier, smarter, and more inclusive.
+            {t("caption")}
           </p>
         </motion.div>
       </div>
@@ -115,7 +114,7 @@ export const Section3 = () => {
                 >
                   <div className="flex flex-col items-center">
                     <p className="px-6 font-pjs text-[28px] font-extrabold text-text-icons-on-color text-center min-h-22">
-                      {item.title}
+                      {t(item.titleKey)}
                     </p>
                     <div className="">
                       {/* <div className="px-6 mt-8 lg:mt-8"> */}
@@ -123,7 +122,7 @@ export const Section3 = () => {
                   </div>
                   <Image
                     src={item.url}
-                    alt={item.title}
+                    alt={item.titleKey}
                     width={200}
                     height={200}
                     className="h-fit w-full max-w-40 xl:max-w-50 aspect-square pt-5"
@@ -145,7 +144,7 @@ export const Section3 = () => {
                         },
                       }}
                     >
-                      {item.description}
+                      {t(item.descriptionKey)}
                     </motion.p>
                     <Button
                       className={`text-gray-100 py-4 w-full mt-2 rounded-t-none rounded-b-2xl ${item.background} hover:${item.background} hover:brightness-110`}
@@ -205,14 +204,14 @@ export const Section3 = () => {
                 >
                   <Image
                     src={item.url}
-                    alt={item.title}
+                    alt={item.titleKey}
                     width={68}
                     height={68}
                     className="aspect-square size-17"
                   />
                   <div className="flex flex-col gap-y-6 items-start">
                     <p className="font-pjs text-sm lg:text-[28px] font-extrabold text-text-icons-on-color text-left">
-                      {item.title}
+                      {t(item.titleKey)}
                     </p>
                     <motion.p
                       layout="size"
@@ -230,7 +229,7 @@ export const Section3 = () => {
                         },
                       }}
                     >
-                      {item.description}
+                      {t(item.descriptionKey)}
                     </motion.p>
                   </div>
                 </div>

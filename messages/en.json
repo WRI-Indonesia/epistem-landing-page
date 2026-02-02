@@ -1,0 +1,78 @@
+{
+  "HomePage": {
+    "Hero": {
+      "title1": "Together,",
+      "title2": "we map change",
+      "caption": "Scaling nature-based solutions with participatory <br /> land use and cover mapping platform"
+    },
+    "Section1": {
+      "title": "Overcoming Map Data Barriers",
+      "caption": "Empower land use and land cover (LULC) planning and monitoring with intuitive tools that turn complex data into actionable maps.",
+      "item1Caption": "Create your own map",
+      "item1Description": "With Epistem, mapping your landscape becomes simple and powerful. Focus on the land use and land cover classes that matter most and create your own maps with user-friendly tools (no coding needed!) from publicly available satellite data.",
+      "item2Caption": "Identify Changes in your landscape",
+      "item2Description": "Creating your own land use and land cover maps is just the start. Discover how your landscape changes with Epistem’s tools, providing transparent data and a consistent approach for planning and monitoring sustainable interventions.",
+      "item3Caption": "Access high-quality data",
+      "item3Description": "High-quality land use and land cover maps rely on robust training and validation data. Through Epistem, you can access expert-annotated satellite imagery and field datasets sourced from a community of mapping enthusiasts and nature-based solutions practitioners.",
+      "item4Caption": "Contribute to a growing open-source community",
+      "item4Description": "Epistem platforms are built with transparent and scalable, open-source approaches. Contribute by adding or improving datasets and mapping solutions and benefit from the community’s collective power to overcome map data barriers.",
+      "lumaButtonCaption": "Generate Map with Luma"
+    },
+    "Section2": {
+      "title": "Browse Application",
+      "caption": "Explore Epistem applications to create maps, track changes, access high-quality data, and collaborate with an open-source community.",
+      "item1Title": "Luma",
+      "item1Subtitle": "See past trends, <br /> plan future action",
+      "item1Description": "Intuitive no-coding interface for creating, analysing, and collectively acting of customizable land use and land cover map data.",
+      "item1ButtonCaption": "Try Luma Mockup",
+      "item2Title": "Rona",
+      "item2Subtitle": "Shared data for shared benefits",
+      "item2Description": "Scalable repository of participatory land use and land cover mapping.",
+      "item2ButtonCaption": "Rona Coming Soon"
+    },
+    "Section3": {
+      "title": "The Approach",
+      "caption": "Epistem integrates scientific rigor with real-world usability, making mapping and monitoring easier, smarter, and more inclusive.",
+      "item1Title": "Scientifically robust",
+      "item1Description": "Focuses on technical solutions that are scientifically sound, provides reliable, high-resolution data and tools grounded in research and tailored for field implementation.",
+      "item2Title": "Participatory and co-created",
+      "item2Description": "Effective solutions emerge only when those implementing change help shape the tools that drive it. Developed collaboratively with local actors and stakeholders, the system is transparent, open-source, and accessible, fostering usability and long-term ownership.",
+      "item3Title": "Accessible high technology",
+      "item3Description": "Epistem handles complex coding and data processing behind the scenes, allowing users to generate maps and insights with ease, turning advanced science into actionable solutions."
+    },
+    "Section4": {
+      "title": "About Us",
+      "caption": "Supporting change-makers with data-driven solutions built for their sustainable restoration goals.",
+      "description": "Epistem is a consortium-led initiative combining global research expertise with local knowledge to bridge the gap between science, data, and implementation of nature-based solutions. Convened by IIASA, in partnership with CIFOR-ICRAF and WRI Indonesia, Epistem delivers practical tools for real-world impact.",
+      "readLess": "Read Less",
+      "readMore": "Read More",
+      "item1Title": "The Team",
+      "item1Description": "Epistem is initiated by a consortium led by the International Institute for Applied Systems Analysis (<a1>IIASA</a1>), in partnership with The Center for International Forestry Research and World Agroforestry (<a2>CIFOR-ICRAF</a2>) and World Resources Institute Indonesia (<a3>WRI Indonesia</a3>).",
+      "item2Description": "The initiative combines global research expertise with deep local knowledge to bridge the gap between science, data, and real-world nature-based solutions.",
+      "item3Title": "The Challenge",
+      "item3Description": "NbS actors often face technical barriers to accessing reliable, high-quality data that reflects diverse landscape realities. Effective NbS depend heavily on land use and land cover (LULC) data to guide planning, mobilize financial and institutional resources, and monitor implementation.",
+      "item4Description": "Providing LULC data that is timely, accurate, and thematically detailed can significantly enhance the effectiveness, accountability, and impact of NbS interventions.",
+      "item5Title": "The Purpose",
+      "item5Description": "Epistem strives to eliminate data barriers by providing thematically relevant, high-resolution, and accessible data tailored to diverse user needs, enabling NbS actors to focus on driving real change.",
+      "item6Description": "Through a participatory approach, Epistem empowers stakeholders across the NbS delivery chain to use data that enhances planning, implementation, and monitoring throughout Indonesia and Southeast Asia.",
+      "item7Title": "The Impact",
+      "item7Description": "This data empowerment enables more sustainable and equitable land management, delivering multiple co-benefits such as:",
+      "item8Description": "<li>Climate change adaptation and mitigation</li><li>Biodiversity conservation and enhancement</li><li>Improved livelihoods for indigenous peoples and localcommunities</li>"
+    },
+    "ContactUs": {
+      "title": "Contact Us",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Your First Name",
+      "email": "Email",
+      "emailPlaceholder": "Email",
+      "phoneNumber": "Phone Number",
+      "phoneNumberPlaceholder": "+000",
+      "companyName": "Company Name",
+      "companyNamePlaceholder": "Company Name",
+      "message": "Message",
+      "messagePlaceholder": "Message",
+      "disclaimer": "Your request will be sent securely and remain private.",
+      "sendMessage": "Send your message"
+    }
+  }
+}

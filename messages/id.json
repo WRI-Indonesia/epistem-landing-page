@@ -1,0 +1,78 @@
+{
+  "HomePage": {
+    "Hero": {
+      "title1": "Bersama,",
+      "title2": "kita petakan perubahan",
+      "caption": "Meningkatkan solusi berbasis alam melalui platform pemetaan partisipatif tutupan dan penggunaan lahan."
+    },
+    "Section1": {
+      "title": "Data Peta: Dari dan untuk kita bersama",
+      "caption": "Permudah perencanaan dan pemantauan tata guna lahan dengan alat sederhana yang menjadikan data kompleks lebih berarti.",
+      "item1Caption": "Setiap Peta Adalah Cerita",
+      "item1Description": "Dengan Epistem, pemetaan lanskap jadi lebih mudah dan seru. Pilih kelas tata guna lahan yang paling dibutuhkan, lalu buat peta sendiri dengan alat yang simpel—tanpa perlu kemampuan coding! Semua data berasal dari satelit terbuka yang siap digunakan siapa saja.",
+      "item2Caption": "Lihat Perubahan di Sekitar Kita",
+      "item2Description": "Membuat peta tata guna lahan hanyalah langkah awal. Dengan Epistem, Anda bisa memantau perubahan di lanskap Anda dari waktu ke waktu lewat data yang transparan dan metode yang konsisten. Perencanaan dan pemantauan pun jadi lebih mudah dan terarah.",
+      "item3Caption": "Akses data berkualitas tinggi",
+      "item3Description": "Peta yang berkualitas butuh data yang akurat. Dengan Epistem, Anda bisa pakai citra satelit dan data lapangan yang dikurasi oleh para ahli dan komunitas pemetaan serta pegiat solusi berbasis alam di berbagai daerah.",
+      "item4Caption": "Gabung ke Komunitas Terbuka",
+      "item4Description": "Platform Epistem dibangun bersama komunitas terbuka, transparan, dan dapat terus dikembangkan. Yuk, ikut menambah atau menyempurnakan dataset dan solusi pemetaan—karena bersama, kita bisa buat data peta makin mudah diakses semua orang.",
+      "lumaButtonCaption": "Buat Peta pakai Luma"
+    },
+    "Section2": {
+      "title": "Jelajahi Aplikasi",
+      "caption": "Temukan berbagai aplikasi Epistem untuk buat peta, memantau perubahan, mengakses data berkualitas tinggi, dan berkolaborasi bersama komunitas open-source.",
+      "item1Title": "Luma",
+      "item1Subtitle": "Pahami tren masa lalu, <br /> rencanakan langkah ke depan",
+      "item1Description": "Antarmuka intuitif tanpa coding untuk membuat, menganalisis, dan beraksi bersama menggunakan data tata guna lahan yang bisa disesuaikan kebutuhan.",
+      "item1ButtonCaption": "Coba Demo Luma",
+      "item2Title": "Rona",
+      "item2Subtitle": "Data bersama untuk manfaat bersama",
+      "item2Description": "Repositori partisipatif berskala besar yang menyimpan data referensi  untuk pemetaan tata guna dan tutupan lahan—dibangun dari semangat kolaborasi dan keterbukaan.",
+      "item2ButtonCaption": "Rona Segera Hadir"
+    },
+    "Section3": {
+      "title": "Pendekatan Kami",
+      "caption": "Di Epistem, kami percaya bahwa teknologi dan sains seharusnya mudah dipahami dan bisa dimanfaatkan oleh semua orang. Karena itu, kami menggabungkan ketelitian ilmiah dengan kemudahan penggunaan di lapangan agar pemetaan dan pemantauan jadi lebih mudah, cerdas, dan terbuka untuk siapa pun.",
+      "item1Title": "Kuat secara ilmiah",
+      "item1Description": "Kami berfokus pada solusi teknis yang kuat secara ilmiah, dengan data dan alat beresolusi tinggi yang andal, berbasis riset, dan siap digunakan langsung di lapangan.",
+      "item2Title": "Partisipatif dan kolaboratif",
+      "item2Description": "Solusi terbaik lahir dari kolaborasi. Bersama para penggerak perubahan, Epistem menghadirkan alat yang transparan, terbuka, dan mudah diakses—dibuat bersama, dipakai bersama, menciptakan rasa kepemilikan bersama dalam jangka panjang.",
+      "item3Title": "Teknologi canggih yang mudah diakses",
+      "item3Description": "Di balik layar, Epistem menangani proses coding dan pengolahan data yang kompleks, Anda tinggal langsung buat peta dan mendapatkan insight dengan mudah. Teknologi canggih pun jadi solusi nyata untuk mendukung aksi dan keputusan di lapangan."
+    },
+    "Section4": {
+      "title": "Tentang Kami",
+      "caption": "Kami mendukung para penggerak perubahan dengan solusi berbasis data untuk menjaga dan mengelola lahan secara berkelanjutan.",
+      "description": "Epistem adalah inisiatif kolaboratif yang menyatukan keahlian riset global dan pengetahuan lokal. Tujuannya sederhana: menjembatani sains, data, dan aksi nyata di lapangan lewat solusi berbasis alam. Diprakarsai oleh IIASA bersama CIFOR‑ICRAF dan WRI Indonesia, Epistem hadir untuk bantu siapa pun membuat keputusan yang lebih baik demi masa depan yang lestari.",
+      "readLess": "Baca Lebih Sedikit",
+      "readMore": "Baca Selengkapnya",
+      "item1Title": "Tim Kami",
+      "item1Description": "Epistem merupakan inisiatif kolektif yang dipimpin oleh International Institute for Applied Systems Analysis (<a1>IIASA</a1>), Center for International Forestry Research and World Agroforestry (<a2>CIFOR-ICRAF</a2>), dan World Resources Institute Indonesia (<a3>WRI Indonesia</a3>).",
+      "item2Description": "Inisiatif ini menyatukan keahlian riset global dengan pengetahuan lokal yang mendalam untuk menjembatani kesenjangan antara sains, data, dan penerapan nyata solusi berbasis alam (nature-based solutions/NbS). ",
+      "item3Title": "Tantangan",
+      "item3Description": "Banyak pelaku NbS masih kesulitan mendapatkan data yang andal dan mudah digunakan—apalagi data yang benar‑benar mencerminkan kondisi lanskap yang beragam. Padahal, keberhasilan NbS sangat bergantung pada data tata guna dan tutupan lahan (LULC) untuk merencanakan, menggerakkan sumber daya, dan memantau hasil di lapangan.",
+      "item4Description": "Data LULC yang tepat waktu, akurat, dan detail secara tematik bisa membuat perbedaan besar—meningkatkan efektivitas, akuntabilitas, dan dampak nyata dari setiap intervensi NbS.",
+      "item5Title": "Tujuan Kami",
+      "item5Description": "Epistem hadir untuk menghapus hambatan data dengan menyediakan informasi yang relevan secara tematik, beresolusi tinggi, dan mudah diakses, sehingga para pelaku NbS bisa lebih fokus mendorong perubahan nyata di lapangan.",
+      "item6Description": "Melalui pendekatan partisipatif, Epistem memberdayakan berbagai pemangku kepentingan di seluruh rantai pelaksanaan NbS agar dapat menggunakan data yang memperkuat perencanaan, pelaksanaan, dan pemantauan di Indonesia serta Asia Tenggara.",
+      "item7Title": "Dampak",
+      "item7Description": "Pemberdayaan data ini memungkinkan pengelolaan lahan yang lebih lestari dan adil, dengan berbagai manfaat bersama seperti:",
+      "item8Description": "<li>Adaptasi dan mitigasi perubahan iklim</li><li>Konservasi dan peningkatan keanekaragaman hayati</li><li>Peningkatan kesejahteraan masyarakat adat dan komunitas lokal</li>"
+    },
+    "ContactUs": {
+      "title": "Hubungi Kami",
+      "firstName": "Nama Depan",
+      "firstNamePlaceholder": "Nama Depan Anda",
+      "email": "Alamat Email",
+      "emailPlaceholder": "Alamat Email Anda",
+      "phoneNumber": "Nomor Telepon",
+      "phoneNumberPlaceholder": "+62",
+      "companyName": "Nama Perusahaan",
+      "companyNamePlaceholder": "Nama Perusahaan Anda",
+      "message": "Pesan",
+      "messagePlaceholder": "Pesan Anda",
+      "disclaimer": "Permintaan Anda akan dikirim secara aman dan tetap privat.",
+      "sendMessage": "Kirim Pesan Anda"
+    }
+  }
+}

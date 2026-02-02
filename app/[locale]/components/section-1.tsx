@@ -11,47 +11,46 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const demoArray = [
   {
-    image: "/images/demo-2.webp",
+    image: "/images/demo-1.gif",
     alt: "demo-1",
-    height: 1000,
-    width: 1000,
-    caption: "Create your own map",
-    description:
-      "With Epistem, mapping your landscape becomes simple and powerful. Focus on the land use and land cover classes that matter most and create your own maps with user-friendly tools (no coding needed!) from publicly available satellite data.",
+    height: 281,
+    width: 500,
+    captionKey: "item1Caption",
+    descriptionKey: "item1Description",
   },
   {
     image: "/images/demo-2.webp",
     alt: "demo-2",
-    height: 1000,
-    width: 1000,
-    caption: "Identify Changes in your landscape",
-    description:
-      "Creating your own land use and land cover maps is just the start. Discover how your landscape changes with Epistem’s tools, providing transparent data and a consistent approach for planning and monitoring sustainable interventions.",
+    height: 365,
+    width: 500,
+    captionKey: "item2Caption",
+    descriptionKey: "item2Description",
   },
   {
-    image: "/images/demo-2.webp",
+    image: "/images/demo-3.webp",
     alt: "demo-3",
-    height: 1000,
-    width: 1000,
-    caption: "Access high-quality data",
-    description:
-      "High-quality land use and land cover maps rely on robust training and validation data. Through Epistem, you can access expert-annotated satellite imagery and field datasets sourced from a community of mapping enthusiasts and nature-based solutions practitioners.",
+    height: 333,
+    width: 500,
+    captionKey: "item3Caption",
+    descriptionKey: "item3Description",
   },
   {
-    image: "/images/demo-2.webp",
+    image: "/images/demo-4.webp",
     alt: "demo-4",
-    height: 1000,
-    width: 1000,
-    caption: "Contribute to a growing open-source community",
-    description:
-      "Epistem platforms are built with transparent and scalable, open-source approaches. Contribute by adding or improving datasets and mapping solutions and benefit from the community’s collective power to overcome map data barriers.",
+    height: 486,
+    width: 500,
+    captionKey: "item4Caption",
+    descriptionKey: "item4Description",
   },
 ];
 
 export const Section1 = () => {
+  const t = useTranslations("HomePage.Section1");
+
   const [selected, setSelected] = useState(0);
 
   const titleComp = useRef(null);
@@ -76,7 +75,7 @@ export const Section1 = () => {
 
               // index !== selected && "brightness-50",
             )}
-            key={`demo-arr-${item.caption}`}
+            key={`demo-arr-${item.captionKey}`}
             // key={`demo-arr-${index}`}
             //
             // initial={{ x: "100%" }}
@@ -98,7 +97,7 @@ export const Section1 = () => {
             exit={{ opacity: 0, x: direction * -50 }}
           >
             <Image
-              key={`demo-arr-${item.caption}-img`}
+              key={`demo-arr-${item.captionKey}-img`}
               src={item.image}
               alt={item.alt}
               height={item.height}
@@ -112,7 +111,7 @@ export const Section1 = () => {
                 // "font-pjs text-lg font-bold leading-normal text-text-icons-on-color bg-transparent z-23 absolute bottom-4 left-4 w-full",
               )}
             >
-              {item.caption}
+              {t(item.captionKey)}
             </motion.p>
             <motion.div
               className="h-full w-full absolute top-0 z-22"
@@ -149,7 +148,7 @@ export const Section1 = () => {
           className="col-span-12 lg:col-span-5 flex flex-row items-center"
         >
           <p className="w-full font-pjs text-xl lg:text-6xl font-bold text-text-icons-base-main leading-normal text-center lg:text-left">
-            Overcoming Map Data Barriers
+            {t("title")}
           </p>
         </motion.div>
         <motion.div
@@ -164,8 +163,7 @@ export const Section1 = () => {
           className="max-lg:col-span-12 lg:col-start-9 lg:col-end-13 flex flex-row items-center justify-end"
         >
           <p className="w-full font-pjs text-xs lg:text-xl font-regular text-text-icons-base-main leading-normal text-center lg:text-justify">
-            Empower land use and land cover (LULC) planning and monitoring with
-            intuitive tools that turn complex data into actionable maps.
+            {t("caption")}
           </p>
         </motion.div>
       </div>
@@ -300,7 +298,7 @@ export const Section1 = () => {
                     "row-start-1 row-end-2 relative rounded-xl lg:rounded-[45px] overflow-hidden border-8 lg:border-16 border-black w-full",
                     // `col-start-${1 + 2 * index} col-end-${6 + 2 * index}`,
                     `lg:col-start-${1 + 2 * index} lg:col-end-${5 + 2 * index}`,
-
+                    "bg-black flex flex-col justify-center",
                     // index !== selected && "brightness-50",
                   )}
                   initial={{ opacity: 0 }}
@@ -327,7 +325,7 @@ export const Section1 = () => {
                     alt={item.alt}
                     height={item.height}
                     width={item.width}
-                    className={cn("aspect-square w-full z-21 min-w-25")}
+                    className={cn("w-full h-full object-cover z-21 min-w-25")}
                   />
                   <motion.p
                     layout
@@ -340,7 +338,7 @@ export const Section1 = () => {
                           : "left-2.5 lg:left-4 text-left w-1/2"),
                     )}
                   >
-                    {item.caption}
+                    {t(item.captionKey)}
                   </motion.p>
                   {isSelected && (
                     <motion.div
@@ -365,10 +363,10 @@ export const Section1 = () => {
           {/*  */}
           <div className="hidden lg:block space-y-4">
             <p className="text-center font-pjs text-xl lg:text-5xl font-bold text-text-icons-on-color leading-normal">
-              {demoArray[selected].caption}
+              {t(demoArray[selected].captionKey)}
             </p>
             <p className="text-center font-pjs text-xs lg:text-2xl font-medium text-text-icons-on-color leading-normal">
-              {demoArray[selected].description}
+              {t(demoArray[selected].descriptionKey)}
             </p>
           </div>
           <div className="block lg:hidden space-y-4">
@@ -389,7 +387,7 @@ export const Section1 = () => {
               </Button>
 
               <p className="text-center font-pjs text-xl font-bold text-text-icons-on-color leading-normal">
-                {demoArray[selected].caption}
+                {t(demoArray[selected].captionKey)}
               </p>
               <Button
                 disabled={selected === 3}
@@ -407,14 +405,14 @@ export const Section1 = () => {
               </Button>
             </div>
             <p className="text-center font-pjs text-xs font-medium text-text-icons-on-color leading-normal">
-              {demoArray[selected].description}
+              {t(demoArray[selected].descriptionKey)}
             </p>
           </div>
         </div>
         <div className="w-full flex flex-col items-center">
           <Button className="px-5 py-1 lg:py-3 h-auto rounded-md">
             <p className="font-aptos text-[13px] lg:text-lg font-semibold lg:font-bold text-text-icons-on-color">
-              Generate Map with Luma
+              {t("lumaButtonCaption")}
             </p>
           </Button>
         </div>

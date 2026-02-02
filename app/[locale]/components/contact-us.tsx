@@ -29,6 +29,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 
 const formSchema = z.object({
   name: z
@@ -56,6 +57,8 @@ const defaultValues = {
 };
 
 export const ContactUs = () => {
+  const t = useTranslations("HomePage.ContactUs");
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues,
@@ -82,7 +85,7 @@ export const ContactUs = () => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="w-full relative py-6 max-lg:pb-3 lg:py-10">
+      <div className="w-full relative py-6 max-lg:pt-15 max-lg:pb-10 lg:py-10">
         <motion.p
           ref={titleComp}
           initial={{ y: "100%", opacity: 0 }}
@@ -95,9 +98,9 @@ export const ContactUs = () => {
           }}
           className="font-pjs font-bold text-xl lg:text-6xl text-text-icons-base-main text-center lg:text-left"
         >
-          Contact Us
+          {t("title")}
         </motion.p>
-        <div className="rounded-2xl bg-primary-second w-full p-2 max-lg:px-2 lg:p-8 mt-3 lg:mt-5">
+        <div className="rounded-2xl bg-primary-second w-full p-2 max-lg:pb-3 max-lg:px-2 lg:p-8 mt-3 lg:mt-5">
           <form className="" onSubmit={form.handleSubmit(onSubmit)}>
             <FieldSet className="grid grid-cols-12 gap-y-2.5 lg:gap-y-6 lg:gap-x-6">
               {/* <FieldGroup> */}
@@ -112,7 +115,7 @@ export const ContactUs = () => {
                   >
                     <FieldLabel className="max-lg:leading-6" htmlFor="name">
                       <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                        First Name
+                        {t("firstName")}
                       </p>
                     </FieldLabel>
                     <Input
@@ -121,7 +124,7 @@ export const ContactUs = () => {
                       className="bg-white text-xs lg:text-[15px]"
                       id="name"
                       autoComplete="off"
-                      placeholder="Your First Name"
+                      placeholder={t("firstNamePlaceholder")}
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -140,7 +143,7 @@ export const ContactUs = () => {
                   >
                     <FieldLabel className="max-lg:leading-6" htmlFor="email">
                       <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                        Email
+                        {t("email")}
                       </p>
                     </FieldLabel>
                     <Input
@@ -149,7 +152,7 @@ export const ContactUs = () => {
                       className="bg-white text-xs lg:text-[15px]"
                       id="email"
                       autoComplete="off"
-                      placeholder="Email"
+                      placeholder={t("emailPlaceholder")}
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -171,7 +174,7 @@ export const ContactUs = () => {
                       htmlFor="phone_number"
                     >
                       <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                        Phone Number
+                        {t("phoneNumber")}
                       </p>
                     </FieldLabel>
                     <Input
@@ -181,7 +184,7 @@ export const ContactUs = () => {
                       id="phone_number"
                       autoComplete="off"
                       type="tel"
-                      placeholder="+000"
+                      placeholder={t("phoneNumberPlaceholder")}
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -203,7 +206,7 @@ export const ContactUs = () => {
                       htmlFor="company_name"
                     >
                       <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                        Company Name
+                        {t("companyName")}
                       </p>
                     </FieldLabel>
                     <Input
@@ -212,7 +215,7 @@ export const ContactUs = () => {
                       className="bg-white text-xs lg:text-[15px]"
                       id="company_name"
                       autoComplete="off"
-                      placeholder="Company Name"
+                      placeholder={t("companyNamePlaceholder")}
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -235,7 +238,7 @@ export const ContactUs = () => {
                         htmlFor="company_name"
                       >
                         <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                          Company Name
+                          {t("companyName")}
                         </p>
                       </FieldLabel>
                       <Input
@@ -244,7 +247,7 @@ export const ContactUs = () => {
                         className="bg-white text-xs lg:text-[15px]"
                         id="company_name"
                         autoComplete="off"
-                        placeholder="Company Name"
+                        placeholder={t("companyNamePlaceholder")}
                       />
                       {fieldState.invalid && (
                         <FieldError errors={[fieldState.error]} />
@@ -253,11 +256,11 @@ export const ContactUs = () => {
                   )}
                 />
                 <p className="font-inter text-sm font-medium text-text-icons-base-second">
-                  Your request will be sent securely and remain private.
+                  {t("disclaimer")}
                 </p>
                 <Button variant={"primary"} className="h-auto py-3 px-5 w-fit">
                   <p className="font-aptos text-xs lg:text-[15px] font-semibold lg:font-bold text-text-icons-on-color">
-                    Send your message
+                    {t("sendMessage")}
                   </p>
                 </Button>
               </div>
@@ -275,7 +278,7 @@ export const ContactUs = () => {
                       htmlFor="message-contac"
                     >
                       <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                        Message
+                        {t("message")}
                       </p>
                     </FieldLabel>
 
@@ -285,7 +288,7 @@ export const ContactUs = () => {
                       className="bg-white h-full text-xs lg:text-[15px]"
                       id="message-contac"
                       autoComplete="off"
-                      placeholder="Message"
+                      placeholder={t("messagePlaceholder")}
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -296,7 +299,7 @@ export const ContactUs = () => {
               <div className="lg:hidden col-span-12 flex flex-row justify-between gap-y-6 mt-2">
                 <div className="w-31">
                   <p className="font-inter text-[9px] font-medium text-text-icons-base-second max-w-40 col-span-3">
-                    Your request will be sent securely and remain private.
+                    {t("disclaimer")}
                   </p>
                 </div>
                 <Button
@@ -304,7 +307,7 @@ export const ContactUs = () => {
                   className="h-auto py-1 px-2 col-span-9"
                 >
                   <p className="font-aptos text-[13px] lg:text-lg font-semibold lg:font-bold text-text-icons-on-color">
-                    Send your message
+                    {t("sendMessage")}
                   </p>
                 </Button>
               </div>

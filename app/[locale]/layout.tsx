@@ -4,6 +4,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { NavBar } from "./components/nav-bar";
 import { Footer } from "./components/footer";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,62 +36,62 @@ const pjs = Plus_Jakarta_Sans({
 const aptos = localFont({
   src: [
     {
-      path: "../public/fonts/Aptos-Light.ttf",
+      path: "../../public/fonts/Aptos-Light.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../public/fonts/Aptos.ttf",
+      path: "../../public/fonts/Aptos.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/Aptos-SemiBold.ttf",
+      path: "../../public/fonts/Aptos-SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../public/fonts/Aptos-Bold.ttf",
+      path: "../../public/fonts/Aptos-Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../public/fonts/Aptos-ExtraBold.ttf",
+      path: "../../public/fonts/Aptos-ExtraBold.ttf",
       weight: "800",
       style: "normal",
     },
     {
-      path: "../public/fonts/Aptos-Black.ttf",
+      path: "../../public/fonts/Aptos-Black.ttf",
       weight: "900",
       style: "normal",
     },
     {
-      path: "../public/fonts/Aptos-Light-Italic.ttf",
+      path: "../../public/fonts/Aptos-Light-Italic.ttf",
       weight: "300",
       style: "italic",
     },
     {
-      path: "../public/fonts/Aptos-Italic.ttf",
+      path: "../../public/fonts/Aptos-Italic.ttf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../public/fonts/Aptos-SemiBold-Italic.ttf",
+      path: "../../public/fonts/Aptos-SemiBold-Italic.ttf",
       weight: "600",
       style: "italic",
     },
     {
-      path: "../public/fonts/Aptos-Bold-Italic.ttf",
+      path: "../../public/fonts/Aptos-Bold-Italic.ttf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../public/fonts/Aptos-ExtraBold-Italic.ttf",
+      path: "../../public/fonts/Aptos-ExtraBold-Italic.ttf",
       weight: "800",
       style: "italic",
     },
     {
-      path: "../public/fonts/Aptos-Black-Italic.ttf",
+      path: "../../public/fonts/Aptos-Black-Italic.ttf",
       weight: "900",
       style: "italic",
     },
@@ -96,19 +104,23 @@ export const metadata: Metadata = {
   description:
     "Evolving Participatory Information System for Nature-based Climate Solutions. Data Empowerment: The Epistem initiative aims to develop an open-source landscape monitoring technology that can address multiple thematic requirements of diverse actors and stakeholders of nature-based climate solutions.",
 };
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+export default async function TestLayout({ children, params }: Props) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${pjs.variable} ${aptos.variable} antialiased`}
       >
-        <NavBar />
-        {children}
-        <Footer />
+        <NextIntlClientProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
