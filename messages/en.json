@@ -61,8 +61,8 @@
     },
     "ContactUs": {
       "title": "Contact Us",
-      "firstName": "First Name",
-      "firstNamePlaceholder": "Your First Name",
+      "firstName": "Full Name",
+      "firstNamePlaceholder": "Your Full Name",
       "email": "Email",
       "emailPlaceholder": "Email",
       "phoneNumber": "Phone Number",

@@ -27,7 +27,7 @@ export const Hero = () => {
               visualDuration: 1,
             },
           }}
-          className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal lg:leading-25"
+          className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal lg:leading-25 text-center"
         >
           {t("title1")}{" "}
         </motion.p>
@@ -46,7 +46,7 @@ export const Hero = () => {
               delay: 0,
             },
           }}
-          className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal mb-3"
+          className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal mb-3 text-center"
         >
           {t("title2")}
         </motion.p>
