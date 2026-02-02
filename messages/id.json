@@ -3,7 +3,7 @@
     "Hero": {
       "title1": "Bersama,",
       "title2": "kita petakan perubahan",
-      "caption": "Meningkatkan solusi berbasis alam melalui <br /> platform pemetaan partisipatif tutupan dan penggunaan lahan."
+      "caption": "Meningkatkan solusi berbasis alam melalui <br /> platform pemetaan partisipatif tutupan dan penggunaan lahan"
     },
     "Section1": {
       "title": "Data Peta: Dari dan untuk kita bersama",
@@ -32,7 +32,7 @@
     },
     "Section3": {
       "title": "Pendekatan Kami",
-      "caption": "Kami yakin teknologi dan sains harus mudah dipahami semua orang. Epistem menyatukan ketelitian ilmiah dengan alat praktis lapangan—supaya pemetaan dan pemantauan jadi lebih mudah, cerdas, dan terbuka buat semua.",
+      "caption": "Epistem menyatukan sains tepercaya dengan alat praktis lapangan—memudahkan pemetaan dan pemantauan yang cerdas dan inklusif untuk semua.",
       "item1Title": "Kuat secara ilmiah",
       "item1Description": "Kami berfokus pada solusi teknis yang kuat secara ilmiah, dengan data dan alat beresolusi tinggi yang andal, berbasis riset, dan siap digunakan langsung di lapangan.",
       "item2Title": "Partisipatif dan kolaboratif",
@@ -71,7 +71,7 @@
       "companyNamePlaceholder": "Nama Perusahaan Anda",
       "message": "Pesan",
       "messagePlaceholder": "Pesan Anda",
-      "disclaimer": "Permintaan Anda akan dikirim secara aman dan tetap privat.",
+      "disclaimer": "Pesan Anda akan dikirim dengan aman dan tetap rahasia.",
       "sendMessage": "Kirim Pesan Anda"
     }
   }
