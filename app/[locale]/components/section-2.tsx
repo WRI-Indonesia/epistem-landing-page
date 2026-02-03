@@ -176,11 +176,11 @@ export const Section2 = () => {
               <p
                 className="font-pjs text-xl lg:text-4xl font-bold text-text-icons-on-color leading-normal"
                 dangerouslySetInnerHTML={{
-                  __html: t("item1Subtitle"),
+                  __html: t("item2Subtitle"),
                 }}
               ></p>
               <p className="font-pjs text-xs lg:text-2xl font-regular text-text-icons-on-color leading-normal">
-                {t("item1Description")}
+                {t("item2Description")}
               </p>
             </div>
             <div className="">
