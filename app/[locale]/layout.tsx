@@ -8,6 +8,8 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -122,6 +124,7 @@ export default async function TestLayout({ children, params }: Props) {
           <Footer />
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId={process.env.GA_ID || "error GA"} />
     </html>
   );
 }
