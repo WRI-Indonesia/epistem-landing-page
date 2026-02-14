@@ -14,6 +14,7 @@ import { motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
 import { is } from "zod/locales";
 import { useTranslations } from "next-intl";
+import { SectionHead } from "./section-head";
 
 const featureArray = [
   {
@@ -49,8 +50,8 @@ export const Section3 = () => {
   const approachIsInViewMobile = useInView(approachCompMobile, { once: true });
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="grid grid-cols-12 w-full pt-15 lg:pt-12 pb-10 lg:pb-0 gap-y-3">
+    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 lg:my-20 max-lg:mt-8">
+      {/* <div className="grid grid-cols-12 w-full pt-15 lg:pt-12 pb-10 lg:pb-0 gap-y-3">
         <motion.div
           ref={titleComp}
           initial={{ y: "100%" }}
@@ -80,11 +81,12 @@ export const Section3 = () => {
             {t("caption")}
           </p>
         </motion.div>
-      </div>
+      </div> */}
+      <SectionHead title={t("title")} caption={t("caption")} />
       <div className="hidden lg:block w-full relative">
         <div
           ref={approachComp}
-          className="grid grid-cols-12 py-20 gap-y-4 gap-x-4 h-fit"
+          className="grid grid-cols-12 pt-12 gap-y-4 gap-x-4 h-fit"
         >
           {featureArray.map((item, index) => {
             const isSelected = index === selected;
@@ -104,16 +106,17 @@ export const Section3 = () => {
                   },
                 }}
                 key={`approach-features-${index}`}
-                className={`col-span-4 ${item.background} rounded-2xl overflow-hidden h-fit`}
+                className={`col-span-4 ${item.background} rounded-[20px] overflow-hidden h-fit`}
               >
                 <div
                   className={cn(
-                    "flex flex-col items-center justify-between pt-4 h-fit w-full",
+                    "flex flex-col items-center justify-between pt-4 px-0 h-fit w-full",
                     !isSelected && "aspect-square",
                   )}
                 >
                   <div className="flex flex-col items-center">
-                    <p className="px-6 font-pjs text-[28px] font-extrabold text-text-icons-on-color text-center min-h-22">
+                    {/* <p className="px-6 font-lp-headline-s-bold text-text-icons-on-color text-center min-h-22"> */}
+                    <p className="px-6 font-lp-headline-s-bold text-text-icons-on-color text-center min-h-22">
                       {t(item.titleKey)}
                     </p>
                     <div className="">
@@ -131,14 +134,14 @@ export const Section3 = () => {
                     <motion.p
                       layout="size"
                       className={cn(
-                        "px-6 font-pjs text-2xl font-medium text-text-icons-on-color mt-0 text-ellipsis",
+                        "px-6 font-lp-text-l-semibold text-text-icons-on-color mt-0 text-ellipsis",
                         // index !== selected && "line-clamp-3",
                       )}
                       animate={{
                         display: isSelected ? "" : "-webkit-box",
                         webkitLineClamp: isSelected ? "unset" : 3,
                         overflow: isSelected ? "" : "hidden",
-                        maxHeight: isSelected ? "400px" : "70px",
+                        maxHeight: isSelected ? "400px" : "50px",
                         transition: {
                           bounce: 0,
                         },
@@ -147,7 +150,7 @@ export const Section3 = () => {
                       {t(item.descriptionKey)}
                     </motion.p>
                     <Button
-                      className={`text-gray-100 py-4 w-full mt-2 rounded-t-none rounded-b-2xl ${item.background} hover:${item.background} hover:brightness-110`}
+                      className={`text-gray-100 py-4 w-full mt-2 rounded-t-none rounded-b-2xl ${item.background} hover:${item.background} hover:brightness-110 h-fit`}
                       onClick={() => {
                         if (isSelected) {
                           setSelected(-1);
@@ -172,7 +175,7 @@ export const Section3 = () => {
           })}
         </div>
       </div>
-      <div className="block lg:hidden w-full relative">
+      <div className="block lg:hidden w-full relative mt-10">
         <div
           ref={approachCompMobile}
           className="grid grid-cols-12 py-0 max-lg:gap-y-2 gap-x-4 h-fit"
@@ -210,9 +213,11 @@ export const Section3 = () => {
                     className="aspect-square size-17"
                   />
                   <div className="flex flex-col gap-y-6 items-start">
+                    {/* WIP NO DESIGN SYSTEM */}
                     <p className="font-pjs text-sm lg:text-[28px] font-extrabold text-text-icons-on-color text-left">
                       {t(item.titleKey)}
                     </p>
+                    {/* WIP NO DESIGN SYSTEM */}
                     <motion.p
                       layout="size"
                       className={cn(

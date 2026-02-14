@@ -3,7 +3,7 @@
     "Hero": {
       "title1": "Bersama,",
       "title2": "kita petakan perubahan",
-      "caption": "Meningkatkan solusi berbasis alam melalui <br /> platform pemetaan partisipatif tutupan dan penggunaan lahan"
+      "caption": "Meningkatkan solusi berbasis alam melalui <br></br> platform pemetaan partisipatif tutupan dan penggunaan lahan"
     },
     "Section1": {
       "title": "Data Peta: Dari dan untuk kita bersama",
@@ -22,7 +22,7 @@
       "title": "Jelajahi Aplikasi",
       "caption": "Temukan berbagai aplikasi Epistem untuk buat peta, memantau perubahan, mengakses data berkualitas tinggi, dan berkolaborasi bersama komunitas open-source.",
       "item1Title": "Luma",
-      "item1Subtitle": "Pahami tren masa lalu, <br /> rencanakan langkah ke depan",
+      "item1Subtitle": "Pahami tren masa lalu, <br></br> rencanakan langkah ke depan",
       "item1Description": "Antarmuka intuitif tanpa coding untuk membuat, menganalisis, dan beraksi bersama menggunakan data tata guna lahan yang bisa disesuaikan kebutuhan.",
       "item1ButtonCaption": "Coba Demo Luma",
       "item2Title": "Rona",
@@ -50,7 +50,7 @@
       "item1Description": "Epistem merupakan inisiatif kolektif yang dipimpin oleh International Institute for Applied Systems Analysis (<a1>IIASA</a1>), Center for International Forestry Research and World Agroforestry (<a2>CIFOR-ICRAF</a2>), dan World Resources Institute Indonesia (<a3>WRI Indonesia</a3>).",
       "item2Description": "Inisiatif ini menyatukan keahlian riset global dengan pengetahuan lokal yang mendalam untuk menjembatani kesenjangan antara sains, data, dan penerapan nyata solusi berbasis alam (nature-based solutions/NbS). ",
       "item3Title": "Tantangan",
-      "item3Description": "Banyak pelaku NbS masih kesulitan mendapatkan data yang andal dan mudah digunakan—apalagi data yang benar‑benar mencerminkan kondisi lanskap yang beragam. Padahal, keberhasilan NbS sangat bergantung pada data tata guna dan tutupan lahan (LULC) untuk merencanakan, menggerakkan sumber daya, dan memantau hasil di lapangan.",
+      "item3Description": "Banyak pelaku NbS masih kesulitan mendapatkan data yang andal dan mudah digunakan—apalagi data yang benar-benar mencerminkan kondisi lanskap yang beragam. Padahal, keberhasilan NbS sangat bergantung pada data tata guna dan tutupan lahan (LULC) untuk merencanakan, menggerakkan sumber daya, dan memantau hasil di lapangan.",
       "item4Description": "Data LULC yang tepat waktu, akurat, dan detail secara tematik bisa membuat perbedaan besar—meningkatkan efektivitas, akuntabilitas, dan dampak nyata dari setiap intervensi NbS.",
       "item5Title": "Tujuan Kami",
       "item5Description": "Epistem hadir untuk menghapus hambatan data dengan menyediakan informasi yang relevan secara tematik, beresolusi tinggi, dan mudah diakses, sehingga para pelaku NbS bisa lebih fokus mendorong perubahan nyata di lapangan.",

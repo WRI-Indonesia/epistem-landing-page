@@ -12,12 +12,13 @@ import { useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { SectionHead } from "./section-head";
 
 const demoArray = [
   {
-    image: "/images/demo-1.gif",
+    image: "/images/demo-11.gif",
     alt: "demo-1",
-    height: 281,
+    height: 500,
     width: 500,
     captionKey: "item1Caption",
     descriptionKey: "item1Description",
@@ -89,7 +90,7 @@ export const Section1 = () => {
               x: 0,
               transition: {
                 // delay: 0.2,
-                type: "spring",
+                // type: "spring",
                 visualDuration: 0.3,
                 bounce: 0.4,
               },
@@ -134,8 +135,8 @@ export const Section1 = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="grid grid-cols-12 w-full pt-3 lg:pt-12 pb-3 lg:pb-6 gap-y-3">
+    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 my-15 max-lg:mb-0">
+      {/* <div className="grid grid-cols-12 w-full pt-3 lg:pt-12 pb-3 lg:pb-6 gap-y-3">
         <motion.div
           ref={titleComp}
           initial={{ y: "100%" }}
@@ -166,9 +167,11 @@ export const Section1 = () => {
             {t("caption")}
           </p>
         </motion.div>
-      </div>
+      </div> */}
+      <SectionHead title={t("title")} caption={t("caption")} />
       <div
-        className="rounded-md lg:rounded-2xl px-6 lg:px-25 py-9 lg:py-16 space-y-5 lg:space-y-16 max-lg:mb-2 w-full"
+        // className="rounded-md lg:rounded-2xl px-6 lg:px-25 py-9 lg:py-16 space-y-5 lg:space-y-16 max-lg:mb-2 w-full"
+        className="rounded-md lg:rounded-2xl p-0 lg:p-16 space-y-5 lg:space-y-12 max-lg:mb-2 max-lg:pb-9.5 w-full mt-3 lg:mt-12"
         style={{
           background: "linear-gradient(120deg, #CC4778 41.94%, #A62555 89.53%)",
         }}
@@ -207,7 +210,7 @@ export const Section1 = () => {
                 visualDuration: 2,
               },
             }}
-            className="lg:hidden max-lg:px-5.5"
+            className="lg:hidden px-11.5 pt-9"
           >
             <div>{selectedComp()}</div>
             {/* {demoArray.map((item, index) => {
@@ -325,12 +328,15 @@ export const Section1 = () => {
                     alt={item.alt}
                     height={item.height}
                     width={item.width}
-                    className={cn("w-full h-full object-cover z-21 min-w-25")}
+                    className={cn(
+                      "w-full h-full object-cover object-center z-21 min-w-25",
+                    )}
                   />
                   <motion.p
                     layout
                     className={cn(
-                      "font-pjs text-[6px] lg:text-lg font-bold leading-normal text-text-icons-on-color bg-transparent z-23 absolute bottom-2.5 lg:bottom-4 left-2.5 lg:left-4 w-[90%]",
+                      "font-lp-text-xl-bold text-text-icons-on-color bg-transparent z-23 absolute bottom-2.5 lg:bottom-4 left-2.5 lg:left-4 w-[90%]",
+                      // "font-pjs text-[6px] lg:text-lg font-bold leading-normal text-text-icons-on-color bg-transparent z-23 absolute bottom-2.5 lg:bottom-4 left-2.5 lg:left-4 w-[90%]",
                       // "font-pjs text-lg font-bold leading-normal text-text-icons-on-color bg-transparent z-23 absolute bottom-4 left-4 w-full",
                       !isSelected &&
                         (index > selected
@@ -362,15 +368,15 @@ export const Section1 = () => {
           </motion.div>
           {/*  */}
           <div className="hidden lg:block space-y-4">
-            <p className="text-center font-pjs text-xl lg:text-5xl font-bold text-text-icons-on-color leading-normal">
+            <p className="text-center font-lp-headline-xl-bold text-primary-red-pink-light">
               {t(demoArray[selected].captionKey)}
             </p>
-            <p className="text-center font-pjs text-xs lg:text-2xl font-medium text-text-icons-on-color leading-normal">
+            <p className="text-center font-lp-headline-xs-medium text-text-icons-on-color">
               {t(demoArray[selected].descriptionKey)}
             </p>
           </div>
           <div className="block lg:hidden space-y-4">
-            <div className="flex flex-row justify-between items-center gap-x-2 max-lg:px-5.5">
+            <div className="flex flex-row justify-between items-center gap-x-2 px-10">
               <Button
                 disabled={selected === 0}
                 className="rounded-full p-2 aspect-square h-6"
@@ -386,7 +392,7 @@ export const Section1 = () => {
                 <ChevronLeftIcon className="size-3.5" />
               </Button>
 
-              <p className="text-center font-pjs text-xl font-bold text-text-icons-on-color leading-normal">
+              <p className="text-center font-lp-headline-xxs-bold text-text-icons-on-color">
                 {t(demoArray[selected].captionKey)}
               </p>
               <Button
@@ -404,7 +410,8 @@ export const Section1 = () => {
                 <ChevronRightIcon className="size-3.5" />
               </Button>
             </div>
-            <p className="text-center font-pjs text-xs font-medium text-text-icons-on-color leading-normal">
+            {/* WIP NO DESIGN SYSTEM YET */}
+            <p className="text-center font-pjs text-xs font-medium text-text-icons-on-color leading-normal px-6">
               {t(demoArray[selected].descriptionKey)}
             </p>
           </div>

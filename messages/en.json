@@ -3,7 +3,8 @@
     "Hero": {
       "title1": "Together,",
       "title2": "we map change",
-      "caption": "Scaling nature-based solutions with participatory <br /> land use and cover mapping platform"
+      "caption": "Scaling nature-based solutions with participatory <br></br> land use and cover mapping platform",
+      "caption-br": "Scaling nature-based solutions with participatory <br></br> land use and cover mapping platform"
     },
     "Section1": {
       "title": "Overcoming Map Data Barriers",
@@ -22,12 +23,12 @@
       "title": "Browse Application",
       "caption": "Explore Epistem applications to create maps, track changes, access high-quality data, and collaborate with an open-source community.",
       "item1Title": "Luma",
-      "item1Subtitle": "See past trends, <br /> plan future action",
-      "item1Description": "Intuitive no-coding interface for creating, analysing, and collectively acting of customizable land use and land cover map data.",
+      "item1Subtitle": "See past trends, <br></br> plan future action",
+      "item1Description": "Intuitive no-coding interface for creating, analysing, and collectively acting of <br></br> customizable land use and land cover map data.",
       "item1ButtonCaption": "Try Luma Mockup",
       "item2Title": "Rona",
-      "item2Subtitle": "Shared data for shared benefits",
-      "item2Description": "Scalable repository of participatory land use and land cover mapping.",
+      "item2Subtitle": "Shared data for <br></br> shared benefits",
+      "item2Description": "Scalable repository of participatory land use <br></br> and land cover mapping.",
       "item2ButtonCaption": "Rona Coming Soon"
     },
     "Section3": {
@@ -42,7 +43,7 @@
     },
     "Section4": {
       "title": "About Us",
-      "caption": "Supporting change-makers with data-driven solutions built for their sustainable restoration goals.",
+      "caption": "“Supporting change-makers with data-driven solutions built for their sustainable restoration goals”",
       "description": "Epistem is a consortium-led initiative combining global research expertise with local knowledge to bridge the gap between science, data, and implementation of nature-based solutions. Convened by IIASA, in partnership with CIFOR-ICRAF and WRI Indonesia, Epistem delivers practical tools for real-world impact.",
       "readLess": "Read Less",
       "readMore": "Read More",

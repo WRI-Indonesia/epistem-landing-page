@@ -29,9 +29,9 @@ export const Section4 = () => {
   const textIsInView = useInView(textComp, { once: true });
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
+    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-8 lg:my-20">
       <div className="w-full relative">
-        <div className="grid grid-cols-4 grid-rows-1 lg:grid-rows-1 lg:grid-cols-12 py-8 max-lg:pt-15 lg:py-20 gap-y-9 gap-x-9 h-fit relative max-lg:pb-0">
+        <div className="grid grid-cols-4 grid-rows-1 lg:grid-rows-1 lg:grid-cols-12 py-0 max-lg:pt-0 lg:py-0 gap-y-9 gap-x-9 h-fit relative max-lg:pb-0">
           <motion.div
             ref={imageComp}
             initial={{ x: "0%", opacity: 0 }}
@@ -40,7 +40,7 @@ export const Section4 = () => {
               opacity: imageIsInView ? 1 : 0,
               transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
             }}
-            className="max-lg:hidden col-span-4 relative z-11"
+            className="max-lg:hidden col-span-5 aspect-square relative z-11"
           >
             <div
               className={cn(
@@ -68,16 +68,18 @@ export const Section4 = () => {
               opacity: textIsInView ? 1 : 0,
               transition: { bounce: 0, visualDuration: 2, delay: 0.2 },
             }}
-            className="col-span-4 lg:col-span-8 flex flex-col justify-between relative z-10 max-lg:space-y-2"
+            className="col-span-4 lg:col-span-7 flex flex-col relative z-10 max-lg:space-y-2 space-y-6"
           >
-            <p className="font-pjs font-bold text-xl lg:text-6xl text-text-icons-base-main text-center lg:text-left">
+            <p className="font-lp-headline-xxs-bold lg:font-lp-headline-xl-bold text-text-icons-base-main text-center lg:text-left">
               {t("title")}
             </p>
-            <div className="space-y-2 lg:space-y-12 mt-0 lg:mt-45">
-              <p className="text-[13px] lg:text-5xl font-pjs font-bold lg:font-semibold text-text-icons-base-main text-center lg:text-left leading-normal">
+            <div className="space-y-2 lg:space-y-6 mt-0 lg:mt-0">
+              {/* WIP NO MOBILE DESIGN SYSTEM */}
+              <p className="max-lg:font-pjs max-lg:text-[13px] max-lg:font-bold lg:font-lp-headline-xl-bold text-primary-red-pink-dark-hover text-center lg:text-left">
                 {t("caption")}
               </p>
-              <p className="font-pjs text-[11px] lg:text-2xl font-regular text-text-icons-base-main text-center lg:text-left">
+              {/* WIP NO MOBILE DESIGN SYSTEM */}
+              <p className="max-lg:font-pjs max-lg:text-[11px] max-lg:font-normal lg:font-lp-text-xl-regular text-text-icons-base-main text-justify lg:text-left">
                 {t("description")}
               </p>
               <div className="flex flex-row items-center max-lg:justify-center">
@@ -100,7 +102,7 @@ export const Section4 = () => {
                 </Button>
               </div>
               {isOpen && (
-                <div className="space-y-2 lg:space-y-8 font-pjs text-[11px] lg:text-2xl font-medium text-text-icons-base-main max-lg:text-justify">
+                <div className="space-y-2 lg:space-y-8 max-lg:font-pjs max-lg:text-[11px] max-lg:font-normal lg:font-lp-text-xl-regular text-text-icons-base-main max-lg:text-justify">
                   <div className="">
                     <p className="text-primary-pink max-lg:text-center">
                       {t("item1Title")}

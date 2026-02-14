@@ -6,9 +6,9 @@ export const Hero = () => {
   const t = useTranslations("HomePage.Hero");
 
   return (
-    <main className="flex lg:min-h-screen w-full flex-col items-center justify-center">
+    <main className="flex lg:min-h-screen w-full flex-col items-center justify-center px-0">
       <div
-        className="lg:h-screen w-full flex flex-col items-center justify-center px-4 max-lg:pt-45"
+        className="lg:h-screen w-full flex flex-col items-center justify-center px-3 max-lg:pt-45 space-y-0"
         style={{
           background: "linear-gradient(180deg, #FFE9F1 0%, #FFF 100%)",
         }}
@@ -27,7 +27,7 @@ export const Hero = () => {
               visualDuration: 1,
             },
           }}
-          className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal lg:leading-25 text-center"
+          className="font-lp-headline-l-semibold lg:font-lp-display-l-semibold text-primary-pink text-center"
         >
           {t("title1")}{" "}
         </motion.p>
@@ -46,7 +46,7 @@ export const Hero = () => {
               delay: 0,
             },
           }}
-          className="font-pjs text-4xl lg:text-8xl font-semibold text-primary-pink leading-normal mb-3 text-center"
+          className="font-lp-headline-l-semibold lg:font-lp-display-l-semibold text-primary-pink text-center"
         >
           {t("title2")}
         </motion.p>
@@ -65,12 +65,12 @@ export const Hero = () => {
               delay: 1,
             },
           }}
-          className="font-pjs text-sm lg:text-2xl font-semibold text-primary-pink mb-15 lg:mb-8 text-center leading-normal"
-          dangerouslySetInnerHTML={{ __html: t("caption") }}
+          className="font-lp-text-xs-semibold lg:font-lp-headline-xs-semibold text-primary-pink text-center mb-15"
+          // dangerouslySetInnerHTML={{ __html: t("caption") }}
         >
-          {/* Scaling nature-based solutions with participatory
-          <br />
-          land use and cover mapping platform */}
+          {t.rich("caption", {
+            br: () => <br />,
+          })}
         </motion.p>
         {/* <motion.div
           initial={{

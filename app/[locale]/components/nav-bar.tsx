@@ -33,8 +33,8 @@ export const NavBar = () => {
     <div
       className={cn(
         "fixed w-full block left-1/2 -translate-x-1/2 z-50",
-        // "fixed top-3 px-3 lg:px-3 w-full block max-w-360 left-1/2 -translate-x-1/2 z-50",
-        // "fixed top-3 px-3 w-full hidden lg:block max-w-360 left-1/2 -translate-x-1/2 z-50",
+        // "fixed top-3 px-3 lg:px-3 w-full block max-w-337.5 left-1/2 -translate-x-1/2 z-50",
+        // "fixed top-3 px-3 w-full hidden lg:block max-w-337.5 left-1/2 -translate-x-1/2 z-50",
         {},
       )}
       onMouseOut={handleMouseOut}

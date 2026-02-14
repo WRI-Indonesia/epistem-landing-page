@@ -59,8 +59,15 @@
 
   --color-primary-pink-light-hover: rgba(247, 227, 235, 1);
   --color-primary-pink-dark-hover: rgba(122, 43, 72, 1);
+
+  --color-primary-red-pink-dark-hover: rgba(122, 43, 72, 1);
+
+  --color-primary-red-pink-light: rgba(250, 237, 242, 1);
   --color-primary-red-pink-light-active: rgba(239, 198, 213, 1);
+
   --color-muted: rgba(157, 157, 157, 1);
+
+  --color-gray-700: #323539;
 }
 
 :root {
@@ -146,3 +153,77 @@
 }
 
 /* ---break--- */
+
+@layer utilities {
+  .font-lp-display-l-semibold {
+    @apply font-pjs text-[64px] font-semibold leading-17 tracking-[-1.28px];
+  }
+
+  .font-lp-headline-xl-bold {
+    @apply font-pjs text-[40px] font-bold leading-12 tracking-[-0.8px];
+  }
+
+  .font-lp-headline-l-semibold {
+    @apply font-pjs text-4xl font-semibold leading-11 tracking-[-0.72px];
+  }
+
+  .font-lp-headline-s-bold {
+    @apply font-pjs text-[28px] font-bold leading-9.5 tracking-[-0.42px];
+  }
+
+  .font-lp-headline-xs-semibold {
+    @apply font-pjs text-2xl font-semibold leading-7.5 tracking-[-0.24px];
+  }
+
+  .font-lp-headline-xs-medium {
+    @apply font-pjs text-2xl font-medium leading-7.5 tracking-[-0.24px];
+  }
+
+  .font-lp-headline-xxs-bold {
+    @apply font-pjs text-xl font-bold leading-7 tracking-[-0.2px];
+  }
+
+  .font-lp-text-xl-regular {
+    @apply font-pjs text-lg font-normal leading-6.5;
+  }
+
+  .font-lp-text-xl-bold {
+    @apply font-pjs text-lg font-bold leading-6.5;
+  }
+
+  .font-lp-text-l-semibold {
+    @apply font-pjs text-[16px] font-semibold leading-6;
+  }
+
+  .font-lp-text-m-semibold {
+    @apply font-pjs text-[15px] font-semibold leading-6.5;
+  }
+
+  .font-lp-text-m-regular {
+    @apply font-pjs text-[15px] font-normal leading-6.5;
+  }
+
+  .font-lp-text-xs-semibold {
+    @apply font-pjs text-[13px] font-semibold leading-4.5;
+  }
+
+  .font-lp-text-xs-regular {
+    @apply font-pjs text-[13px] font-normal leading-4.5;
+  }
+
+  .font-text-xl-semibold {
+    @apply font-aptos text-lg font-bold leading-6.5;
+  }
+
+  .font-text-s-medium {
+    @apply font-inter text-sm font-medium leading-5;
+  }
+
+  .font-text-xs-semibold {
+    @apply font-aptos text-[13px] font-semibold leading-5;
+  }
+
+  .font-text-button-semibold-large {
+    @apply font-pjs text-[15px] font-bold leading-5.5 tracking-[0.1px];
+  }
+}

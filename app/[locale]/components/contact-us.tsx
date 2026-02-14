@@ -45,7 +45,7 @@ const formSchema = z.object({
     .min(5, "Message must be at least 3 characters.")
     .max(32, "Message must be at most 200 characters."),
   email: z.email("Email must be valid"),
-  phone_number: zPhone({ regexError: "Phone number must be valid" }),
+  // phone_number: zPhone({ regexError: "Phone number must be valid" }),
 });
 
 const defaultValues = {
@@ -53,7 +53,7 @@ const defaultValues = {
   company_name: "",
   message: "",
   email: "",
-  phone_number: "",
+  // phone_number: "",
 };
 
 export const ContactUs = () => {
@@ -84,8 +84,8 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
-      <div className="w-full relative py-6 max-lg:pt-15 max-lg:pb-10 lg:py-10">
+    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-6  max-lg:mb-3 lg:my-15">
+      <div className="w-full relative py-6 max-lg:pt-0 max-lg:pb-0 lg:py-0">
         <motion.p
           ref={titleComp}
           initial={{ y: "100%", opacity: 0 }}
@@ -96,11 +96,11 @@ export const ContactUs = () => {
               visualDuration: 2,
             },
           }}
-          className="font-pjs font-bold text-xl lg:text-6xl text-text-icons-base-main text-center lg:text-left"
+          className="font-lp-headline-xxs-bold lg:font-lp-headline-xl-bold text-text-icons-base-main text-center lg:text-left"
         >
           {t("title")}
         </motion.p>
-        <div className="rounded-2xl bg-primary-second w-full p-2 max-lg:pb-3 max-lg:px-2 lg:p-8 mt-3 lg:mt-5">
+        <div className="rounded-2xl bg-primary-second w-full p-2 max-lg:pb-3 max-lg:px-2 lg:p-8 mt-3 lg:mt-10">
           <form className="" onSubmit={form.handleSubmit(onSubmit)}>
             <FieldSet className="grid grid-cols-12 gap-y-2.5 lg:gap-y-6 lg:gap-x-6">
               {/* <FieldGroup> */}
@@ -114,7 +114,8 @@ export const ContactUs = () => {
                     className="col-span-12 lg:col-span-4 max-lg:gap-0"
                   >
                     <FieldLabel className="max-lg:leading-6" htmlFor="name">
-                      <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
+                      {/* WIP NO MOBILE DESIGN SYSTEM */}
+                      <p className="max-lg:font-aptos max-lg:text-[13px] max-lg:font-semibold max-lg:leading-6 lg:font-lp-text-m-semibold text-text-icons-base-main">
                         {t("firstName")}
                       </p>
                     </FieldLabel>
@@ -142,7 +143,8 @@ export const ContactUs = () => {
                     className="col-span-12 lg:col-span-4 max-lg:gap-0"
                   >
                     <FieldLabel className="max-lg:leading-6" htmlFor="email">
-                      <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
+                      {/* WIP NO MOBILE DESIGN SYSTEM */}
+                      <p className="max-lg:font-aptos max-lg:text-[13px] max-lg:font-semibold max-lg:leading-6 lg:font-lp-text-m-semibold text-text-icons-base-main">
                         {t("email")}
                       </p>
                     </FieldLabel>
@@ -160,7 +162,7 @@ export const ContactUs = () => {
                   </Field>
                 )}
               />
-              <Controller
+              {/* <Controller
                 name="phone_number"
                 control={form.control}
                 render={({ field, fieldState }) => (
@@ -173,7 +175,7 @@ export const ContactUs = () => {
                       className="max-lg:leading-6"
                       htmlFor="phone_number"
                     >
-                      <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
+                      <p className="max-lg:font-aptos max-lg:text-[13px] max-lg:font-semibold max-lg:leading-6 lg:font-lp-text-m-semibold text-text-icons-base-main">
                         {t("phoneNumber")}
                       </p>
                     </FieldLabel>
@@ -191,7 +193,7 @@ export const ContactUs = () => {
                     )}
                   </Field>
                 )}
-              />
+              /> */}
               <Controller
                 name="company_name"
                 control={form.control}
@@ -205,7 +207,8 @@ export const ContactUs = () => {
                       className="max-lg:leading-6"
                       htmlFor="company_name"
                     >
-                      <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
+                      {/* WIP NO MOBILE DESIGN SYSTEM */}
+                      <p className="max-lg:font-aptos max-lg:text-[13px] max-lg:font-semibold max-lg:leading-6 lg:font-lp-text-m-semibold text-text-icons-base-main">
                         {t("companyName")}
                       </p>
                     </FieldLabel>
@@ -237,7 +240,8 @@ export const ContactUs = () => {
                         className="max-lg:leading-6"
                         htmlFor="company_name"
                       >
-                        <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
+                        {/* WIP NO MOBILE DESIGN SYSTEM */}
+                        <p className="max-lg:font-aptos max-lg:text-[13px] max-lg:font-semibold max-lg:leading-6 lg:font-lp-text-m-semibold text-text-icons-base-main">
                           {t("companyName")}
                         </p>
                       </FieldLabel>
@@ -255,58 +259,71 @@ export const ContactUs = () => {
                     </Field>
                   )}
                 />
-                <p className="font-inter text-sm font-medium text-text-icons-base-second">
-                  {t("disclaimer")}
-                </p>
-                <Button variant={"primary"} className="h-auto py-3 px-5 w-fit">
-                  <p className="font-aptos text-xs lg:text-[15px] font-semibold lg:font-bold text-text-icons-on-color">
-                    {t("sendMessage")}
-                  </p>
-                </Button>
               </div>
-              <Controller
-                name="message"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field
-                    data-invalid={fieldState.invalid}
-                    orientation={"vertical"}
-                    className="col-span-12 lg:col-span-8 max-lg:gap-0"
-                  >
-                    <FieldLabel
-                      className="max-lg:leading-6"
-                      htmlFor="message-contac"
-                    >
-                      <p className="font-aptos lg:font-inter text-[13px] lg:text-[15px] font-semibold lg:font-medium text-text-icons-base-main">
-                        {t("message")}
-                      </p>
-                    </FieldLabel>
 
-                    <Textarea
-                      {...field}
-                      aria-invalid={fieldState.invalid}
-                      className="bg-white h-full text-xs lg:text-[15px]"
-                      id="message-contac"
-                      autoComplete="off"
-                      placeholder={t("messagePlaceholder")}
-                    />
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
+              <div className="col-span-12 grid grid-cols-12 gap-x-6">
+                <div className="col-span-12 lg:col-span-8">
+                  <Controller
+                    name="message"
+                    control={form.control}
+                    render={({ field, fieldState }) => (
+                      <Field
+                        data-invalid={fieldState.invalid}
+                        orientation={"vertical"}
+                        className="max-lg:gap-0"
+                        // className="col-span-12 lg:col-span-8 max-lg:gap-0"
+                      >
+                        <FieldLabel
+                          className="max-lg:leading-6"
+                          htmlFor="message-contac"
+                        >
+                          {/* WIP NO MOBILE DESIGN SYSTEM */}
+                          <p className="max-lg:font-aptos max-lg:text-[13px] max-lg:font-semibold max-lg:leading-6 lg:font-lp-text-m-semibold text-text-icons-base-main">
+                            {t("message")}
+                          </p>
+                        </FieldLabel>
+
+                        <Textarea
+                          {...field}
+                          aria-invalid={fieldState.invalid}
+                          className="bg-white h-full text-xs lg:text-[15px]"
+                          id="message-contac"
+                          autoComplete="off"
+                          placeholder={t("messagePlaceholder")}
+                        />
+                        {fieldState.invalid && (
+                          <FieldError errors={[fieldState.error]} />
+                        )}
+                      </Field>
                     )}
-                  </Field>
-                )}
-              />
+                  />
+                </div>
+                <div className="hidden lg:flex col-span-4 space-y-6 flex-col justify-end">
+                  <p className="font-text-s-medium text-text-icons-base-second">
+                    {t("disclaimer")}
+                  </p>
+                  <Button
+                    variant={"primary"}
+                    className="h-auto py-3 px-5 w-fit"
+                  >
+                    <p className="font-text-button-semibold-large text-text-icons-on-color">
+                      {t("sendMessage")}
+                    </p>
+                  </Button>
+                </div>
+              </div>
               <div className="lg:hidden col-span-12 flex flex-row justify-between gap-y-6 mt-2">
                 <div className="w-31">
+                  {/* WIP NO MOBILE DESIGN SYSTEM */}
                   <p className="font-inter text-[9px] font-medium text-text-icons-base-second max-w-40 col-span-3">
                     {t("disclaimer")}
                   </p>
                 </div>
                 <Button
                   variant={"primary"}
-                  className="h-auto py-1 px-2 col-span-9"
+                  className="h-auto py-1 px-2 col-span-9 rounded-md"
                 >
-                  <p className="font-aptos text-[13px] lg:text-lg font-semibold lg:font-bold text-text-icons-on-color">
+                  <p className="font-text-xs-semibold text-text-icons-on-color">
                     {t("sendMessage")}
                   </p>
                 </Button>

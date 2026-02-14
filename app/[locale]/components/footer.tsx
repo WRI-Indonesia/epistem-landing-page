@@ -18,7 +18,7 @@ export const Footer = () => {
   return (
     <>
       <div className="w-full py-6 lg:py-17 px-1 lg:px-28 bg-primary-pink-light-hover">
-        <div className="flex flex-col items-center justify-start w-full max-w-360 px-3">
+        <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2">
           <div className="flex flex-col w-full gap-y-2.5 lg:gap-y-10">
             <Image
               src="/images/restore-logo.webp"
