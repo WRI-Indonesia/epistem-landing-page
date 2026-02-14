@@ -154,76 +154,144 @@
 
 /* ---break--- */
 
-@layer utilities {
-  .font-lp-display-l-semibold {
-    @apply font-pjs text-[64px] font-semibold leading-17 tracking-[-1.28px];
-  }
+@utility font-lp-display-l-semibold {
+  font-family: var(--font-pjs);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 68px;
+  letter-spacing: -1.28px;
+}
 
-  .font-lp-headline-xl-bold {
-    @apply font-pjs text-[40px] font-bold leading-12 tracking-[-0.8px];
-  }
+@utility font-lp-display-l-semibold {
+  font-family: var(--font-pjs);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 68px;
+  letter-spacing: -1.28px;
+}
 
-  .font-lp-headline-l-semibold {
-    @apply font-pjs text-4xl font-semibold leading-11 tracking-[-0.72px];
-  }
+@utility font-lp-headline-xl-bold {
+  font-family: var(--font-pjs);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+}
 
-  .font-lp-headline-s-bold {
-    @apply font-pjs text-[28px] font-bold leading-9.5 tracking-[-0.42px];
-  }
+@utility font-lp-headline-l-semibold {
+  font-family: var(--font-pjs);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.72px;
+}
 
-  .font-lp-headline-xs-semibold {
-    @apply font-pjs text-2xl font-semibold leading-7.5 tracking-[-0.24px];
-  }
+@utility font-lp-headline-s-bold {
+  font-family: var(--font-pjs);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.42px;
+}
 
-  .font-lp-headline-xs-medium {
-    @apply font-pjs text-2xl font-medium leading-7.5 tracking-[-0.24px];
-  }
+@utility font-lp-headline-xs-semibold {
+  font-family: var(--font-pjs);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+}
 
-  .font-lp-headline-xxs-bold {
-    @apply font-pjs text-xl font-bold leading-7 tracking-[-0.2px];
-  }
+@utility font-lp-headline-xs-medium {
+  font-family: var(--font-pjs);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+}
 
-  .font-lp-text-xl-regular {
-    @apply font-pjs text-lg font-normal leading-6.5;
-  }
+@utility font-lp-headline-xxs-bold {
+  font-family: var(--font-pjs);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
 
-  .font-lp-text-xl-bold {
-    @apply font-pjs text-lg font-bold leading-6.5;
-  }
+@utility font-lp-text-xl-regular {
+  font-family: var(--font-pjs);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
 
-  .font-lp-text-l-semibold {
-    @apply font-pjs text-[16px] font-semibold leading-6;
-  }
+@utility font-lp-text-xl-bold {
+  font-family: var(--font-pjs);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
 
-  .font-lp-text-m-semibold {
-    @apply font-pjs text-[15px] font-semibold leading-6.5;
-  }
+@utility font-lp-text-l-semibold {
+  font-family: var(--font-pjs);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
 
-  .font-lp-text-m-regular {
-    @apply font-pjs text-[15px] font-normal leading-6.5;
-  }
+@utility font-lp-text-m-semibold {
+  font-family: var(--font-pjs);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 26px;
+}
 
-  .font-lp-text-xs-semibold {
-    @apply font-pjs text-[13px] font-semibold leading-4.5;
-  }
+@utility font-lp-text-m-regular {
+  font-family: var(--font-pjs);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+}
 
-  .font-lp-text-xs-regular {
-    @apply font-pjs text-[13px] font-normal leading-4.5;
-  }
+@utility font-lp-text-xs-semibold {
+  font-family: var(--font-pjs);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+}
 
-  .font-text-xl-semibold {
-    @apply font-aptos text-lg font-bold leading-6.5;
-  }
+@utility font-lp-text-xs-regular {
+  font-family: var(--font-pjs);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
 
-  .font-text-s-medium {
-    @apply font-inter text-sm font-medium leading-5;
-  }
+@utility font-text-xl-semibold {
+  font-family: var(--font-aptos);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
 
-  .font-text-xs-semibold {
-    @apply font-aptos text-[13px] font-semibold leading-5;
-  }
+@utility font-text-s-medium {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
 
-  .font-text-button-semibold-large {
-    @apply font-pjs text-[15px] font-bold leading-5.5 tracking-[0.1px];
-  }
+@utility font-text-xs-semibold {
+  font-family: var(--font-aptos);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+@utility font-text-button-semibold-large {
+  font-family: var(--font-pjs);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.1px;
 }

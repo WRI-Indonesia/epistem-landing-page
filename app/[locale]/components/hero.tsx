@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <main className="flex lg:min-h-screen w-full flex-col items-center justify-center px-0">
       <div
-        className="lg:h-screen w-full flex flex-col items-center justify-center px-3 max-lg:pt-45 space-y-0"
+        className="lg:h-screen w-full flex flex-col items-center justify-center px-3 max-lg:pt-45 space-y-3"
         style={{
           background: "linear-gradient(180deg, #FFE9F1 0%, #FFF 100%)",
         }}
