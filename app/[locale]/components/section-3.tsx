@@ -139,7 +139,7 @@ export const Section3 = () => {
                       )}
                       animate={{
                         display: isSelected ? "" : "-webkit-box",
-                        webkitLineClamp: isSelected ? "unset" : 3,
+                        // webkitLineClamp: isSelected ? 0 : 3,
                         overflow: isSelected ? "" : "hidden",
                         maxHeight: isSelected ? "400px" : "50px",
                         transition: {
@@ -226,7 +226,7 @@ export const Section3 = () => {
                       )}
                       animate={{
                         display: isSelected ? "" : "-webkit-box",
-                        webkitLineClamp: isSelected ? "unset" : 3,
+                        // webkitLineClamp: isSelected ? 0 : 3,
                         overflow: isSelected ? "" : "hidden",
                         maxHeight: isSelected ? "200px" : "30px",
                         transition: {

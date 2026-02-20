@@ -40,7 +40,10 @@ export const Section4 = () => {
               opacity: imageIsInView ? 1 : 0,
               transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
             }}
-            className="max-lg:hidden col-span-5 aspect-square relative z-11"
+            className={cn(
+              "max-lg:hidden col-span-5 aspect-square relative z-11",
+              isOpen && "aspect-auto",
+            )}
           >
             <div
               className={cn(

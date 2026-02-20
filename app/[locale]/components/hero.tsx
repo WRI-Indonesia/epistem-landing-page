@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <main className="flex lg:min-h-screen w-full flex-col items-center justify-center px-0">
       <div
-        className="lg:h-screen w-full flex flex-col items-center justify-center px-3 max-lg:pt-45 space-y-3"
+        className="lg:h-screen w-full flex flex-col items-center justify-center px-3 max-lg:pt-45 space-y-0"
         style={{
           background: "linear-gradient(180deg, #FFE9F1 0%, #FFF 100%)",
         }}
@@ -65,7 +65,7 @@ export const Hero = () => {
               delay: 1,
             },
           }}
-          className="font-lp-text-xs-semibold lg:font-lp-headline-xs-semibold text-primary-pink text-center mb-15"
+          className="font-lp-text-xs-semibold lg:font-lp-headline-xs-semibold text-primary-pink text-center mb-15 mt-6"
           // dangerouslySetInnerHTML={{ __html: t("caption") }}
         >
           {t.rich("caption", {

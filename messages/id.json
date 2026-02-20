@@ -26,8 +26,8 @@
       "item1Description": "Antarmuka intuitif tanpa coding untuk membuat, menganalisis, dan beraksi bersama menggunakan data tata guna lahan yang bisa disesuaikan kebutuhan.",
       "item1ButtonCaption": "Coba Demo Luma",
       "item2Title": "Rona",
-      "item2Subtitle": "Data bersama untuk manfaat bersama",
-      "item2Description": "Repositori partisipatif berskala besar yang menyimpan data referensi  untuk pemetaan tata guna dan tutupan lahan—dibangun dari semangat kolaborasi dan keterbukaan.",
+      "item2Subtitle": "Data bersama untuk <br></br> manfaat bersama",
+      "item2Description": "Repositori partisipatif berskala besar yang menyimpan data <br></br> referensi  untuk pemetaan tata guna dan tutupan lahan—dibangun <br></br> dari semangat kolaborasi dan keterbukaan.",
       "item2ButtonCaption": "Rona Segera Hadir"
     },
     "Section3": {
@@ -42,7 +42,7 @@
     },
     "Section4": {
       "title": "Tentang Kami",
-      "caption": "Kami mendukung para penggerak perubahan dengan solusi berbasis data untuk menjaga dan mengelola lahan secara berkelanjutan.",
+      "caption": "“Kami mendukung para penggerak perubahan dengan solusi berbasis data untuk menjaga dan mengelola lahan secara berkelanjutan”",
       "description": "Epistem adalah inisiatif kolaboratif yang menyatukan keahlian riset global dan pengetahuan lokal. Tujuannya sederhana: menjembatani sains, data, dan aksi nyata di lapangan lewat solusi berbasis alam. Diprakarsai oleh IIASA bersama CIFOR‑ICRAF dan WRI Indonesia, Epistem hadir untuk bantu siapa pun membuat keputusan yang lebih baik demi masa depan yang lestari.",
       "readLess": "Baca Lebih Sedikit",
       "readMore": "Baca Selengkapnya",

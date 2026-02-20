@@ -39,7 +39,7 @@ export const Section2 = () => {
               width={1144}
               height={1064}
               src="/images/luma-displays.webp"
-              className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 lg:w-3/4 lg:mr-0 max-sm:pl-0 max-lg:pl-0 relative  max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
+              className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 lg:max-w-92.5 lg:mr-0 max-sm:pl-0 max-lg:pl-0 relative  max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
               alt="luma"
             />
           </motion.div>
@@ -56,7 +56,7 @@ export const Section2 = () => {
                 visualDuration: 1,
               },
             }}
-            className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 lg:pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50 lg:pl-0 max-lg:pr-0"
+            className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 lg:pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50 lg:pl-0 lg:mt-4 max-lg:pr-0"
           >
             <p className="font-lp-text-xs-regular lg:font-lp-headline-xs-medium text-text-icons-on-color">
               {t("item1Title")}
@@ -173,13 +173,13 @@ export const Section2 = () => {
               },
             }}
             // exit={{ opacity: 0 }}
-            className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50"
+            className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50 lg:mt-4"
             // className="space-y-6 flex flex-col justify-end pb-10 col-span-1 lg:col-span-7 max-lg:pt-20 lg:pl-20"
           >
             <p className="font-lp-text-xs-regular lg:font-lp-headline-xs-medium text-text-icons-on-color">
               {t("item2Title")}
             </p>
-            <div className="space-y-3 lg:space-y-4 w-[90%]]">
+            <div className="space-y-3 lg:space-y-4 w-[90%]">
               <p
                 className="font-lp-headline-xxs-bold lg:font-lp-headline-xl-bold text-text-icons-on-color"
                 // dangerouslySetInnerHTML={{
@@ -232,7 +232,7 @@ export const Section2 = () => {
               src="/images/rona-display.webp"
               // mx-auto pl-10
               // className="max-sm:max-w-50 max-md:max-w-60 max-lg:max-w-70 lg:w-3/4 lg:ml-0 relative right-5 lg:right-20 max-sm:bottom-2 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30 lg:-bottom-5"
-              className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 lg:w-3/4 lg:ml-0 relative max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
+              className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 lg:max-w-92.5 lg:ml-0 relative max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
               alt="luma"
             />
           </motion.div>

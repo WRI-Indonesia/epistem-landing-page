@@ -38,8 +38,8 @@ const formSchema = z.object({
     .max(32, "Name must be at most 32 characters."),
   company_name: z
     .string()
-    .min(5, "Company name must be at least 3 characters.")
-    .max(32, "Company name must be at most 32 characters."),
+    .min(5, "Organization name must be at least 3 characters.")
+    .max(32, "Organization name must be at most 32 characters."),
   message: z
     .string()
     .min(5, "Message must be at least 3 characters.")

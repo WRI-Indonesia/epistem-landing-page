@@ -16,7 +16,7 @@ import { SectionHead } from "./section-head";
 
 const demoArray = [
   {
-    image: "/images/demo-11.gif",
+    image: "/images/demo-1.gif",
     alt: "demo-1",
     height: 500,
     width: 500,
@@ -104,6 +104,7 @@ export const Section1 = () => {
               height={item.height}
               width={item.width}
               className={cn("aspect-square w-full z-21 min-w-25")}
+              unoptimized
             />
             <motion.p
               layout
