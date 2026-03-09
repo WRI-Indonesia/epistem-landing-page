@@ -84,19 +84,19 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-6  max-lg:mb-3 lg:my-15">
+    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-6  max-lg:mb-3 lg:my-15 xl:my-20">
       <div className="w-full relative py-6 max-lg:pt-0 max-lg:pb-0 lg:py-0">
         <motion.p
           ref={titleComp}
-          initial={{ y: "100%", opacity: 0 }}
-          animate={{
-            y: titleIsInView ? 0 : "100%",
-            opacity: 1,
-            transition: {
-              visualDuration: 2,
-            },
-          }}
-          className="font-lp-headline-xxs-bold lg:font-lp-headline-xl-bold text-text-icons-base-main text-center lg:text-left"
+          // initial={{ y: "100%", opacity: 0 }}
+          // animate={{
+          //   y: titleIsInView ? 0 : "100%",
+          //   opacity: 1,
+          //   transition: {
+          //     visualDuration: 2,
+          //   },
+          // }}
+          className="font-lp-headline-xxs-bold lg:font-lp-headline-l-bold xl:font-lp-headline-xl-bold text-text-icons-base-main text-center lg:text-left"
         >
           {t("title")}
         </motion.p>

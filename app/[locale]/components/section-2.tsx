@@ -22,16 +22,19 @@ export const Section2 = () => {
       component: (
         <div className="h-full w-full lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-x-20">
           <motion.div
+            // initial={{
+            //   opacity: 0,
+            //   scale: 1,
+            // }}
+            // animate={{
+            //   opacity: 1,
+            //   scale: 1.55,
+            //   transition: {
+            //     visualDuration: 1,
+            //   },
+            // }}
             initial={{
-              opacity: 0,
-              scale: 1,
-            }}
-            animate={{
-              opacity: 1,
               scale: 1.55,
-              transition: {
-                visualDuration: 1,
-              },
             }}
             className="pointer-events-none col-span-1 lg:col-span-1 max-lg:w-fit flex flex-col items-center lg:justify-center max-lg:mx-auto"
           >
@@ -39,31 +42,31 @@ export const Section2 = () => {
               width={1144}
               height={1064}
               src="/images/luma-displays.webp"
-              className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 lg:max-w-92.5 lg:mr-0 max-sm:pl-0 max-lg:pl-0 relative  max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
+              className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 max-xl:max-w-80 xl:max-w-92.5 lg:mr-0 max-sm:pl-0 max-lg:pl-0 relative  max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
               alt="luma"
             />
           </motion.div>
           <motion.div
             layout
-            initial={{
-              opacity: 0,
-              x: "100%",
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              transition: {
-                visualDuration: 1,
-              },
-            }}
+            // initial={{
+            //   opacity: 0,
+            //   x: "100%",
+            // }}
+            // animate={{
+            //   opacity: 1,
+            //   x: 0,
+            //   transition: {
+            //     visualDuration: 1,
+            //   },
+            // }}
             className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 lg:pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50 lg:pl-0 lg:mt-4 max-lg:pr-0"
           >
-            <p className="font-lp-text-xs-regular lg:font-lp-headline-xs-medium text-text-icons-on-color">
+            <p className="font-lp-text-xs-regular lg:font-lp-headline-xxs-medium xl:font-lp-headline-xs-medium text-text-icons-on-color">
               {t("item1Title")}
             </p>
             <div className="space-y-3 lg:space-y-4">
               <p
-                className="font-lp-headline-xxs-bold lg:font-lp-headline-xl-bold text-text-icons-on-color"
+                className="font-lp-headline-xxs-bold lg:font-lp-headline-s-bold xl:font-lp-headline-xl-bold text-text-icons-on-color"
                 // dangerouslySetInnerHTML={{
                 //   __html: t("item1Subtitle"),
                 // }}
@@ -84,7 +87,7 @@ export const Section2 = () => {
                 size={"lg"}
                 className="h-auto py-1 lg:py-3 px-5 rounded-md lg:rounded-[16px]"
               >
-                <p className="font-text-xs-semibold lg:font-text-xl-semibold text-text-icons-on-color">
+                <p className="font-text-xs-semibold lg:text-[13.5px] xl:font-text-xl-semibold text-text-icons-on-color">
                   {t("item1ButtonCaption")}
                 </p>
               </Button>
@@ -158,30 +161,30 @@ export const Section2 = () => {
         //     />
         //   </motion.div>
         // </div>
-        <div className="h-full w-full lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-x-20 flex flex-col-reverse">
+        <div className="h-full w-full lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-x-20 flex flex-col-reverse relative">
           <motion.div
             layout
-            initial={{
-              opacity: 0,
-              x: "100%",
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              transition: {
-                visualDuration: 1,
-              },
-            }}
+            // initial={{
+            //   opacity: 0,
+            //   x: "100%",
+            // }}
+            // animate={{
+            //   opacity: 1,
+            //   x: 0,
+            //   transition: {
+            //     visualDuration: 1,
+            //   },
+            // }}
             // exit={{ opacity: 0 }}
             className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50 lg:mt-4"
             // className="space-y-6 flex flex-col justify-end pb-10 col-span-1 lg:col-span-7 max-lg:pt-20 lg:pl-20"
           >
-            <p className="font-lp-text-xs-regular lg:font-lp-headline-xs-medium text-text-icons-on-color">
+            <p className="font-lp-text-xs-regular lg:font-lp-headline-xxs-medium xl:font-lp-headline-xs-medium text-text-icons-on-color">
               {t("item2Title")}
             </p>
             <div className="space-y-3 lg:space-y-4 w-[90%]">
               <p
-                className="font-lp-headline-xxs-bold lg:font-lp-headline-xl-bold text-text-icons-on-color"
+                className="font-lp-headline-xxs-bold lg:font-lp-headline-s-bold xl:font-lp-headline-xl-bold text-text-icons-on-color"
                 // dangerouslySetInnerHTML={{
                 //   __html: t("item2Subtitle"),
                 // }}
@@ -203,38 +206,48 @@ export const Section2 = () => {
                 className="h-auto py-1 lg:py-3 px-5 rounded-md lg:rounded-[16px]"
                 disabled
               >
-                <p className="font-text-xs-semibold lg:font-text-xl-semibold text-text-icons-on-color">
+                <p className="font-text-xs-semibold lg:text-[13.5px] xl:font-text-xl-semibold text-text-icons-on-color">
                   {t("item2ButtonCaption")}
                 </p>
               </Button>
             </div>
           </motion.div>
           <motion.div
-            initial={{
-              opacity: 0,
-              scale: 1,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1.55,
-              transition: {
-                visualDuration: 1,
-              },
-            }}
+            // initial={{
+            //   opacity: 0,
+            //   scale: 1,
+            // }}
+            // animate={{
+            //   opacity: 1,
+            //   scale: 1.55,
+            //   transition: {
+            //     visualDuration: 1,
+            //   },
+            // }}
             // exit={{ opacity: 0 }}
-            className="pointer-events-none col-span-1 lg:col-span-1 max-lg:w-fit flex flex-col items-start lg:justify-center max-lg:mx-auto"
+            // initial={{
+            //   scale: 1.55,
+            // }}
+            className="pointer-events-none col-span-1 lg:col-span-1 max-lg:w-fit flex flex-col items-start lg:justify-center max-lg:mx-auto relative"
           >
-            <Image
-              width={1144}
-              height={1064}
-              // width={1616}
-              // height={1238}
-              src="/images/rona-display.webp"
-              // mx-auto pl-10
-              // className="max-sm:max-w-50 max-md:max-w-60 max-lg:max-w-70 lg:w-3/4 lg:ml-0 relative right-5 lg:right-20 max-sm:bottom-2 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30 lg:-bottom-5"
-              className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 lg:max-w-92.5 lg:ml-0 relative max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
-              alt="luma"
-            />
+            <motion.div
+              initial={{
+                scale: 1.55,
+              }}
+              className="lg:max-xl:absolute block lg:max-xl:block xl:block"
+            >
+              <Image
+                width={1144}
+                height={1064}
+                // width={1616}
+                // height={1238}
+                src="/images/rona-display.webp"
+                // mx-auto pl-10
+                // className="max-sm:max-w-50 max-md:max-w-60 max-lg:max-w-70 lg:w-3/4 lg:ml-0 relative right-5 lg:right-20 max-sm:bottom-2 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30 lg:-bottom-5"
+                className="max-sm:max-w-45 max-md:max-w-60 max-lg:max-w-70 max-xl:max-w-80 xl:max-w-92.5 lg:ml-0 relative max-sm:bottom-0 max-sm:-mb-6 max-md:-mb-12 max-lg:-mb-30"
+                alt="luma"
+              />
+            </motion.div>
           </motion.div>
         </div>
       ),
@@ -285,9 +298,9 @@ export const Section2 = () => {
         </motion.div>
       </div> */}
       <SectionHead title={t("title")} caption={t("caption")} />
-      <div className="mt-10 md:mt-10 lg:mt-20 pt-0 md:pt-0 lg:pt-0 w-full relative">
+      <div className="mt-10 md:mt-10 lg:mt-15 xl:mt-20 pt-0 md:pt-0 lg:pt-0 w-full relative">
         {/* <div className="w-full max-lg:px-6 max-lg:pb-3.5 lg:p-12 rounded-lg bg-text-icons-base-main h-fit lg:min-h-125 lg:h-125 flex flex-col gap-y-2 px-8 lg:px-12 relative"> */}
-        <div className="w-full max-lg:px-3.5 max-lg:pb-9.5 lg:p-12 rounded-lg bg-text-icons-base-main h-fit flex flex-col gap-y-2 px-8 lg:px-12 relative">
+        <div className="w-full max-lg:px-3.5 max-lg:pb-9.5 lg:p-9 xl:p-12 px-8 lg:px-9 xl:px-12 rounded-lg bg-text-icons-base-main h-fit flex flex-col gap-y-2 relative">
           {featureArray.map((item, index) => {
             const isSelected = index === selected;
 

@@ -29,19 +29,19 @@ export const Section4 = () => {
   const textIsInView = useInView(textComp, { once: true });
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-8 lg:my-20">
+    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-8 lg:my-15 xl:my-20">
       <div className="w-full relative">
-        <div className="grid grid-cols-4 grid-rows-1 lg:grid-rows-1 lg:grid-cols-12 py-0 max-lg:pt-0 lg:py-0 gap-y-9 gap-x-9 h-fit relative max-lg:pb-0">
+        <div className="grid grid-cols-4 grid-rows-1 lg:grid-rows-1 lg:grid-cols-12 py-0 max-lg:pt-0 lg:py-0 gap-y-9 lg:gap-x-6.5 xl:gap-x-9 h-fit relative max-lg:pb-0">
           <motion.div
             ref={imageComp}
-            initial={{ x: "0%", opacity: 0 }}
-            animate={{
-              x: 0,
-              opacity: imageIsInView ? 1 : 0,
-              transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
-            }}
+            // initial={{ x: "0%", opacity: 0 }}
+            // animate={{
+            //   x: 0,
+            //   opacity: imageIsInView ? 1 : 0,
+            //   transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
+            // }}
             className={cn(
-              "max-lg:hidden col-span-5 aspect-square relative z-11",
+              "max-lg:hidden lg:col-span-4 xl:col-span-5 aspect-square relative z-11",
               isOpen && "aspect-auto",
             )}
           >
@@ -65,24 +65,24 @@ export const Section4 = () => {
           </motion.div>
           <motion.div
             ref={textComp}
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{
-              y: 0,
-              opacity: textIsInView ? 1 : 0,
-              transition: { bounce: 0, visualDuration: 2, delay: 0.2 },
-            }}
-            className="col-span-4 lg:col-span-7 flex flex-col relative z-10 max-lg:space-y-2 space-y-6"
+            // initial={{ y: "100%", opacity: 0 }}
+            // animate={{
+            //   y: 0,
+            //   opacity: textIsInView ? 1 : 0,
+            //   transition: { bounce: 0, visualDuration: 2, delay: 0.2 },
+            // }}
+            className="col-span-4 lg:col-span-8 xl:col-span-7 flex flex-col relative z-10 max-lg:space-y-2 space-y-6"
           >
-            <p className="font-lp-headline-xxs-bold lg:font-lp-headline-xl-bold text-text-icons-base-main text-center lg:text-left">
+            <p className="font-lp-headline-xxs-bold lg:font-lp-headline-l-bold xl:font-lp-headline-xl-bold text-text-icons-base-main text-center lg:text-left">
               {t("title")}
             </p>
-            <div className="space-y-2 lg:space-y-6 mt-0 lg:mt-0">
+            <div className="space-y-2 lg:space-y-4.5 xl:space-y-6 mt-0 lg:mt-0">
               {/* WIP NO MOBILE DESIGN SYSTEM */}
-              <p className="max-lg:font-pjs max-lg:text-[13px] max-lg:font-bold lg:font-lp-headline-xl-bold text-primary-red-pink-dark-hover text-center lg:text-left">
+              <p className="max-lg:font-pjs max-lg:text-[13px] max-lg:font-bold lg:font-lp-headline-s-bold xl:font-lp-headline-xl-bold text-primary-red-pink-dark-hover text-center lg:text-left">
                 {t("caption")}
               </p>
               {/* WIP NO MOBILE DESIGN SYSTEM */}
-              <p className="max-lg:font-pjs max-lg:text-[11px] max-lg:font-normal lg:font-lp-text-xl-regular text-text-icons-base-main text-justify lg:text-left">
+              <p className="max-lg:font-pjs max-lg:text-[11px] max-lg:font-normal lg:font-lp-text-s-regular xl:font-lp-text-xl-regular text-text-icons-base-main text-justify lg:text-left">
                 {t("description")}
               </p>
               <div className="flex flex-row items-center max-lg:justify-center">
@@ -93,7 +93,7 @@ export const Section4 = () => {
                     setIsOpen((val) => !val);
                   }}
                 >
-                  <p className="font-pjs text-[10px] lg:text-xl font-bold text-primary-pink ">
+                  <p className="font-pjs text-[10px] lg:text-sm xl:text-xl font-bold text-primary-pink ">
                     {isOpen ? t("readLess") : t("readMore")}
                   </p>
                   <motion.div
@@ -105,7 +105,7 @@ export const Section4 = () => {
                 </Button>
               </div>
               {isOpen && (
-                <div className="space-y-2 lg:space-y-8 max-lg:font-pjs max-lg:text-[11px] max-lg:font-normal lg:font-lp-text-xl-regular text-text-icons-base-main max-lg:text-justify">
+                <div className="space-y-2 lg:space-y-4.5 xl::space-y-8 max-lg:font-pjs max-lg:text-[11px] max-lg:font-normal lg:font-lp-text-s-regular xl:font-lp-text-xl-regular text-text-icons-base-main max-lg:text-justify">
                   <div className="">
                     <p className="text-primary-pink max-lg:text-center">
                       {t("item1Title")}
@@ -193,12 +193,12 @@ export const Section4 = () => {
           </motion.div>
           <motion.div
             ref={imageMobile}
-            initial={{ x: "0%", opacity: 0 }}
-            animate={{
-              x: 0,
-              opacity: imageMobileIsInView ? 1 : 0,
-              transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
-            }}
+            // initial={{ x: "0%", opacity: 0 }}
+            // animate={{
+            //   x: 0,
+            //   opacity: imageMobileIsInView ? 1 : 0,
+            //   transition: { bounce: 0, visualDuration: 2, delay: 0.1 },
+            // }}
             className="hidden col-span-4 relative z-11 h-fit"
           >
             <div className={cn("rounded-2xl overflow-hidden")}>

@@ -50,7 +50,7 @@ export const Section3 = () => {
   const approachIsInViewMobile = useInView(approachCompMobile, { once: true });
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 lg:my-20 max-lg:mt-8">
+    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 lg:my-15 xl:my-20 max-lg:mt-8">
       {/* <div className="grid grid-cols-12 w-full pt-15 lg:pt-12 pb-10 lg:pb-0 gap-y-3">
         <motion.div
           ref={titleComp}
@@ -93,18 +93,16 @@ export const Section3 = () => {
             return (
               <motion.div
                 // layout
-                initial={{
-                  opacity: 0,
-                  // transition: {
-                  // },
-                }}
-                animate={{
-                  opacity: approachIsInView ? 1 : 0,
-                  transition: {
-                    visualDuration: 3,
-                    delay: 0.2 + (index + 1) * 0.1,
-                  },
-                }}
+                // initial={{
+                //   opacity: 0,
+                // }}
+                // animate={{
+                //   opacity: approachIsInView ? 1 : 0,
+                //   transition: {
+                //     visualDuration: 3,
+                //     delay: 0.2 + (index + 1) * 0.1,
+                //   },
+                // }}
                 key={`approach-features-${index}`}
                 className={`col-span-4 ${item.background} rounded-[20px] overflow-hidden h-fit`}
               >
@@ -116,7 +114,7 @@ export const Section3 = () => {
                 >
                   <div className="flex flex-col items-center">
                     {/* <p className="px-6 font-lp-headline-s-bold text-text-icons-on-color text-center min-h-22"> */}
-                    <p className="px-6 font-lp-headline-s-bold text-text-icons-on-color text-center min-h-22">
+                    <p className="px-6 lg:font-lp-headline-xxs-bold xl:font-lp-headline-s-bold text-text-icons-on-color text-center min-h-22 lg:min-h-15 xl:min-h-22">
                       {t(item.titleKey)}
                     </p>
                     <div className="">
@@ -128,20 +126,22 @@ export const Section3 = () => {
                     alt={item.titleKey}
                     width={200}
                     height={200}
-                    className="h-fit w-full max-w-40 xl:max-w-50 aspect-square pt-5"
+                    className="h-fit w-full max-w-40 lg:max-w-30 xl:max-w-50 aspect-square pt-5"
                   />
-                  <div className={cn("pt-10", item.background)}>
+                  <div
+                    className={cn("pt-10 lg:pt-5 xl:pt-10", item.background)}
+                  >
                     <motion.p
                       layout="size"
                       className={cn(
-                        "px-6 font-lp-text-l-semibold text-text-icons-on-color mt-0 text-ellipsis",
+                        "px-6 font-lp-text-s-regular xl:font-lp-text-l-semibold text-text-icons-on-color mt-0 text-ellipsis",
                         // index !== selected && "line-clamp-3",
                       )}
                       animate={{
                         display: isSelected ? "" : "-webkit-box",
                         // webkitLineClamp: isSelected ? 0 : 3,
                         overflow: isSelected ? "" : "hidden",
-                        maxHeight: isSelected ? "400px" : "50px",
+                        maxHeight: isSelected ? "400px" : "55px",
                         transition: {
                           bounce: 0,
                         },
@@ -185,18 +185,16 @@ export const Section3 = () => {
             return (
               <motion.div
                 // layout
-                initial={{
-                  opacity: 0,
-                  // transition: {
-                  // },
-                }}
-                animate={{
-                  opacity: approachIsInViewMobile ? 1 : 0,
-                  transition: {
-                    visualDuration: 3,
-                    delay: 0.2 + (index + 1) * 0.1,
-                  },
-                }}
+                // initial={{
+                //   opacity: 0,
+                // }}
+                // animate={{
+                //   opacity: approachIsInViewMobile ? 1 : 0,
+                //   transition: {
+                //     visualDuration: 3,
+                //     delay: 0.2 + (index + 1) * 0.1,
+                //   },
+                // }}
                 key={`approach-features-${index}`}
                 className={`col-span-12 ${item.background} rounded-[12px] overflow-hidden h-fit p-4 flex flex-row`}
               >

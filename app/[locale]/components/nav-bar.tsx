@@ -56,27 +56,27 @@ export const NavBar = () => {
               className={cn(
                 "flex flex-row items-center justify-between w-full",
               )}
-              transition={{
-                visualDuration: 2,
-                bounce: 0,
-              }}
-              initial={{
-                x: "+100%",
-                opacity: 0,
-              }}
-              animate={{
-                x: 0,
-                opacity: 1,
-              }}
-              exit={{
-                x: "+100%",
-                width: 0,
-                opacity: 0,
-                height: 0,
-                transition: {
-                  visualDuration: 0.1,
-                },
-              }}
+              // transition={{
+              //   visualDuration: 2,
+              //   bounce: 0,
+              // }}
+              // initial={{
+              //   x: "+100%",
+              //   opacity: 0,
+              // }}
+              // animate={{
+              //   x: 0,
+              //   opacity: 1,
+              // }}
+              // exit={{
+              //   x: "+100%",
+              //   width: 0,
+              //   opacity: 0,
+              //   height: 0,
+              //   transition: {
+              //     visualDuration: 0.1,
+              //   },
+              // }}
             >
               <div className="flex flex-row items-center gap-x-2">
                 {/* <Image
