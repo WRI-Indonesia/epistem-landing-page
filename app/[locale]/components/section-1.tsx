@@ -19,7 +19,7 @@ export const Section1 = () => {
 
   const demoArray = [
     {
-      image: "/images/demo-1.gif",
+      image: "/images/demo-1-new.gif",
       alt: "demo-1",
       height: 500,
       width: 500,
