@@ -131,24 +131,14 @@ export const Section3 = () => {
                   <div
                     className={cn("pt-10 lg:pt-5 xl:pt-10", item.background)}
                   >
-                    <motion.p
-                      layout="size"
+                    <p
                       className={cn(
                         "px-6 font-lp-text-s-regular xl:font-lp-text-l-semibold text-text-icons-on-color mt-0 text-ellipsis",
-                        // index !== selected && "line-clamp-3",
+                        index !== selected && "line-clamp-2",
                       )}
-                      animate={{
-                        display: isSelected ? "" : "-webkit-box",
-                        // webkitLineClamp: isSelected ? 0 : 3,
-                        overflow: isSelected ? "" : "hidden",
-                        maxHeight: isSelected ? "400px" : "55px",
-                        transition: {
-                          bounce: 0,
-                        },
-                      }}
                     >
                       {t(item.descriptionKey)}
-                    </motion.p>
+                    </p>
                     <Button
                       className={`text-gray-100 py-4 w-full mt-2 rounded-t-none rounded-b-2xl ${item.background} hover:${item.background} hover:brightness-110 h-fit`}
                       onClick={() => {
