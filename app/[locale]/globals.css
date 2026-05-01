@@ -154,6 +154,14 @@
 
 /* ---break--- */
 
+@utility font-lp-display-m-semibold {
+  font-family: var(--font-pjs);
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -1.04px;
+}
+
 @utility font-lp-display-l-semibold {
   font-family: var(--font-pjs);
   font-size: 64px;
@@ -200,6 +208,14 @@
   font-weight: 700;
   line-height: 38px;
   letter-spacing: -0.42px;
+}
+
+@utility font-lp-headline-xxs-semibold {
+  font-family: var(--font-pjs);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.24px;
 }
 
 @utility font-lp-headline-xs-semibold {
@@ -331,4 +347,16 @@
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0.1px;
+}
+
+.base-container {
+  max-width: 1440px;
+  padding: 0 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .base-container {
+    padding: 0 8px;
+    max-width: 768px;
+  }
 }

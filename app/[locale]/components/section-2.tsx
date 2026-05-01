@@ -22,17 +22,6 @@ export const Section2 = () => {
       component: (
         <div className="h-full w-full lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-x-20">
           <motion.div
-            // initial={{
-            //   opacity: 0,
-            //   scale: 1,
-            // }}
-            // animate={{
-            //   opacity: 1,
-            //   scale: 1.55,
-            //   transition: {
-            //     visualDuration: 1,
-            //   },
-            // }}
             initial={{
               scale: 1.55,
             }}
@@ -48,29 +37,13 @@ export const Section2 = () => {
           </motion.div>
           <motion.div
             layout
-            // initial={{
-            //   opacity: 0,
-            //   x: "100%",
-            // }}
-            // animate={{
-            //   opacity: 1,
-            //   x: 0,
-            //   transition: {
-            //     visualDuration: 1,
-            //   },
-            // }}
             className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 lg:pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50 lg:pl-0 lg:mt-4 max-lg:pr-0"
           >
             <p className="font-lp-text-xs-regular lg:font-lp-headline-xxs-medium xl:font-lp-headline-xs-medium text-text-icons-on-color">
               {t("item1Title")}
             </p>
             <div className="space-y-3 lg:space-y-4">
-              <p
-                className="font-lp-headline-xxs-bold lg:font-lp-headline-s-bold xl:font-lp-headline-xl-bold text-text-icons-on-color"
-                // dangerouslySetInnerHTML={{
-                //   __html: t("item1Subtitle"),
-                // }}
-              >
+              <p className="font-lp-headline-xxs-bold lg:font-lp-headline-s-bold xl:font-lp-headline-xl-bold text-text-icons-on-color">
                 {t.rich("item1Subtitle", {
                   br: () => <br />,
                 })}
@@ -164,18 +137,6 @@ export const Section2 = () => {
         <div className="h-full w-full lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-x-20 flex flex-col-reverse relative">
           <motion.div
             layout
-            // initial={{
-            //   opacity: 0,
-            //   x: "100%",
-            // }}
-            // animate={{
-            //   opacity: 1,
-            //   x: 0,
-            //   transition: {
-            //     visualDuration: 1,
-            //   },
-            // }}
-            // exit={{ opacity: 0 }}
             className="space-y-3 lg:space-y-6 flex flex-col justify-start pb-0 col-span-1 lg:col-span-1 max-md:pt-25 max-lg:pt-50 lg:mt-4"
             // className="space-y-6 flex flex-col justify-end pb-10 col-span-1 lg:col-span-7 max-lg:pt-20 lg:pl-20"
           >
@@ -183,12 +144,7 @@ export const Section2 = () => {
               {t("item2Title")}
             </p>
             <div className="space-y-3 lg:space-y-4 w-[90%]">
-              <p
-                className="font-lp-headline-xxs-bold lg:font-lp-headline-s-bold xl:font-lp-headline-xl-bold text-text-icons-on-color"
-                // dangerouslySetInnerHTML={{
-                //   __html: t("item2Subtitle"),
-                // }}
-              >
+              <p className="font-lp-headline-xxs-bold lg:font-lp-headline-s-bold xl:font-lp-headline-xl-bold text-text-icons-on-color">
                 {t.rich("item2Subtitle", {
                   br: () => <br />,
                 })}
@@ -212,24 +168,7 @@ export const Section2 = () => {
               </Button>
             </div>
           </motion.div>
-          <motion.div
-            // initial={{
-            //   opacity: 0,
-            //   scale: 1,
-            // }}
-            // animate={{
-            //   opacity: 1,
-            //   scale: 1.55,
-            //   transition: {
-            //     visualDuration: 1,
-            //   },
-            // }}
-            // exit={{ opacity: 0 }}
-            // initial={{
-            //   scale: 1.55,
-            // }}
-            className="pointer-events-none col-span-1 lg:col-span-1 max-lg:w-fit flex flex-col items-start lg:justify-center max-lg:mx-auto relative"
-          >
+          <motion.div className="pointer-events-none col-span-1 lg:col-span-1 max-lg:w-fit flex flex-col items-start lg:justify-center max-lg:mx-auto relative">
             <motion.div
               initial={{
                 scale: 1.55,
@@ -263,7 +202,7 @@ export const Section2 = () => {
   // const demoIsInView = useInView(demoComp, { once: true });
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 lg:py-0 my-15 max-lg:mt-8 max-lg:mb-2">
+    <div className="base-container flex flex-col items-center justify-start w-full px-2 lg:py-0 my-15 max-lg:mt-8 max-lg:mb-2">
       {/* <div className="grid grid-cols-12 w-full pt-8 lg:pt-12 pb-10 lg:pb-0 sm:pb-12 gap-y-4">
         <motion.div
           ref={titleComp}

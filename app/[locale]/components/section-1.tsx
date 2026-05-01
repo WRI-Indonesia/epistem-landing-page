@@ -41,8 +41,11 @@ export const Section1 = () => {
       captionKey: "item2Caption",
       descriptionKey: "item2Description",
       buttonComponent: (
-        <Button className="px-5 py-1 lg:py-3 h-auto rounded-md">
-          <p className="font-aptos text-[13px] lg:text-[13.5px] xl:text-lg font-semibold lg:font-bold text-text-icons-on-color">
+        <Button
+          className="px-5 py-1 lg:py-3 h-auto rounded-md bg-[#DFE2E8] opacity-100! hover:cursor-not-allowed!"
+          disabled
+        >
+          <p className="font-aptos text-[13px] lg:text-[13.5px] xl:text-lg font-semibold lg:font-bold text-[#979AA0]">
             {t("buttonCaption2")}
           </p>
         </Button>
@@ -56,8 +59,11 @@ export const Section1 = () => {
       captionKey: "item3Caption",
       descriptionKey: "item3Description",
       buttonComponent: (
-        <Button className="px-5 py-1 lg:py-3 h-auto rounded-md">
-          <p className="font-aptos text-[13px] lg:text-[13.5px] xl:text-lg font-semibold lg:font-bold text-text-icons-on-color">
+        <Button
+          className="px-5 py-1 lg:py-3 h-auto rounded-md bg-[#DFE2E8] opacity-100! hover:cursor-not-allowed!"
+          disabled
+        >
+          <p className="font-aptos text-[13px] lg:text-[13.5px] xl:text-lg font-semibold lg:font-bold text-[#979AA0]">
             {t("buttonCaption3")}
           </p>
         </Button>
@@ -77,8 +83,11 @@ export const Section1 = () => {
               {t("buttonCaption4")}
             </p>
           </Button>
-          <Button className="px-5 py-1 lg:py-3 h-auto rounded-md">
-            <p className="font-aptos text-[13px] lg:text-[13.5px] xl:text-lg font-semibold lg:font-bold text-text-icons-on-color">
+          <Button
+            className="px-5 py-1 lg:py-3 h-auto rounded-md bg-[#DFE2E8] opacity-100! hover:cursor-not-allowed!"
+            disabled
+          >
+            <p className="font-aptos text-[13px] lg:text-[13.5px] xl:text-lg font-semibold lg:font-bold text-[#979AA0]">
               {t("buttonCaption5")}
             </p>
           </Button>
@@ -171,7 +180,7 @@ export const Section1 = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 lg:my-15 xl:my-20 max-lg:mb-0">
+    <div className="base-container flex flex-col items-center justify-start w-full px-2 lg:my-15 xl:my-20 max-lg:mb-0">
       {/* <div className="grid grid-cols-12 w-full pt-3 lg:pt-12 pb-3 lg:pb-6 gap-y-3">
         <motion.div
           ref={titleComp}

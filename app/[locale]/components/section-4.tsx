@@ -29,7 +29,7 @@ export const Section4 = () => {
   const textIsInView = useInView(textComp, { once: true });
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-8 lg:my-15 xl:my-20">
+    <div className="base-container flex flex-col items-center justify-start w-full px-2 max-lg:mt-8 lg:my-15 xl:my-20">
       <div className="w-full relative">
         <div className="grid grid-cols-4 grid-rows-1 lg:grid-rows-1 lg:grid-cols-12 py-0 max-lg:pt-0 lg:py-0 gap-y-9 lg:gap-x-6.5 xl:gap-x-9 h-fit relative max-lg:pb-0">
           <motion.div

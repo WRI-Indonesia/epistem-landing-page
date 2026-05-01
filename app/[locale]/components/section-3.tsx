@@ -50,7 +50,7 @@ export const Section3 = () => {
   const approachIsInViewMobile = useInView(approachCompMobile, { once: true });
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 lg:my-15 xl:my-20 max-lg:mt-8">
+    <div className="base-container flex flex-col items-center justify-start w-full px-2 lg:my-15 xl:my-20 max-lg:mt-8">
       {/* <div className="grid grid-cols-12 w-full pt-15 lg:pt-12 pb-10 lg:pb-0 gap-y-3">
         <motion.div
           ref={titleComp}

@@ -13,81 +13,17 @@ export const Hero = () => {
           background: "linear-gradient(180deg, #FFE9F1 0%, #FFF 100%)",
         }}
       >
-        <motion.p
-          // layout
-          // initial={{
-          //   y: "100%",
-          //   opacity: 0,
-          // }}
-          // animate={{
-          //   y: 0,
-          //   opacity: 1,
-          //   transition: {
-          //     bounce: 0,
-          //     visualDuration: 1,
-          //   },
-          // }}
-          className="font-lp-headline-l-semibold lg:max-xl:text-[52px] lg:max-xl:leading-15 lg:max-xl:font-semibold xl:font-lp-display-l-semibold text-primary-pink text-center"
-        >
+        <motion.p className="font-lp-headline-l-semibold lg:max-xl:font-lp-display-m-semibold xl:font-lp-display-l-semibold text-primary-pink text-center">
           {t("title1")}{" "}
         </motion.p>
-        <motion.p
-          // layout
-          // initial={{
-          //   y: "100%",
-          //   opacity: 0,
-          // }}
-          // animate={{
-          //   y: 0,
-          //   opacity: 1,
-          //   transition: {
-          //     bounce: 0,
-          //     visualDuration: 1,
-          //     delay: 0,
-          //   },
-          // }}
-          className="font-lp-headline-l-semibold lg:max-xl:text-[52px] lg:max-xl:leading-15 lg:max-xl:font-semibold xl:font-lp-display-l-semibold text-primary-pink text-center"
-        >
+        <motion.p className="font-lp-headline-l-semibold lg:max-xl:font-lp-display-m-semibold xl:font-lp-display-l-semibold text-primary-pink text-center">
           {t("title2")}
         </motion.p>
-        <motion.p
-          // layout
-          // initial={{
-          //   y: "100%",
-          //   opacity: 0,
-          // }}
-          // animate={{
-          //   y: 0,
-          //   opacity: 1,
-          //   transition: {
-          //     bounce: 0,
-          //     visualDuration: 1,
-          //     delay: 1,
-          //   },
-          // }}
-          className="font-lp-text-xs-semibold lg:max-xl:text-xl xl:font-lp-headline-xs-semibold text-primary-pink text-center mb-15 mt-6"
-          // dangerouslySetInnerHTML={{ __html: t("caption") }}
-        >
+        <motion.p className="font-lp-text-xs-semibold lg:max-xl:font-lp-headline-xxs-semibold xl:font-lp-headline-xs-semibold text-primary-pink text-center mb-15 max-md:mb-25 mt-6">
           {t.rich("caption", {
             br: () => <br />,
           })}
         </motion.p>
-        {/* <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-            visibility: "visible",
-            transition: {
-              delay: 3,
-            },
-          }}
-        >
-          <Button className="rounded-lg">
-            <p className="font-aptos text-lg font-bold">Try Epistem - X</p>
-          </Button>
-        </motion.div> */}
       </div>
     </main>
   );

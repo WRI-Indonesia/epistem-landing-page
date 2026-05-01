@@ -12,14 +12,14 @@
       "item1Caption": "Create your own map",
       "item1Description": "With Epistem, mapping your landscape becomes simple and powerful. Focus on the land use and land cover classes that matter most and create your own maps with user-friendly tools (no coding needed!) from publicly available satellite data.",
       "item2Caption": "Identify changes in your landscape",
-      "item2Description": "Creating your own land use and land cover maps is just the start. Discover how your landscape changes with Epistem’s tools, providing transparent data and a consistent approach for planning and monitoring sustainable interventions.",
+      "item2Description": "Creating your own land use and land cover maps is just the start. Discover how your landscape changes with Epistem's tools, providing transparent data and a consistent approach for planning and monitoring sustainable interventions.",
       "item3Caption": "Access high-quality data",
-      "item3Description": "High-quality land use and land cover maps rely on robust training and validation data. Through Epistem, you can access expert-annotated satellite imagery and field datasets sourced from a community of mapping enthusiasts and nature-based solutions practitioners.",
+      "item3Description": "High-quality land use and land cover maps rely on robust reference data and mapping methodology. Through Epistem, you can access expert-processed satellite imagery, reference datasets, and mapping solutions from a community of remote-sensing enthusiasts and nature-based solutions practitioners.",
       "item4Caption": "Contribute to a growing open-source community",
-      "item4Description": "Epistem platforms are built with transparent and scalable, open-source approaches. Contribute by adding or improving datasets and mapping solutions and benefit from the community’s collective power to overcome map data barriers.",
+      "item4Description": "Epistem platforms are built with transparent and scalable, open-source approaches. Contribute by adding or improving datasets and mapping solutions, and benefit from the community's collective power to overcome map data barriers.",
       "buttonCaption1": "Generate Map with Luma",
-      "buttonCaption2": "Analyze Map with Luma",
-      "buttonCaption3": "Explore Rona",
+      "buttonCaption2": "Analyze Map with Luma (coming soon)",
+      "buttonCaption3": "Explore Rona (coming soon)",
       "buttonCaption4": "Access Epistem GitHub",
       "buttonCaption5": "Explore Rona (coming soon)"
     },
@@ -27,20 +27,20 @@
       "title": "Browse Application",
       "caption": "Explore Epistem applications to create maps, track changes, access high-quality data, and collaborate with an open-source community.",
       "item1Title": "Luma (Land Use Mapping for All)",
-      "item1Subtitle": "See past trends, <br></br> plan future action",
+      "item1Subtitle": "Map past trends, <br></br> plan future action",
       "item1Description": "Intuitive no-coding interface for creating, analysing,<br></br> and collectively acting on customizable land use and land cover map data.",
       "item1ButtonCaption": "Try Luma Mockup",
       "item2Title": "Rona (Repository for Open-source laNd use Analysis)",
       "item2Subtitle": "Shared data for <br></br> shared benefits",
       "item2Description": "Scalable repository of participatory land use <br></br> and land cover mapping.",
-      "item2ButtonCaption": "Rona Coming Soon"
+      "item2ButtonCaption": "Coming Soon"
     },
     "Section3": {
       "title": "The Approach",
       "caption": "Epistem integrates scientific rigor with real-world usability, making mapping and monitoring easier, smarter, and more inclusive.",
       "item1Title": "Scientifically robust",
       "item1Description": "Focuses on technical solutions that are scientifically sound, provides reliable, high-resolution data and tools grounded in research and tailored for field implementation.",
-      "item2Title": "Participatory and co-created",
+      "item2Title": "Participatory and co-creation",
       "item2Description": "Effective solutions emerge only when those implementing change help shape the tools that drive it. Developed collaboratively with local actors and stakeholders, the system is transparent, open-source, and accessible, fostering usability and long-term ownership.",
       "item3Title": "Accessible high technology",
       "item3Description": "Epistem handles complex coding and data processing behind the scenes, allowing users to generate maps and insights with ease, turning advanced science into actionable solutions."
@@ -62,7 +62,7 @@
       "item6Description": "Through a participatory approach, Epistem empowers stakeholders across the NbS delivery chain to use data that enhances planning, implementation, and monitoring throughout Indonesia and Southeast Asia.",
       "item7Title": "The Impact",
       "item7Description": "This data empowerment enables more sustainable and equitable land management, delivering multiple co-benefits such as:",
-      "item8Description": "<li>Climate change adaptation and mitigation</li><li>Biodiversity conservation and enhancement</li><li>Improved livelihoods for indigenous peoples and localcommunities</li>"
+      "item8Description": "<li>Climate change adaptation and mitigation</li><li>Biodiversity conservation and enhancement</li><li>Improved livelihoods for indigenous peoples and local communities</li>"
     },
     "ContactUs": {
       "title": "Contact Us",
@@ -76,7 +76,7 @@
       "companyNamePlaceholder": "Your Institution Name",
       "message": "Message",
       "messagePlaceholder": "Message",
-      "disclaimer": "Your request will be sent safely and kept confidential.",
+      "disclaimer": "Your message will be sent safely and kept confidential.",
       "sendMessage": "Send Message"
     }
   }

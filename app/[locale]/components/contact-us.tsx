@@ -84,7 +84,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start w-full max-w-335.5 px-2 max-lg:mt-6  max-lg:mb-3 lg:my-15 xl:my-20">
+    <div className="base-container flex flex-col items-center justify-start w-full px-2 max-lg:mt-6  max-lg:mb-3 lg:my-15 xl:my-20">
       <div className="w-full relative py-6 max-lg:pt-0 max-lg:pb-0 lg:py-0">
         <motion.p
           ref={titleComp}
