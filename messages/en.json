@@ -77,7 +77,11 @@
       "message": "Message",
       "messagePlaceholder": "Message",
       "disclaimer": "Your message will be sent safely and kept confidential.",
-      "sendMessage": "Send Message"
+      "sendMessage": "Send Message",
+      "submitting": "Sending...",
+      "submitSuccess": "Your message has been sent successfully.",
+      "submitError": "We couldn't submit your message right now. Please try again.",
+      "captchaError": "reCAPTCHA could not be verified. Please try again."
     }
   }
 }

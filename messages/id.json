@@ -76,7 +76,11 @@
       "message": "Pesan",
       "messagePlaceholder": "Pesan Anda",
       "disclaimer": "Pesan Anda akan dikirim secara aman dan rahasia.",
-      "sendMessage": "Kirim Pesan"
+      "sendMessage": "Kirim Pesan",
+      "submitting": "Mengirim...",
+      "submitSuccess": "Pesan Anda berhasil dikirim.",
+      "submitError": "Pesan Anda belum dapat dikirim sekarang. Silakan coba lagi.",
+      "captchaError": "reCAPTCHA tidak dapat diverifikasi. Silakan coba lagi."
     }
   }
 }

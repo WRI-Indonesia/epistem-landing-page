@@ -9,10 +9,13 @@ import { Button } from "@/components/ui/button";
 //   ChevronRightIcon,
 // } from "lucide-react";
 // import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
-import { zPhone } from "@/lib/utils";
-import z from "zod";
+import {
+  contactFormSchema,
+  type ContactFormValues,
+  RECAPTCHA_ACTION,
+} from "@/lib/contact-form";
 import {
   Field,
   FieldError,
@@ -30,23 +33,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
+import Script from "next/script";
 
-const formSchema = z.object({
-  name: z
-    .string()
-    .min(5, "Name must be at least 3 characters.")
-    .max(32, "Name must be at most 32 characters."),
-  company_name: z
-    .string()
-    .min(5, "Organization name must be at least 3 characters.")
-    .max(32, "Organization name must be at most 32 characters."),
-  message: z
-    .string()
-    .min(5, "Message must be at least 3 characters.")
-    .max(32, "Message must be at most 200 characters."),
-  email: z.email("Email must be valid"),
-  // phone_number: zPhone({ regexError: "Phone number must be valid" }),
-});
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
+type SubmitState =
+  | { type: "idle" }
+  | { type: "success"; message: string }
+  | { type: "error"; message: string };
 
 const defaultValues = {
   name: "",
@@ -58,9 +59,12 @@ const defaultValues = {
 
 export const ContactUs = () => {
   const t = useTranslations("HomePage.ContactUs");
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+  const [submitState, setSubmitState] = useState<SubmitState>({ type: "idle" });
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm({
+    resolver: zodResolver(contactFormSchema),
     defaultValues,
     // disabled: LULCLoading,
   });
@@ -73,18 +77,100 @@ export const ContactUs = () => {
 
   // const imageIsInView = useInView(imageComp, { once: true });
   // const imageMobileIsInView = useInView(imageMobile, { once: true });
-  const titleIsInView = useInView(titleComp, { once: true });
+  useInView(titleComp, { once: true });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log("dataa", data);
+  useEffect(() => {
+    const subscription = form.watch(() => {
+      setSubmitState((currentState) =>
+        currentState.type === "idle" ? currentState : { type: "idle" },
+      );
+    });
 
-    // setCompanyDetails(data);
+    return () => subscription.unsubscribe();
+  }, [form]);
+
+  const getRecaptchaToken = async () => {
+    if (!siteKey || !scriptLoaded || !window.grecaptcha) {
+      throw new Error("captcha_not_ready");
+    }
+
+    return await new Promise<string>((resolve, reject) => {
+      window.grecaptcha?.ready(() => {
+        window.grecaptcha
+          ?.execute(siteKey, { action: RECAPTCHA_ACTION })
+          .then(resolve)
+          .catch(() => reject(new Error("captcha_execute_failed")));
+      });
+    });
+  };
+
+  const onSubmit = async (data: ContactFormValues) => {
+    setSubmitState({ type: "idle" });
+
+    let recaptchaToken: string;
+
+    try {
+      recaptchaToken = await getRecaptchaToken();
+    } catch {
+      setSubmitState({
+        type: "error",
+        message: t("captchaError"),
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken,
+        }),
+      });
+
+      let result: { ok: boolean; message?: string } | null = null;
+
+      try {
+        result = (await response.json()) as {
+          ok: boolean;
+          message?: string;
+        };
+      } catch {
+        result = null;
+      }
+
+      if (!response.ok || !result?.ok) {
+        throw new Error(result?.message ?? t("submitError"));
+      }
+
+      setSubmitState({
+        type: "success",
+        message: t("submitSuccess"),
+      });
+      form.reset(defaultValues);
+    } catch {
+      setSubmitState({
+        type: "error",
+        message: t("submitError"),
+      });
+    }
 
     return;
   };
 
   return (
     <div className="base-container flex flex-col items-center justify-start w-full px-2 max-lg:mt-6  max-lg:mb-3 lg:my-15 xl:my-20">
+      {siteKey ? (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
+          strategy="afterInteractive"
+          onLoad={() => setScriptLoaded(true)}
+          onError={() => setScriptLoaded(false)}
+        />
+      ) : null}
       <div className="w-full relative py-6 max-lg:pt-0 max-lg:pb-0 lg:py-0">
         <motion.p
           ref={titleComp}
@@ -302,12 +388,27 @@ export const ContactUs = () => {
                   <p className="font-text-s-medium text-text-icons-base-second">
                     {t("disclaimer")}
                   </p>
+                  {submitState.type !== "idle" ? (
+                    <p
+                      className={`font-text-s-medium ${
+                        submitState.type === "success"
+                          ? "text-green-700"
+                          : "text-red-600"
+                      }`}
+                    >
+                      {submitState.message}
+                    </p>
+                  ) : null}
                   <Button
                     variant={"primary"}
                     className="h-auto py-3 px-5 w-fit"
+                    type="submit"
+                    disabled={form.formState.isSubmitting}
                   >
                     <p className="font-text-button-semibold-large text-text-icons-on-color">
-                      {t("sendMessage")}
+                      {form.formState.isSubmitting
+                        ? t("submitting")
+                        : t("sendMessage")}
                     </p>
                   </Button>
                 </div>
@@ -318,13 +419,28 @@ export const ContactUs = () => {
                   <p className="font-inter text-[9px] font-medium text-text-icons-base-second max-w-40 col-span-3">
                     {t("disclaimer")}
                   </p>
+                  {submitState.type !== "idle" ? (
+                    <p
+                      className={`mt-2 font-inter text-[9px] font-medium ${
+                        submitState.type === "success"
+                          ? "text-green-700"
+                          : "text-red-600"
+                      }`}
+                    >
+                      {submitState.message}
+                    </p>
+                  ) : null}
                 </div>
                 <Button
                   variant={"primary"}
                   className="h-auto py-1 px-2 col-span-9 rounded-md"
+                  type="submit"
+                  disabled={form.formState.isSubmitting}
                 >
                   <p className="font-text-xs-semibold text-text-icons-on-color">
-                    {t("sendMessage")}
+                    {form.formState.isSubmitting
+                      ? t("submitting")
+                      : t("sendMessage")}
                   </p>
                 </Button>
               </div>
