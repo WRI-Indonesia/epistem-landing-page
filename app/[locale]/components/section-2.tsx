@@ -256,7 +256,7 @@ export const Section2 = () => {
                 <div
                   key={`feature-button-${index}`}
                   className={cn(
-                    "h-1 lg:h-2 w-13.5 lg:w-28 rounded-full hover:cursor-pointer hover:brightness-90 transition-all duration-200",
+                    "h-1 lg:h-2 w-13.5 lg:w-21 xl:w-28 rounded-full hover:cursor-pointer hover:brightness-90 transition-all duration-200",
                     isSelected
                       ? "bg-primary-red-pink-light-active"
                       : "bg-white",

@@ -1,8 +1,8 @@
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 
 interface Props {
-  title: string;
+  title: string | ReactNode;
   caption: string;
 }
 
@@ -11,7 +11,7 @@ export const SectionHead = ({ title, caption }: Props) => {
   const titleIsInView = useInView(titleComp, { once: true });
 
   return (
-    <div className="grid grid-cols-12 w-full gap-y-3 px-0">
+    <div className="grid grid-cols-12 w-full gap-y-3 gap-x-3 px-0">
       <motion.div
         ref={titleComp}
         className="col-span-12 lg:col-span-6 flex flex-row items-center"

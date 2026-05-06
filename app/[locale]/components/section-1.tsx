@@ -213,7 +213,12 @@ export const Section1 = () => {
           </p>
         </motion.div>
       </div> */}
-      <SectionHead title={t("title")} caption={t("caption")} />
+      <SectionHead
+        title={t.rich("title", {
+          br: () => <br />,
+        })}
+        caption={t("caption")}
+      />
       <div
         // className="rounded-md lg:rounded-2xl px-6 lg:px-25 py-9 lg:py-16 space-y-5 lg:space-y-16 max-lg:mb-2 w-full"
         className="rounded-md lg:rounded-2xl p-0 lg:p-12 xl:p-16 space-y-5 lg:space-y-9 xl:space-y-12 max-lg:mb-2 max-lg:pb-9.5 w-full mt-3 lg:mt-12"
