@@ -82,5 +82,91 @@
       "submitError": "Pesan Anda belum dapat dikirim sekarang. Silakan coba lagi.",
       "captchaError": "reCAPTCHA tidak dapat diverifikasi. Silakan coba lagi."
     }
+  },
+  "EventPage": {
+    "meta": {
+      "eyebrow": "Lokakarya Peluncuran Platform Pemetaan Daring “Luma”",
+      "title": "Bangkit Datanya, Lestari Bentang Lahannya:",
+      "date": "Rabu, 20 Mei 2026",
+      "location": "Gedung A. A. Maramis, Jakarta",
+      "subtitle": "Memetakan Alam dan Menautkan Insan Melalui Rembuk Peta Penggunaan dan Tutupan Lahan"
+    },
+    "nav": {
+      "home": "Beranda",
+      "summary": "Ringkasan",
+      "pressRelease": "Siaran Pers",
+      "speakers": "Pembicara",
+      "agenda": "Agenda",
+      "gallery": "Galeri"
+    },
+    "hero": {
+      "scrollCta": "Gulir untuk menjelajahi"
+    },
+    "summary": {
+      "label": "TENTANG ACARA",
+      "title": "RINGKASAN",
+      "titleHighlight": "KEGIATAN",
+      "p1": "Lokakarya “Bangkit Datanya, Lestari Bentang Lahannya” merupakan bagian dari inisiatif Epistem (Evolving Participatory Information System for Nature-based Climate Solutions) yang bertujuan memperkuat pengelolaan bentang lahan berkelanjutan melalui pendekatan pemetaan kolaboratif dan partisipatif. Kegiatan ini dilandasi kebutuhan akan data penggunaan dan tutupan lahan yang akurat, terbuka, dan mudah diakses untuk mendukung restorasi hutan, pencegahan deforestasi, serta pencapaian target iklim Indonesia, termasuk agenda FOLU Net Sink 2030.",
+      "p2": "Melalui kolaborasi antara IIASA, BRIN, CIFOR-ICRAF, dan WRI Indonesia, Epistem menghadirkan Luma “Pemetaan Lahan Untuk Semua”, platform pemetaan daring berbasis sumber terbuka yang telah diuji bersama komunitas praktisi di beberapa wilayah Indonesia, dan akan diluncurkan pada momen lokakarya ini.",
+      "p3": "Lokakarya akan memadukan paparan strategis, demonstrasi teknologi, praktik langsung, dan diskusi rembuk peta guna membangun pemahaman bersama tentang pemetaan modular, pengelolaan data referensi bersama, serta penguatan jejaring kolaboratif lintas pemangku kepentingan. Momentum Hari Kebangkitan Nasional menjadi pengingat pentingnya kedaulatan data dan kolaborasi untuk menjaga masa depan bentang lahan Indonesia.",
+      "whereLabel": "DI MANA",
+      "whereValue": "Ruang Majapahit, Gedung A. A.  Maramis, Jakarta",
+      "whenLabel": "KAPAN",
+      "whenValue": "Rabu, 20 Mei 2026"
+    },
+    "pressRelease": {
+      "label": "SIARAN PERS",
+      "title": "Kemenhut dan ICRAF Perkuat Agroforestri untuk Dukung Target Iklim dan Ekonomi Hijau di Indonesia",
+      "p1": "Kementerian Kehutanan (Kemenhut) Republik Indonesia bersama International Centre for Research in Agroforestry (ICRAF) resmi memperkuat kolaborasi strategis dalam mendukung target iklim nasional dan pembangunan ekonomi hijau. Kesepakatan ini ditandai dengan penandatanganan Memorandum Saling Pengertian (MSP) tentang kerja sama agroforestri yang berlangsung di Jakarta, Rabu (4/3).",
+      "p2": "Penandatanganan tersebut dilakukan oleh Sekretaris Jenderal Kementerian Kehutanan, Mahfudz, dan Director General ICRAF, Eliane Ubalijoro. Kerja sama ini mencakup enam bidang utama, yaitu pengembangan model agroforestri, pengelolaan Daerah Aliran Sungai (DAS) dan restorasi, pendanaan inovatif untuk agroforestri, agroforestri untuk KHDTK, digitalisasi dan pengelolaan pengetahuan, serta pengembangan sosial-ekonomi komunitas masyarakat hutan.",
+      "p3": "Dalam sambutannya, Mahfudz menegaskan bahwa sektor kehutanan dan lahan memiliki peran krusial dalam pencapaian target penurunan emisi gas rumah kaca nasional, terutama dalam kerangka Indonesia’s FOLU Net Sink 2030. Sektor ini berkontribusi hampir 60 persen dari total target nasional.",
+      "quote": "Melalui kolaborasi ini, kita tidak hanya sekadar menanam pohon, tetapi membangun ekosistem di mana fungsi ekologis hutan dan produktivitas ekonomi masyarakat dapat berjalan beriringan. Agroforestri menjadi kunci strategis bagi Indonesia untuk memastikan bahwa pengelolaan bentang lahan kita mampu menekan emisi sekaligus menjadi sumber kesejahteraan yang berkelanjutan bagi masyarakat.",
+      "quoteAttrib": "Mahfudz",
+      "p4": "Director General ICRAF, Eliane Ubalijoro, menyampaikan bahwa praktik ini sebenarnya telah lama dijalankan oleh komunitas di dunia selama ratusan tahun. Di Indonesia, sistem agroforestri tradisional seperti Repong Damar di Lampung, Tembawang di Kalimantan Barat, Mamar di NTT, Pelak di Jambi, dan Parak di Sumatera Barat adalah model nyata yang teruji untuk direplikasi.",
+      "p5": "Direktur CIFOR-ICRAF Asia, Sonya Dewi, menekankan pentingnya kejelasan definisi dan ruang lingkup agar praktik agroforestri di Indonesia selaras dengan prinsip ekologis. Secara teknis, agroforestri adalah sistem pengelolaan lahan berkelanjutan yang mengintegrasikan pohon dengan tanaman pangan atau ternak.",
+      "footerDate": "Jakarta, 5 Maret 2026",
+      "footerResponsible": "Penanggung jawab:",
+      "footerName": "Kepala Biro Hubungan Masyarakat, Ristianto Pribadi"
+    },
+    "speakers": {
+      "label": "NARASUMBER",
+      "title": "TEMUI PARA",
+      "titleHighlight": "PEMBICARA"
+    },
+    "speakerRoles": {
+      "sp1Role": "Kepala Organisasi Riset Hayati dan Lingkungan, BRIN",
+      "sp2Role": "Senior Researcher, INPE",
+      "sp3Role": "Kepala Pusat Riset Ekologi, BRIN",
+      "sp4Role": "Senior Research Scholar, IIASA ",
+      "sp5Role": "Direktur CIFOR-ICRAF Program Indonesia",
+      "sp6Role": "Geospatial Information System Research Officer, CIFOR-ICRAF Program Indonesia",
+      "sp7Role": "Land Use Planning for Multiple Ecosystem Service Researcher, CIFOR-ICRAF Indonesia",
+      "sp8Role": "Researcher, IIASA",
+      "sp9Role": "Geoinformatics Specialist, CIFOR-ICRAF Indonesia",
+      "sp10Role": "Economy and Knowledge Management Research Assistant, CIFOR-ICRAF Indonesia"      
+    
+    },
+    "agenda": {
+      "label": "JADWAL",
+      "title": "AGENDA",
+      "titleHighlight": "KEGIATAN",
+      "item1Title": "REGISTRASI",
+      "item2Title": "PEMBUKAAN DAN SAMBUTAN",
+      "item3Title": "SESI 1 | Paparan Kunci: Menuju Visi Pengelolaan Bentang Lahan Kerakyatan",
+      "item4Title": "SESI 2 | Paparan Kunci: Teknologi Pemetaan Menautkan Insan",
+      "item4Desc": "desc",
+      "item5Title": "SESI 3 | Peluncuran dan Demonstrasi Luma: Dari Teori menuju Praktis",
+      "item5Desc": "SESI 5 | Memetakan Alam, Menautkan Insan: Membangun Gerakan Bersama",
+      "item5Sp1": "Dodi Sumardi, S.Hut., M.T., M.PP (Moderator)",
+      "item6Title": "SESI 4 | Rembuk Peta Nasional: Data Terbuka untuk Peta Bersama",
+      "moderator": "Moderator"
+    },
+    "gallery": {
+      "label": "DOKUMENTASI",
+      "title": "GALERI",
+      "titleHighlight": "KEGIATAN",
+      "of": "dari",
+      "close": "Tutup"
+    }
   }
 }
