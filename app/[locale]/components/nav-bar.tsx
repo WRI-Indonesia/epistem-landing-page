@@ -9,7 +9,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { Link } from "next/link";
+import Link from "next/link";
 
 export const NavBar = () => {
   const locale = useLocale();
