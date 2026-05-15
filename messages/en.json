@@ -107,11 +107,14 @@
       "p1": "The Data Democratization for Sustainable Landscapes workshop is part of the Epistem (Evolving Participatory Information System for Nature-based Climate Solutions) initiative, which aims to strengthen sustainable landscape management through a collaborative and participatory mapping approach. This activity is based on the need for accurate, open, and easily accessible land use and land cover data to support forest restoration, prevent deforestation, and achieve Indonesia's climate targets, including the 2030 FOLU Net Sink agenda.",
       "p2": "Through a collaboration between IIASA, BRIN, CIFOR-ICRAF, and WRI Indonesia, Epistem has developed a web-based mapping platform called Luma Land Use Mapping for All, an open-source online mapping platform that has been tested with communities of practitioners in several regions in Indonesia and will be launched during this workshop.",
       "p3": "The workshop will combine strategic presentations, technology demonstrations, hands-on practice, and map discussion sessions to build a shared understanding of modular mapping, shared reference data management, and strengthening collaborative networks across stakeholders. Commemorating National Awakening Day, the Epistem initiative aspires to instill the spirit of this national movement milestone into its vision of “data democratization for sustainable landscapes.” This moment marks a revival of collective stewardship in land use governance through mapping gotong royong—bringing together practitioners, government, and local communities to advance nature-based climate solutions.",
-      
+      "p4": "The event TOR can be viewed <torlink>here</torlink>.",
+      "torUrl": "https://drive.usercontent.google.com/download?id=1481yLj3HCsmfX5Bb1cjwZCc8wAxAVGFC&export=download&authuser=0&confirm=t&uuid=43d20f7b-acbd-4ade-b7d6-3a768c959551&at=ALBwUgn3sLqPp4XoJViuk8eR-_pc:1778833982041",
       "whereLabel": "WHERE",
       "whereValue": "Majapahit Room, A. A. Maramis Building, Jakarta",
       "whenLabel": "WHEN",
-      "whenValue": "Wednesday, May 20, 2026"
+      "whenValue": "Wednesday, May 20, 2026",
+      "zoomLabel": "ONLINE",
+      "zoomValue": "Link to Zoom Meeting"  
     },
 
     "speakers": {
