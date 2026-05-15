@@ -68,6 +68,7 @@
   --color-muted: rgba(157, 157, 157, 1);
 
   --color-gray-700: #323539;
+  --color-gray-dark: rgba(81, 81, 81, 1);
 }
 
 :root {

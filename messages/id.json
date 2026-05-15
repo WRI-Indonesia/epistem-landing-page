@@ -63,6 +63,15 @@
       "item7Description": "Penguatan akses dan pemanfaatan data memungkinkan pengelolaan lahan yang lebih lestari dan adil, serta menghadirkan berbagai manfaat bersama, antara lain:",
       "item8Description": "<li>Adaptasi dan mitigasi perubahan iklim</li><li>Konservasi dan peningkatan keanekaragaman hayati</li><li>Peningkatan kesejahteraan masyarakat adat dan komunitas lokal</li>"
     },
+    "Events": {
+      "title": "Acara",
+      "caption": "Jelajahi acara mendatang, tonggak peluncuran produk, dan lokakarya berbasis komunitas kami di berbagai wilayah.",
+      "date": "24 Januari 2024",
+      "cta": "Lihat detail acara",
+      "eventTitle": "Epistem Summit Summer 2026 - Kopidarat 3, Peluncuran Luma & Rona",
+      "description": "Epistem adalah inisiatif kolaboratif yang mempertemukan keahlian riset global dengan pengetahuan lokal untuk menjembatani sains, data, dan implementasi solusi berbasis alam.",
+      "location": "Jakarta, Indonesia"
+    },
     "ContactUs": {
       "title": "Hubungi Kami",
       "firstName": "Nama Lengkap",

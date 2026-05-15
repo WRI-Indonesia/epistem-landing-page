@@ -63,6 +63,15 @@
       "item7Description": "This data empowerment enables more sustainable and equitable land management, delivering multiple co-benefits such as:",
       "item8Description": "<li>Climate change adaptation and mitigation</li><li>Biodiversity conservation and enhancement</li><li>Improved livelihoods for indigenous peoples and local communities</li>"
     },
+    "Events": {
+      "title": "Events",
+      "caption": "Discover our upcoming events, product milestones, and community-driven workshops across the region.",
+      "date": "24 January 2024",
+      "cta": "See detail event",
+      "eventTitle": "Epistem Summit Summer 2026 - Kopidarat 3, Luma & Rona Launching",
+      "description": "Epistem is a consortium-led initiative combining global research expertise with local knowledge to bridge the gap between science, data, and implementation of nature-based solutions.",
+      "location": "Jakarta, Indonesia"
+    },
     "ContactUs": {
       "title": "Contact Us",
       "firstName": "Full Name",
