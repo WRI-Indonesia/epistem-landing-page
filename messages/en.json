@@ -94,10 +94,8 @@
     "nav": {
       "home": "Home",
       "summary": "Summary",
-      "pressRelease": "Press Release",
       "speakers": "Speakers",
-      "agenda": "Agenda",
-      "gallery": "Gallery"
+      "agenda": "Agenda"
     },
     "hero": {
       "scrollCta": "Scroll to explore"
@@ -109,25 +107,13 @@
       "p1": "The Data Democratization for Sustainable Landscapes workshop is part of the Epistem (Evolving Participatory Information System for Nature-based Climate Solutions) initiative, which aims to strengthen sustainable landscape management through a collaborative and participatory mapping approach. This activity is based on the need for accurate, open, and easily accessible land use and land cover data to support forest restoration, prevent deforestation, and achieve Indonesia's climate targets, including the 2030 FOLU Net Sink agenda.",
       "p2": "Through a collaboration between IIASA, BRIN, CIFOR-ICRAF, and WRI Indonesia, Epistem has developed a web-based mapping platform called Luma Land Use Mapping for All, an open-source online mapping platform that has been tested with communities of practitioners in several regions in Indonesia and will be launched during this workshop.",
       "p3": "The workshop will combine strategic presentations, technology demonstrations, hands-on practice, and map discussion sessions to build a shared understanding of modular mapping, shared reference data management, and strengthening collaborative networks across stakeholders. Commemorating National Awakening Day, the Epistem initiative aspires to instill the spirit of this national movement milestone into its vision of “data democratization for sustainable landscapes.” This moment marks a revival of collective stewardship in land use governance through mapping gotong royong—bringing together practitioners, government, and local communities to advance nature-based climate solutions.",
+      
       "whereLabel": "WHERE",
       "whereValue": "Majapahit Room, A. A. Maramis Building, Jakarta",
       "whenLabel": "WHEN",
       "whenValue": "Wednesday, May 20, 2026"
     },
-    "pressRelease": {
-      "label": "PRESS RELEASE",
-      "title": "MoF and ICRAF Strengthen Agroforestry to Support Climate Targets and Green Economy in Indonesia",
-      "p1": "The Ministry of Forestry (MoF) of the Republic of Indonesia and the International Centre for Research in Agroforestry (ICRAF) have officially strengthened their strategic collaboration in supporting national climate targets and green economic development. The agreement was marked by the signing of a Memorandum of Understanding (MoU) on agroforestry cooperation held in Jakarta on Wednesday (4/3).",
-      "p2": "The signing was carried out by the Secretary General of the Ministry of Forestry, Mahfudz, and the Director General of ICRAF, Eliane Ubalijoro. The cooperation covers six main areas: agroforestry model development, watershed management and restoration, innovative financing for agroforestry, agroforestry for KHDTK, digitalization and knowledge management, and socioeconomic development of forest communities.",
-      "p3": "In his remarks, Mahfudz emphasized that the forestry and land sector plays a crucial role in achieving national greenhouse gas emission reduction targets, particularly within the framework of Indonesia FOLU Net Sink 2030. This sector contributes nearly 60 percent of the total national target.",
-      "quote": "Through this collaboration, we are not merely planting trees, but building an ecosystem where the ecological functions of forests and the economic productivity of communities can go hand in hand. Agroforestry is a strategic key for Indonesia to ensure that our landscape management can reduce emissions while becoming a sustainable source of prosperity for communities.",
-      "quoteAttrib": "Mahfudz",
-      "p4": "The Director General of ICRAF, Eliane Ubalijoro, noted that these practices have actually been carried out by communities around the world for hundreds of years. In Indonesia, traditional agroforestry systems such as Repong Damar in Lampung, Tembawang in West Kalimantan, Mamar in NTT, Pelak in Jambi, and Parak in West Sumatra are proven real models to be replicated.",
-      "p5": "The Director of CIFOR-ICRAF Asia, Sonya Dewi, emphasized the importance of clear definitions and scope so that agroforestry practices in Indonesia align with ecological principles. Technically, agroforestry is a sustainable land management system that integrates trees with food crops or livestock.",
-      "footerDate": "Jakarta, March 5, 2026",
-      "footerResponsible": "Person in charge:",
-      "footerName": "Head of Public Relations Bureau, Ristianto Pribadi"
-    },
+
     "speakers": {
       "label": "SPEAKERS",
       "title": "Meet",
@@ -160,13 +146,6 @@
       "item6Title": "SESSION 4 | National Map Dialogue: Open Data for a Shared Map",
       "moderator": "Moderator",
       "closing": "Closing"
-    },
-    "gallery": {
-      "label": "DOCUMENTATION",
-      "title": "EVENT",
-      "titleHighlight": "GALLERY",
-      "of": "of",
-      "close": "Close"
     }
   }
 }

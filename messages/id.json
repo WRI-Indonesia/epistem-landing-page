@@ -94,10 +94,8 @@
     "nav": {
       "home": "Beranda",
       "summary": "Ringkasan",
-      "pressRelease": "Siaran Pers",
       "speakers": "Pembicara",
-      "agenda": "Agenda",
-      "gallery": "Galeri"
+      "agenda": "Agenda"
     },
     "hero": {
       "scrollCta": "Gulir untuk menjelajahi"
@@ -113,20 +111,6 @@
       "whereValue": "Ruang Majapahit, Gedung A. A.  Maramis, Jakarta",
       "whenLabel": "KAPAN",
       "whenValue": "Rabu, 20 Mei 2026"
-    },
-    "pressRelease": {
-      "label": "SIARAN PERS",
-      "title": "Kemenhut dan ICRAF Perkuat Agroforestri untuk Dukung Target Iklim dan Ekonomi Hijau di Indonesia",
-      "p1": "Kementerian Kehutanan (Kemenhut) Republik Indonesia bersama International Centre for Research in Agroforestry (ICRAF) resmi memperkuat kolaborasi strategis dalam mendukung target iklim nasional dan pembangunan ekonomi hijau. Kesepakatan ini ditandai dengan penandatanganan Memorandum Saling Pengertian (MSP) tentang kerja sama agroforestri yang berlangsung di Jakarta, Rabu (4/3).",
-      "p2": "Penandatanganan tersebut dilakukan oleh Sekretaris Jenderal Kementerian Kehutanan, Mahfudz, dan Director General ICRAF, Eliane Ubalijoro. Kerja sama ini mencakup enam bidang utama, yaitu pengembangan model agroforestri, pengelolaan Daerah Aliran Sungai (DAS) dan restorasi, pendanaan inovatif untuk agroforestri, agroforestri untuk KHDTK, digitalisasi dan pengelolaan pengetahuan, serta pengembangan sosial-ekonomi komunitas masyarakat hutan.",
-      "p3": "Dalam sambutannya, Mahfudz menegaskan bahwa sektor kehutanan dan lahan memiliki peran krusial dalam pencapaian target penurunan emisi gas rumah kaca nasional, terutama dalam kerangka Indonesia’s FOLU Net Sink 2030. Sektor ini berkontribusi hampir 60 persen dari total target nasional.",
-      "quote": "Melalui kolaborasi ini, kita tidak hanya sekadar menanam pohon, tetapi membangun ekosistem di mana fungsi ekologis hutan dan produktivitas ekonomi masyarakat dapat berjalan beriringan. Agroforestri menjadi kunci strategis bagi Indonesia untuk memastikan bahwa pengelolaan bentang lahan kita mampu menekan emisi sekaligus menjadi sumber kesejahteraan yang berkelanjutan bagi masyarakat.",
-      "quoteAttrib": "Mahfudz",
-      "p4": "Director General ICRAF, Eliane Ubalijoro, menyampaikan bahwa praktik ini sebenarnya telah lama dijalankan oleh komunitas di dunia selama ratusan tahun. Di Indonesia, sistem agroforestri tradisional seperti Repong Damar di Lampung, Tembawang di Kalimantan Barat, Mamar di NTT, Pelak di Jambi, dan Parak di Sumatera Barat adalah model nyata yang teruji untuk direplikasi.",
-      "p5": "Direktur CIFOR-ICRAF Asia, Sonya Dewi, menekankan pentingnya kejelasan definisi dan ruang lingkup agar praktik agroforestri di Indonesia selaras dengan prinsip ekologis. Secara teknis, agroforestri adalah sistem pengelolaan lahan berkelanjutan yang mengintegrasikan pohon dengan tanaman pangan atau ternak.",
-      "footerDate": "Jakarta, 5 Maret 2026",
-      "footerResponsible": "Penanggung jawab:",
-      "footerName": "Kepala Biro Hubungan Masyarakat, Ristianto Pribadi"
     },
     "speakers": {
       "label": "NARASUMBER",
@@ -161,13 +145,6 @@
       "item6Title": "SESI 4 | Rembuk Peta Nasional: Data Terbuka untuk Peta Bersama",
       "moderator": "Moderator",
       "closing": "Penutupan"
-    },
-    "gallery": {
-      "label": "DOKUMENTASI",
-      "title": "GALERI",
-      "titleHighlight": "KEGIATAN",
-      "of": "dari",
-      "close": "Tutup"
     }
   }
 }
