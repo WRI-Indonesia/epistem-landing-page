@@ -9,6 +9,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { Link } from "next/link";
 
 export const NavBar = () => {
   const locale = useLocale();
@@ -89,13 +90,15 @@ export const NavBar = () => {
                 <p className="text-black font-inter text-sm lg:text-2xl font-bold">
                   Epistem
                 </p> */}
-                <Image
-                  src="/images/epistem-logos.webp"
-                  alt="epistem logo"
-                  width={500}
-                  height={216}
-                  className="h-9 lg:h-16 w-auto pt-1.25 pr-1.25"
-                />
+                <Link href="/">
+                  <Image
+                    src="/images/epistem-logos.webp"
+                    alt="epistem logo"
+                    width={500}
+                    height={216}
+                    className="h-9 lg:h-16 w-auto pt-1.25 pr-1.25"
+                  />
+                </Link>
               </div>
 
               <div className="flex flex-row items-center space-x-1.5">
