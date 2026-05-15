@@ -373,7 +373,7 @@ function SummarySection() {
 
                     <p style={{ fontWeight: 700, fontSize: 12, color: "#1a1a1a", margin: 0, fontFamily: "var(--font-pjs)" }}>{label}</p>
 
-                    <p style={{ fontSize: 12, color: "#666", margin: "2px 0 0", fontFamily: "var(--font-aptos)" }}>{value}</p>
+                    <p style={{ fontSize: 15, color: "#971b1b", margin: "2px 0 0", fontFamily: "var(--font-aptos)" }}>{value}</p>
 
                   </div>
 
