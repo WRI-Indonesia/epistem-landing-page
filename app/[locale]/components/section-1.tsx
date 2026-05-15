@@ -13,6 +13,7 @@ import { AnimatePresence, motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { SectionHead } from "./section-head";
+import { Link } from "@/i18n/navigation";
 
 export const Section1 = () => {
   const t = useTranslations("HomePage.Section1");
@@ -78,10 +79,12 @@ export const Section1 = () => {
       descriptionKey: "item4Description",
       buttonComponent: (
         <div className="flex flex-col lg:flex-row items-center gap-4">
-          <Button className="px-5 py-1 lg:py-3 h-auto rounded-md">
+          <Button asChild>
+            <Link href="https://github.com/epistem-io" className="px-5 py-1 lg:py-3 h-auto rounded-md">
             <p className="font-aptos text-[13px] lg:text-[13.5px] xl:text-lg font-semibold lg:font-bold text-text-icons-on-color">
               {t("buttonCaption4")}
             </p>
+            </Link>
           </Button>
           <Button
             className="px-5 py-1 lg:py-3 h-auto rounded-md bg-[#DFE2E8] opacity-100! hover:cursor-not-allowed!"
