@@ -1,16 +1,16 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import Image from "next/image";
 
 // Variabel animasi untuk efek masuk (fade-up)
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
