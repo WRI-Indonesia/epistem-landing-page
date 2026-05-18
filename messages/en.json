@@ -116,7 +116,6 @@
       "zoomLabel": "ONLINE",
       "zoomValue": "Link to Zoom Meeting"  
     },
-
     "speakers": {
       "label": "SPEAKERS",
       "title": "Meet",
@@ -149,6 +148,36 @@
       "item6Title": "SESSION 4 | National Map Dialogue: Open Data for a Shared Map",
       "moderator": "Moderator",
       "closing": "Closing"
+    }
+  },
+  "LumaPage": {
+    "Hero": {
+      "title": "Luma",
+      "subtitle": "(Land Use Mapping for All)",
+      "caption": "Turn satellite data into actionable landscape insights in quick, clear, and collaborative way."
+    },
+    "Intro": {
+      "title": "Map Smarter, Not Harder",
+      "description": "Luma simplifies land use and land cover (LULC) mapping into one seamless workflow. Whether you're a researcher, policymaker, or even a student, you can generate high-quality maps without technical barriers."
+    },
+    "Features": {
+      "item1Title": "Generate LULC Maps in Five Simple Steps",
+      "item1Desc": "Transform raw satellite imagery into a classified map in minutes. Define your area of interest, select a classification scheme, evaluate model performance and thematic accuracy, then generate and export your map, all in one place.",
+      "item2Title": "Analyze Change Over Time",
+      "item2Desc": "Go beyond mapping! Track deforestation, restoration, or other changes with built-in change detection and time series analysis tools.",
+      "item3Title": "Share and Collaborate Effortlessly",
+      "item3Desc": "Download your maps for free or share them instantly. Luma makes collaboration straightforward and accessible."
+    },
+    "WhyLuma": {
+      "title": "Why Luma?",
+      "item1Title": "User-friendly by design",
+      "item1Desc": "No coding. No specialized hardware. Just an intuitive interface built for everyone.",
+      "item2Title": "Free and Accessible",
+      "item2Desc": "Use powerful mapping tools at no cost. Ideal for individuals, students, and institutions alike.",
+      "item3Title": "Open and Transparent",
+      "item3Desc": "Built on open satellite data, Luma supports transparency, reproducibility, and collaborative innovation.",
+      "item4Title": "Adaptive and Community-driven",
+      "item4Desc": "Built on the spirit of “gotong royong”, a shared approach to building and improving maps together. Customize your maps to fit your needs while benefiting from continuous, community-driven contributions across diverse themes."
     }
   }
 }

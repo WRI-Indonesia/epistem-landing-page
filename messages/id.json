@@ -54,8 +54,8 @@
       "item1Description": "Epistem adalah inisiatif kolektif yang dipimpin oleh International Institute for Applied Systems Analysis (<a1>IIASA</a1>), World Agroforestry (<a2>CIFOR-ICRAF</a2>), dan World Resources Institute Indonesia (<a3>WRI Indonesia</a3>).",
       "item2Description": "Inisiatif ini menggabungkan keahlian riset global dengan pengetahuan lokal yang mendalam untuk menjembatani kesenjangan antara sains, data, dan penerapan solusi berbasis alam (nature-based solutions/NbS) di lapangan.",
       "item3Title": "Tantangan",
-      "item3Description": "Banyak pelaku NbS masih kesulitan mengakses data yang akurat dan mudah digunakan, terutama data yang benar‑benar  mencerminkan keragaman kondisi lanskap. Padahal, keberhasilan NbS sangat bergantung pada data tata guna dan tutupan lahan (land use and land cover/ LULC)  untuk perencanaan, alokasi sumber daya, serta pemantauan hasil di lapangan.",
-      "item4Description": "Data LULC yang mutakhir, akurat, dan detail secara tematik  dapat membawa perbedaan signifikan seperti meningkatkan efektivitas, memperkuat akuntabilitas, dan menghasilkan dampak yang lebih terukur dari setiap intervensi NbS.",
+      "item3Description": "Banyak pelaku NbS masih kesulitan mengakses data yang akurat dan mudah digunakan, terutama data yang benar‑benar mencerminkan keragaman kondisi lanskap. Padahal, keberhasilan NbS sangat bergantung pada data tata guna dan tutupan lahan (land use and land cover/ LULC) untuk perencanaan, alokasi sumber daya, serta pemantauan hasil di lapangan.",
+      "item4Description": "Data LULC yang mutakhir, akurat, dan detail secara tematik dapat membawa perbedaan signifikan seperti meningkatkan efektivitas, memperkuat akuntabilitas, dan menghasilkan dampak yang lebih terukur dari setiap intervensi NbS.",
       "item5Title": "Tujuan Kami",
       "item5Description": "Epistem hadir untuk mengurangi kendala akses data dengan menyediakan informasi yang tepat guna, beresolusi tinggi, dan mudah digunakan. Dengan dukungan data yang mumpuni, para pelaku NbS dapat lebih fokus mendorong perubahan nyata di lapangan.",
       "item6Description": "Melalui pendekatan partisipatif, Epistem memberdayakan berbagai pemangku kepentingan di seluruh rantai pelaksanaan NbS agar mampu memanfaatkan data untuk memperkuat perencanaan, implementasi, dan pemantauan di Indonesia dan Asia Tenggara.",
@@ -110,7 +110,7 @@
       "p4": "TOR kegiatan dapat dilihat <torlink>di sini</torlink>.",
       "torUrl": "https://drive.usercontent.google.com/download?id=1kmWEZuMoXQDb79eFxwimyGy31d4y4r-H&export=download&authuser=0&confirm=t&uuid=1cbfb0f1-281d-41e1-aaf0-d18d305a3b8c&at=ALBwUgk-ig1SRej8qvmRiOoixWR_:1778833854960",
       "whereLabel": "DI MANA",
-      "whereValue": "Ruang Majapahit, Gedung A. A.  Maramis, Jakarta",
+      "whereValue": "Ruang Majapahit, Gedung A. A. Maramis, Jakarta",
       "whenLabel": "KAPAN",
       "whenValue": "Rabu, 20 Mei 2026",
       "zoomLabel": "ONLINE",
@@ -132,7 +132,6 @@
       "sp8Role": "Researcher, IIASA",
       "sp9Role": "Geoinformatics Specialist, CIFOR-ICRAF Indonesia",
       "sp10Role": "Economy and Knowledge Management Research Assistant, CIFOR-ICRAF Indonesia"      
-    
     },
     "agenda": {
       "label": "JADWAL",
@@ -149,6 +148,36 @@
       "item6Title": "SESI 4 | Rembuk Peta Nasional: Data Terbuka untuk Peta Bersama",
       "moderator": "Moderator",
       "closing": "Penutupan"
+    }
+  },
+  "LumaPage": {
+    "Hero": {
+      "title": "Luma",
+      "subtitle": "(Pemetaan Lahan untuk Semua)",
+      "caption": "Ubah data satelit menjadi wawasan lahan yang dapat ditindaklanjuti dengan cepat, jelas, dan kolaboratif."
+    },
+    "Intro": {
+      "title": "Petakan Lebih Cerdas, Bukan Lebih Sulit",
+      "description": "Luma menyederhanakan pemetaan penggunaan dan tutupan lahan (LULC) menjadi satu alur kerja yang mulus. Baik Anda seorang peneliti, pembuat kebijakan, atau mahasiswa, Anda dapat menghasilkan peta berkualitas tinggi tanpa hambatan teknis."
+    },
+    "Features": {
+      "item1Title": "Hasilkan Peta LULC dalam Lima Langkah Sederhana",
+      "item1Desc": "Ubah citra satelit menjadi peta terklasifikasi dalam hitungan menit. Tentukan area yang ingin Anda petakan, pilih atau buat skema klasifikasi yang sesuai dengan kebutuhan Anda, evaluasi kinerja model dan akurasi tematik, lalu hasilkan dan ekspor peta Anda, semuanya di satu tempat.",
+      "item2Title": "Analisis Perubahan dari Waktu ke Waktu",
+      "item2Desc": "Melampaui pemetaan! Lacak deforestasi, restorasi, atau dinamika lahan dengan alat deteksi perubahan dan analisis rentang waktu di dalam Luma.",
+      "item3Title": "Berbagi dan Berkolaborasi dengan Mudah",
+      "item3Desc": "Unduh peta Anda secara gratis atau bagikan langsung dengan siapapun yang Anda mau. Luma membuat kolaborasi menjadi mudah dan langsung."
+    },
+    "WhyLuma": {
+      "title": "Mengapa Luma?",
+      "item1Title": "Mudah Digunakan",
+      "item1Desc": "Tidak perlu coding. Tidak perlu perangkat khusus. Hanya antarmuka intuitif yang dibangun untuk semua orang.",
+      "item2Title": "Terjangkau",
+      "item2Desc": "Gunakan alat pemetaan yang canggih tanpa biaya. Solusi efisien bisa didapatkan oleh berbagai pihak, dari individu, mahasiswa, maupun institusi.",
+      "item3Title": "Terbuka dan Transparan",
+      "item3Desc": "Luma bersifat transparan dan dapat diakses oleh publik. Memanfaatkan data penginderaan jauh (citra satelit) yang terbuka untuk mendukung kolaborasi dan inovasi bersama.",
+      "item4Title": "Adaptif dan Didorong oleh Gotong Royong",
+      "item4Desc": "Dibangun di atas semangat gotong royong, pendekatan bersama untuk membangun dan meningkatkan kualitas peta bersama. Sesuaikan peta Anda agar sesuai dengan kebutuhan Anda sambil mendapatkan manfaat dari kontribusi berkelanjutan yang didorong oleh komunitas di berbagai tema."
     }
   }
 }
