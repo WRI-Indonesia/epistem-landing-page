@@ -170,14 +170,14 @@
     },
     "WhyLuma": {
       "title": "Mengapa Luma?",
-      "item1Title": "Mudah Digunakan",
-      "item1Desc": "Tidak perlu coding. Tidak perlu perangkat khusus. Hanya antarmuka intuitif yang dibangun untuk semua orang.",
-      "item2Title": "Terjangkau",
-      "item2Desc": "Gunakan alat pemetaan yang canggih tanpa biaya. Solusi efisien bisa didapatkan oleh berbagai pihak, dari individu, mahasiswa, maupun institusi.",
-      "item3Title": "Terbuka dan Transparan",
-      "item3Desc": "Luma bersifat transparan dan dapat diakses oleh publik. Memanfaatkan data penginderaan jauh (citra satelit) yang terbuka untuk mendukung kolaborasi dan inovasi bersama.",
-      "item4Title": "Adaptif dan Didorong oleh Gotong Royong",
-      "item4Desc": "Dibangun di atas semangat gotong royong, pendekatan bersama untuk membangun dan meningkatkan kualitas peta bersama. Sesuaikan peta Anda agar sesuai dengan kebutuhan Anda sambil mendapatkan manfaat dari kontribusi berkelanjutan yang didorong oleh komunitas di berbagai tema."
+      "item1Title": "Mudah dan Terjangkau",
+      "item1Desc": "Penggunaan alat pemetaan yang canggih, Tidak perlu tanpa perlu coding,. Tidak perlu tanpa perangkat khusus, dan tanpa akses berbayar",
+      "item2Title": "Terbuka dan Transparan",
+      "item2Desc": "Luma bersifat transparan dan terbuka untuk publik. Memanfaatkan data penginderaan jauh (citra satelit) yang sudah tersedia untuk mendukung kolaborasi dan inovasi bersama.",
+      "item3Title": "Adaptif dan Gotong Royong",
+      "item3Desc": "Data bersifat fleksibel dan dibangun secara kolaboratif. Dapat disesuaikan dengan kebutuhan dan mendukung berbagai tema.",
+      "item4Title": "Transformatif",
+      "item4Desc": "Mengatasi kendala data sehingga intervensi bentang lahan menjadi lebih efektif,  efisien, dan akuntabel. "
     }
   }
 }
