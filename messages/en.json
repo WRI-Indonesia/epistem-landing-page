@@ -92,6 +92,33 @@
       "captchaError": "reCAPTCHA could not be verified. Please try again."
     }
   },
+  "Auth": {
+    "SetPassword": {
+      "title": "Set Password",
+      "description": "Create a secure password to finalize your registration and access your account.",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm password",
+      "submit": "Create Account",
+      "submitting": "Saving...",
+      "submitError": "We couldn't save your password right now. Please try again.",
+      "successTitle": "Password saved",
+      "successMessage": "Your password has been set successfully. You can now continue using your account.",
+      "requirements": {
+        "lowercaseUppercase": "Lowercase & Uppercase",
+        "number": "Number (0-9)",
+        "specialCharacter": "Special character (!@#*...)",
+        "minLength": "At least 8 Characters"
+      },
+      "errors": {
+        "minLength": "Password must be at least 8 characters.",
+        "lowercaseUppercase": "Password must include uppercase and lowercase letters.",
+        "number": "Password must include at least one number.",
+        "specialCharacter": "Password must include at least one special character.",
+        "confirmRequired": "Please confirm your password.",
+        "passwordMismatch": "Passwords do not match."
+      }
+    }
+  },
   "EventPage": {
     "meta": {
       "eyebrow": "“Luma” Mapping Platform Launching Workshop",

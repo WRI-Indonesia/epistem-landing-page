@@ -235,6 +235,14 @@
   letter-spacing: -0.24px;
 }
 
+@utility font-lp-headline-xs-bold {
+  font-family: var(--font-pjs);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+}
+
 @utility font-lp-headline-xs-medium {
   font-family: var(--font-pjs);
   font-size: 24px;

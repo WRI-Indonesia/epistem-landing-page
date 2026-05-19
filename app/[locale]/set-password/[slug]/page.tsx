@@ -1,11 +1,18 @@
 import AuthStep from "@/components/auth/AuthStep";
+import SetPassword from "@/components/auth/SetPassword";
 
-export default function Page() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
   return (
-    <div className="lg:pt-22 bg-white">
-      <div className="grid grid-cols-2 p-6">
+    <div className="bg-white lg:pt-22">
+      <div className="grid min-h-screen grid-cols-1 gap-6 p-6 lg:grid-cols-2">
         <AuthStep />
-        <div></div>
+        <SetPassword slug={slug} />
       </div>
     </div>
   );

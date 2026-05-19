@@ -92,6 +92,33 @@
       "captchaError": "reCAPTCHA tidak dapat diverifikasi. Silakan coba lagi."
     }
   },
+  "Auth": {
+    "SetPassword": {
+      "title": "Atur Kata Sandi",
+      "description": "Buat kata sandi yang aman untuk menyelesaikan pendaftaran dan mengakses akun Anda.",
+      "passwordLabel": "Kata sandi",
+      "confirmPasswordLabel": "Konfirmasi kata sandi",
+      "submit": "Buat Akun",
+      "submitting": "Menyimpan...",
+      "submitError": "Kami belum dapat menyimpan kata sandi Anda saat ini. Silakan coba lagi.",
+      "successTitle": "Kata sandi tersimpan",
+      "successMessage": "Kata sandi Anda berhasil disimpan. Akun Anda sekarang siap digunakan.",
+      "requirements": {
+        "lowercaseUppercase": "Huruf kecil & huruf besar",
+        "number": "Angka (0-9)",
+        "specialCharacter": "Karakter khusus (!@#*...)",
+        "minLength": "Minimal 8 karakter"
+      },
+      "errors": {
+        "minLength": "Kata sandi harus terdiri dari minimal 8 karakter.",
+        "lowercaseUppercase": "Kata sandi harus memuat huruf kecil dan huruf besar.",
+        "number": "Kata sandi harus memuat setidaknya satu angka.",
+        "specialCharacter": "Kata sandi harus memuat setidaknya satu karakter khusus.",
+        "confirmRequired": "Mohon konfirmasi kata sandi Anda.",
+        "passwordMismatch": "Konfirmasi kata sandi tidak cocok."
+      }
+    }
+  },
   "EventPage": {
     "meta": {
       "eyebrow": "Lokakarya Peluncuran Platform Pemetaan Daring “Luma”",
