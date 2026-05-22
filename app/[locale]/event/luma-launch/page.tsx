@@ -268,123 +268,486 @@ function HeroSection() {
 // ─── Summary ─────────────────────────────────────────────────────────────────
 
 
-
 function SummarySection() {
-
   const t = useTranslations("EventPage");
 
-
+  // ─── DATA LINK MATERI PRESENTASI ───
+  // Silakan ganti URL di bawah ini dengan tautan Google Drive / file asli Anda
+  const materialsList = [
+    { id: 1, link: "https://drive.google.com/file/d/13jG6QwBhRATembadDNzRA7pw3aXXFSS6/view?usp=sharing" },
+    { id: 2, link: "https://drive.google.com/file/d/10J-fMUEZYATQtRwuldu5c4Xd_K4Fm0-z/view?usp=sharing" },
+    { id: 3, link: "https://drive.google.com/file/d/1u-riOUPFPjjDxeI7mx0_mQILrTDfqsCm/view?usp=sharing" },
+  ];
 
   return (
-
-    <section id="summary" style={{ padding: "80px 24px", background: "#f9f4f6" }}>
-
+    <section id="summary" style={{ padding: "100px 24px", background: "linear-gradient(180deg, #ffffff 0%, #fdf8fa 100%)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-
-        <div className="event-ringkasan-grid">
-
-          <div className="event-ringkasan-photos">
-
-            <img src={IMG_GROUP_1} alt="group" style={{ width: "100%", borderRadius: 16, objectFit: "cover", aspectRatio: "4/3" }} />
-
+        
+        {/* Layout Utama: 2 Kolom Responsif */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "64px", alignItems: "start" }}>
+          
+          {/* ─── KOLOM KIRI: GAMBAR (Sticky) ─── */}
+          <div style={{ position: "sticky", top: "120px" }}>
+            <div style={{
+              borderRadius: "24px",
+              overflow: "hidden",
+              boxShadow: "0 24px 48px rgba(204, 71, 120, 0.08)",
+              border: "1px solid rgba(255, 255, 255, 0.5)",
+              background: "white"
+            }}>
+              <img 
+                src={IMG_GROUP_1} 
+                alt="Event Group" 
+                style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "4/3", display: "block" }} 
+              />
+            </div>
           </div>
 
+          {/* ─── KOLOM KANAN: KONTEN & TEKS ─── */}
           <div>
-
-            <p style={{ color: "#cc4778", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 8, fontFamily: "var(--font-pjs)" }}>
-
+            <p style={{ color: "#cc4778", fontWeight: 800, fontSize: 14, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12, fontFamily: "var(--font-pjs)" }}>
               {t("summary.label")}
-
             </p>
-
-            <h2 style={{ fontSize: "clamp(28px,3.5vw,40px)", fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.02em", marginBottom: 24, fontFamily: "var(--font-pjs)" }}>
-
-              {t("summary.title")}{" "}
-
-              <span style={{ color: "#cc4778" }}>{t("summary.titleHighlight")}</span>
-
+            <h2 style={{ fontSize: "clamp(28px,3.5vw,40px)", fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.02em", marginBottom: 40, fontFamily: "var(--font-pjs)" }}>            
+              {t("summary.title")} <span style={{ color: "#cc4778" }}>{t("summary.titleHighlight")}</span>
             </h2>
 
+            {/* Paragraf */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 48 }}>
+              <p style={{ color: "#4a4a4a", lineHeight: 1.8, fontSize: 18, margin: 0, fontFamily: "var(--font-pjs)" }}>{t("summary.p1")}</p>
+              <p style={{ color: "#4a4a4a", lineHeight: 1.8, fontSize: 18, margin: 0, fontFamily: "var(--font-pjs)" }}>{t("summary.p2")}</p>
+              <p style={{ color: "#4a4a4a", lineHeight: 1.8, fontSize: 18, margin: 0, fontFamily: "var(--font-pjs)" }}>{t("summary.p3")}</p>
+              <p style={{ color: "#4a4a4a", lineHeight: 1.8, fontSize: 18, margin: 0, fontFamily: "var(--font-pjs)" }}>
+                {t.rich("summary.p4", {
+                  torlink: (chunks) => (
+                    <a 
+                      href={t("summary.torUrl")} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      style={{ color: "#cc4778", textDecoration: "none", borderBottom: "2px solid #cc4778", fontWeight: 700, transition: "opacity 0.2s" }}
+                    >
+                      {chunks}
+                    </a>
+                  )
+                })}
+              </p>
+            </div>
 
+            {/* ─── KARTU INFORMASI & MATERI (Glassmorphism) ─── */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
+              
+              {/* Kartu Lokasi & Tanggal (Setengah Lebar) */}
+              {[
+                { emoji: "📍", label: t("summary.whereLabel"), value: t("summary.whereValue") },
+                { emoji: "📅", label: t("summary.whenLabel"), value: t("summary.whenValue") },
+              ].map(({ emoji, label, value }) => (
+                <div
+                  key={label}
+                  style={{
+                    display: "flex", 
+                    flexDirection: "column",
+                    gap: 16, 
+                    background: "rgba(255, 255, 255, 0.7)",
+                    backdropFilter: "blur(12px)",
+                    WebkitBackdropFilter: "blur(12px)",
+                    borderRadius: "20px", 
+                    padding: "24px",
+                    boxShadow: "0 8px 32px rgba(204, 71, 120, 0.05)", 
+                    border: "1px solid rgba(255, 255, 255, 0.8)",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+                    <div style={{ width: 48, height: 48, borderRadius: "14px", background: "rgba(204, 71, 120, 0.1)", color: "#cc4778", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 22 }}>
+                      {emoji}
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <p style={{ fontWeight: 700, fontSize: 12, color: "#888", textTransform: "uppercase", letterSpacing: "0.05em", margin: "0 0 6px", fontFamily: "var(--font-pjs)" }}>{label}</p>
+                      <p style={{ fontSize: 16, fontWeight: 700, color: "#1a1a1a", margin: 0, fontFamily: "var(--font-pjs)", lineHeight: 1.4 }}>{value}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
 
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: 16, marginBottom: 20, fontFamily: "var(--font-aptos)" }}>{t("summary.p1")}</p>
+              {/* ─── KARTU ONLINE / ZOOM (Lebar Penuh, QR Tengah) ─── */}
+              <div
+                style={{
+                  gridColumn: "1 / -1", // Menjadikan kotak memanjang penuh
+                  display: "flex", 
+                  flexDirection: "column",
+                  gap: 16, 
+                  background: "rgba(255, 255, 255, 0.7)",
+                  backdropFilter: "blur(12px)",
+                  WebkitBackdropFilter: "blur(12px)",
+                  borderRadius: "20px", 
+                  padding: "24px",
+                  boxShadow: "0 8px 32px rgba(204, 71, 120, 0.05)", 
+                  border: "1px solid rgba(255, 255, 255, 0.8)",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: "14px", background: "rgba(204, 71, 120, 0.1)", color: "#cc4778", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 22 }}>
+                    💻
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <p style={{ fontWeight: 700, fontSize: 12, color: "#888", textTransform: "uppercase", letterSpacing: "0.05em", margin: "0 0 6px", fontFamily: "var(--font-pjs)" }}>
+                      {t("summary.zoomLabel")}
+                    </p>
+                    <p style={{ fontSize: 16, fontWeight: 700, color: "#1a1a1a", margin: 0, fontFamily: "var(--font-pjs)", lineHeight: 1.4 }}>
+                      {t("summary.zoomValue")}
+                    </p>
+                  </div>
+                </div>
+                
+                {/* QR Code Besar di Tengah */}
+                <div style={{ marginTop: 16, paddingTop: 24, borderTop: "1px dashed rgba(204,71,120,0.2)", display: "flex", justifyContent: "center" }}>
+                  <img 
+                    src={IMG_QR_CODE} // Pastikan variabel IMG_QR_CODE sudah ada
+                    alt={`QR Code Zoom`} 
+                    style={{ 
+                      width: "100%", 
+                      maxWidth: "240px", // Ukuran diperbesar
+                      height: "auto", 
+                      borderRadius: "16px", 
+                      border: "6px solid white", 
+                      boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+                      display: "block"
+                    }} 
+                  />
+                </div>
+              </div>
 
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: 16, marginBottom: 20, fontFamily: "var(--font-aptos)" }}>{t("summary.p2")}</p>
+              {/* ─── KARTU: KUMPULAN MATERI PRESENTASI (Lebar Penuh) ─── */}
+              <div
+                style={{
+                  gridColumn: "1 / -1", 
+                  display: "flex", 
+                  flexDirection: "column",
+                  gap: 16, 
+                  background: "rgba(255, 255, 255, 0.7)",
+                  backdropFilter: "blur(12px)",
+                  WebkitBackdropFilter: "blur(12px)",
+                  borderRadius: "20px", 
+                  padding: "24px",
+                  boxShadow: "0 8px 32px rgba(204, 71, 120, 0.05)", 
+                  border: "1px solid rgba(255, 255, 255, 0.8)",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: "14px", background: "rgba(204, 71, 120, 0.1)", color: "#cc4778", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 22 }}>
+                    📁
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <p style={{ fontWeight: 700, fontSize: 12, color: "#888", textTransform: "uppercase", letterSpacing: "0.05em", margin: "0 0 6px", fontFamily: "var(--font-pjs)" }}>
+                      {t("summary.materials.label") || "UNDUHAN"}
+                    </p>
+                    <p style={{ fontSize: 16, fontWeight: 700, color: "#1a1a1a", margin: 0, fontFamily: "var(--font-pjs)", lineHeight: 1.4 }}>
+                      {t("summary.materials.title")} <span style={{ color: "#cc4778" }}>{t("summary.materials.titleHighlight")}</span>
+                    </p>
+                  </div>
+                </div>
 
-            <p style={{ color: "#555", lineHeight: 1.8, fontSize: 16, fontFamily: "var(--font-aptos)" }}>{t("summary.p3")}</p>
+                {/* List File Materi menggunakan materialsList */}
+                <div style={{ marginTop: 8, paddingTop: 16, borderTop: "1px dashed rgba(204,71,120,0.2)", display: "flex", flexDirection: "column", gap: 12 }}>
+                  {materialsList.map((mat) => (
+                    <a
+                      key={`mat-${mat.id}`}
+                      href={mat.link} // Tautan diambil secara dinamis dari array materialsList
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 16,
+                        textDecoration: "none",
+                        color: "#1a1a1a",
+                        padding: "12px 16px",
+                        background: "rgba(255,255,255,0.8)",
+                        borderRadius: "12px",
+                        border: "1px solid rgba(0,0,0,0.04)",
+                        transition: "all 0.2s ease",
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.borderColor = "rgba(204,71,120,0.3)";
+                        e.currentTarget.style.boxShadow = "0 4px 12px rgba(204,71,120,0.08)";
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.borderColor = "rgba(0,0,0,0.04)";
+                        e.currentTarget.style.boxShadow = "none";
+                        e.currentTarget.style.transform = "translateY(0)";
+                      }}
+                    >
+                      <div style={{ fontSize: 20 }}>📄</div>
+                      <div style={{ flex: 1 }}>
+                        <p style={{ margin: "0 0 4px", fontSize: 14, fontWeight: 700, fontFamily: "var(--font-pjs)", lineHeight: 1.3, color: "#111" }}>
+                          {t(`summary.materials.mat${mat.id}Title` as any)}
+                        </p>
+                        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                          <span style={{ fontSize: 10, fontWeight: 800, background: "#f5f5f5", color: "#666", padding: "2px 6px", borderRadius: 4, letterSpacing: "0.05em", fontFamily: "var(--font-pjs)" }}>
+                            {t(`summary.materials.mat${mat.id}Type` as any)}
+                          </span>
+                          <span style={{ fontSize: 12, color: "#888", fontFamily: "var(--font-pjs)" }}>
+                            {t(`summary.materials.mat${mat.id}Speaker` as any)}
+                          </span>
+                        </div>
+                      </div>
+                      <div style={{ width: 32, height: 32, borderRadius: "50%", background: "rgba(204,71,120,0.1)", color: "#cc4778", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "bold" }}>
+                        ↓
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
 
-            <p style={{ lineHeight: 1.6, color: "#555", marginTop: 16 }}>
-              {t.rich("summary.p4", {
-                torlink: (chunks) => (
-                  <a 
-                    href={t("summary.torUrl")} 
-                    target="_blank" 
-                    style={{ color: "#cc4778", textDecoration: "underline", fontWeight: 600 }}
-                  >
-                    {chunks}
-                  </a>
-                )
-              })}
-            </p>
-
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 36 }}>
-  {[
-    { emoji: "📍", label: t("summary.whereLabel"), value: t("summary.whereValue") },
-    { emoji: "📅", label: t("summary.whenLabel"), value: t("summary.whenValue") },
-    { emoji: "💻", label: t("summary.zoomLabel"), value: t("summary.zoomValue"), qrCode: IMG_QR_CODE },
-  ].map(({ emoji, label, value, qrCode }) => (
-    <div
-      key={label}
-      style={{
-        display: "flex", alignItems: "flex-start", gap: 16, background: "white",
-        borderRadius: 16, padding: "16px 20px",
-        boxShadow: "0 4px 20px rgba(0,0,0,0.08)", border: "1px solid #f0f0f0",
-        flex: "1 1 200px",
-      }}
-    >
-      <div style={{ width: 42, height: 42, borderRadius: "50%", background: "#cc4778", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 18 }}>
-        {emoji}
-      </div>
-      
-      {/* Tambahkan flex: 1 di sini agar kontainer memanjang memenuhi ruang */}
-      <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-        <p style={{ fontWeight: 700, fontSize: 12, color: "#1a1a1a", margin: 0, fontFamily: "var(--font-pjs)" }}>{label}</p>
-        <p style={{ fontSize: 15, color: "#971b1b", margin: "2px 0 0", fontFamily: "var(--font-aptos)" }}>{value}</p>
-        
-        {/* Render QR Code khusus jika properti qrCode tersedia */}
-        {qrCode && (
-          <img 
-            src={qrCode} 
-            alt={`QR Code ${label}`} 
-            style={{ 
-              width: 300, 
-              height: 300, 
-              marginTop: 20, 
-              borderRadius: 8, 
-              border: "2px solid #f0f0f0", 
-              objectFit: "cover",
-              alignSelf: "left"
-            }} 
-          />
-        )}
-      </div>
-    </div>
-  ))}
-</div>
+            </div>
 
           </div>
-
         </div>
 
       </div>
-
     </section>
-
   );
-
 }
 
 
+// ─── Press Release ────────────────────────────────────────────────────────────
+
+function PressReleaseSection() {
+  const t = useTranslations("EventPage");
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <section id="press-release" style={{ padding: "80px 24px", background: "white" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+
+        {/* Header */}
+        <div style={{ marginBottom: 48 }}>
+          <p style={{ color: "#cc4778", fontWeight: 700, fontSize: 14, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 8, fontFamily: "var(--font-pjs)" }}>
+            {t("pressRelease.label")}
+          </p>
+          <h2 style={{ fontSize: "clamp(28px,3.5vw,40px)", fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.02em", margin: 0, fontFamily: "var(--font-pjs)" }}>
+            {t("pressRelease.title")}{" "}
+            <span style={{ color: "#cc4778" }}>{t("pressRelease.titleHighlight")}</span>
+          </h2>
+        </div>
+
+        {/* Main card */}
+        <div
+          style={{
+            background: "linear-gradient(135deg, #fdf6f9 0%, #f9f4f6 50%, #fef9fb 100%)",
+            borderRadius: 24,
+            border: "1px solid #f0dce6",
+            overflow: "hidden",
+            boxShadow: "0 8px 40px rgba(204,71,120,0.08)",
+          }}
+        >
+          {/* Top accent bar */}
+          <div style={{ height: 4, background: "linear-gradient(90deg, #cc4778 0%, #e8729c 50%, #1a4fa3 100%)" }} />
+
+          <div style={{ padding: "clamp(28px, 4vw, 48px)" }}>
+
+            {/* Date badge + headline */}
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 20, marginBottom: 32, flexWrap: "wrap" }}>
+              <div
+                style={{
+                  background: "#cc4778",
+                  color: "white",
+                  borderRadius: 12,
+                  padding: "8px 16px",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  fontFamily: "var(--font-pjs)",
+                  whiteSpace: "nowrap",
+                  flexShrink: 0,
+                  alignSelf: "flex-start",
+                  marginTop: 4,
+                }}
+              >
+                {t("pressRelease.date")}
+              </div>
+            </div>
+
+            {/* Body paragraphs (Awal) */}
+            <div style={{ display: "grid", gridTemplateColumns: expanded ? "1fr" : "1fr 1fr", gap: "0 40px" }} className="pr-body-grid">
+              <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                {t("pressRelease.body1")}
+              </p>
+              <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                {t("pressRelease.body2")}
+              </p>
+            </div>
+
+            {/* Expanded content */}
+            {expanded && (
+              <>
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body3")}
+                </p>
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body4")}
+                </p>
+
+                {/* Quote 1 */}
+                <div
+                  style={{
+                    borderLeft: "4px solid #cc4778",
+                    background: "rgba(204,71,120,0.04)",
+                    borderRadius: "0 12px 12px 0",
+                    padding: "20px 24px",
+                    margin: "8px 0 28px",
+                  }}
+                >
+                  <p
+                    style={{
+                      color: "#1a1a1a",
+                      fontSize: "clamp(20px, 1.4vw, 17px)",
+                      fontStyle: "italic",
+                      lineHeight: 1.7,
+                      margin: "0 0 12px",
+                      fontFamily: "var(--font-pjs)",
+                    }}
+                  >
+                    "{t("pressRelease.quote1Text")}"
+                  </p>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <div style={{ width: 32, height: 2, background: "#cc4778", borderRadius: 2 }} />
+                    <div>
+                      <span style={{ fontWeight: 700, fontSize: 14, color: "#cc4778", fontFamily: "var(--font-pjs)" }}>
+                        {t("pressRelease.quote1Author")}
+                      </span>
+                      <span style={{ color: "#525252", fontSize: 14, fontFamily: "var(--font-pjs)", marginLeft: 6 }}>
+                        — {t("pressRelease.quote1Role")}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body5")}
+                </p>
+
+                {/* Quote 2 */}
+                <div
+                  style={{
+                    borderLeft: "4px solid #1a4fa3",
+                    background: "rgba(26,79,163,0.04)",
+                    borderRadius: "0 12px 12px 0",
+                    padding: "20px 24px",
+                    margin: "8px 0 28px",
+                  }}
+                >
+                  <p
+                    style={{
+                      color: "#1a1a1a",
+                      fontSize: "clamp(20px, 1.4vw, 17px)",
+                      fontStyle: "italic",
+                      lineHeight: 1.7,
+                      margin: "0 0 12px",
+                      fontFamily: "var(--font-pjs)",
+                    }}
+                  >
+                    "{t("pressRelease.quote2Text")}"
+                  </p>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <div style={{ width: 32, height: 2, background: "#1a4fa3", borderRadius: 2 }} />
+                    <div>
+                      <span style={{ fontWeight: 700, fontSize: 14, color: "#1a4fa3", fontFamily: "var(--font-pjs)" }}>
+                        {t("pressRelease.quote2Author")}
+                      </span>
+                      <span style={{ color: "#525252", fontSize: 14, fontFamily: "var(--font-pjs)", marginLeft: 6 }}>
+                        — {t("pressRelease.quote2Role")}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* --- Tambahan 6 Paragraf Baru (Body 7 - Body 12) --- */}
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body6")}
+                </p>
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body7")}
+                </p>
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body8")}
+                </p>
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body9")}
+                </p>
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body10")}
+                </p>
+                <p style={{ color: "#555", lineHeight: 1.85, fontSize: 18, margin: "0 0 20px", fontFamily: "var(--font-pjs)" }}>
+                  {t("pressRelease.body11")}
+                </p>
+
+                {/* Contact */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 12,
+                    background: "white",
+                    borderRadius: 12,
+                    padding: "16px 20px",
+                    border: "1px solid #f0dce6",
+                    marginTop: 8,
+                    width: "fit-content",
+                  }}
+                >
+                  <div style={{ width: 36, height: 36, borderRadius: "50%", background: "#faedf2", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>✉️</div>
+                  <div>
+                    <p style={{ margin: 0, fontSize: 11, fontWeight: 700, color: "#cc4778", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "var(--font-pjs)" }}>
+                      {t("pressRelease.contactLabel")}
+                    </p>
+                    <p style={{ margin: "2px 0 0", fontSize: 13, color: "#1a1a1a", fontFamily: "var(--font-pjs)" }}>
+                      {t("pressRelease.contactTeam")} —{" "}
+                      <a href={`mailto:${t("pressRelease.contactEmail")}`} style={{ color: "#cc4778", textDecoration: "none", fontWeight: 600 }}>
+                        {t("pressRelease.contactEmail")}
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* Actions */}
+            <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap", alignItems: "center" }}>
+              <button
+                onClick={() => setExpanded(!expanded)}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  background: expanded ? "#f0dce6" : "#cc4778",
+                  color: expanded ? "#cc4778" : "white",
+                  border: "none",
+                  borderRadius: 50,
+                  padding: "12px 24px",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  fontFamily: "var(--font-pjs)",
+                  transition: "all 0.2s",
+                  letterSpacing: "0.01em",
+                }}
+              >
+                <span>{expanded ? "↑" : "↓"}</span>
+                {expanded ? (
+                  <span>{t("pressRelease.collapse")}</span>
+                ) : (
+                  <span>{t("pressRelease.readMore")}</span>
+                )}
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 
 
@@ -418,7 +781,7 @@ function SpeakersSection() {
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
 
-        <p style={{ color: "#cc4778", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 8, fontFamily: "var(--font-pjs)" }}>
+        <p style={{ color: "#cc4778", fontWeight: 700, fontSize: 14, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 8, fontFamily: "var(--font-pjs)" }}>
 
           {t("speakers.label")}
 
@@ -494,7 +857,7 @@ function SpeakersSection() {
 
                 <p style={{ color: "white", fontWeight: 700, fontSize: 14, margin: 0, fontFamily: "var(--font-pjs)" }}>{sp.name}</p>
 
-                <p style={{ color: "rgba(255,255,255,0.75)", fontSize: 11, margin: "4px 0 0", lineHeight: 1.4, fontFamily: "var(--font-aptos)" }}>
+                <p style={{ color: "rgba(255,255,255,0.75)", fontSize: 11, margin: "4px 0 0", lineHeight: 1.4, fontFamily: "var(--font-pjs)" }}>
 
                   {t(`speakerRoles.${sp.roleKey}` as any)}
 
@@ -601,7 +964,7 @@ function AgendaSection() {
 
         <div style={{ textAlign: "center", marginBottom: 56 }}>
 
-          <p style={{ color: "#cc4778", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 8, fontFamily: "var(--font-pjs)" }}>
+          <p style={{ color: "#cc4778", fontWeight: 700, fontSize: 14, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 8, fontFamily: "var(--font-pjs)" }}>
 
             {t("agenda.label")}
 
@@ -649,7 +1012,7 @@ function AgendaSection() {
 
                 {item.desc && (
 
-                  <p style={{ fontSize: 14, color: "#666", margin: "0 0 16px", fontFamily: "var(--font-aptos)" }}>
+                  <p style={{ fontSize: 14, color: "#666", margin: "0 0 16px", fontFamily: "var(--font-pjs)" }}>
 
                     {item.desc}
 
@@ -761,6 +1124,8 @@ export default function EventPage() {
 
           .event-ringkasan-photos { display: block; }
 
+          .pr-body-grid { grid-template-columns: 1fr !important; }
+
         }
 
       `}</style>
@@ -772,6 +1137,8 @@ export default function EventPage() {
         <HeroSection />
 
         <SummarySection />
+
+        <PressReleaseSection />
 
         <SpeakersSection />
 
