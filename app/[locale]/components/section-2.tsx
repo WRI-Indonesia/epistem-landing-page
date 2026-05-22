@@ -13,6 +13,7 @@ import { motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { SectionHead } from "./section-head";
+import { Link } from "@/i18n/navigation";
 
 export const Section2 = () => {
   const t = useTranslations("HomePage.Section2");
@@ -55,15 +56,17 @@ export const Section2 = () => {
               </p>
             </div>
             <div className="">
-              <Button
-                variant={"primary"}
-                size={"lg"}
-                className="h-auto py-1 lg:py-3 px-5 rounded-md lg:rounded-[16px]"
-              >
-                <p className="font-text-xs-semibold lg:text-[13.5px] xl:font-text-xl-semibold text-text-icons-on-color">
-                  {t("item1ButtonCaption")}
-                </p>
-              </Button>
+              <Link href={`${process.env.LUMA_URL}`}>
+                <Button
+                  variant={"primary"}
+                  size={"lg"}
+                  className="h-auto py-1 lg:py-3 px-5 rounded-md lg:rounded-[16px]"
+                >
+                  <p className="font-text-xs-semibold lg:text-[13.5px] xl:font-text-xl-semibold text-text-icons-on-color">
+                    {t("item1ButtonCaption")}
+                  </p>
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
